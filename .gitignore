@@ -3,3 +3,5 @@
 *.zip
 /CAGD/anwser/
 /CAGD/homework/
+*.vs/
+*CppUnit/
