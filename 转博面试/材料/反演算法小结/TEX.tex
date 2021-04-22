@@ -1,0 +1,291 @@
+\documentclass{article}
+% \usepackage{xeCJK}
+% \usepackage[UTF8]{ctex}
+\usepackage{CJKutf8}
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes,chains}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,graphics}
+\usepackage{makeidx,mathrsfs}
+\usepackage{color}
+\usepackage{graphicx,subfigure}
+% \usepackage{epstopdf}
+\usepackage{indentfirst}
+\usepackage{bbm}
+\usepackage{cases}
+%%%%%%%%% algorithm %%%%%%
+\usepackage[ruled]{algorithm2e}
+% \usepackage{algorithm} %format of the algorithm 
+\usepackage{algorithmic} %format of the algorithm 
+% \usepackage{multirow} %multirow for format of table 
+% \renewcommand{\algorithmicrequire}{\textbf{Input:}} 
+% \renewcommand{\algorithmicensure}{\textbf{Output:}}
+%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{amsmath} 
+\usepackage{xcolor}
+\setlength{\parindent}{2em}
+\setlength{\hoffset}{-0.35in}\textwidth = 450pt
+\setlength{\voffset}{-0.9in}\textheight = 690pt
+\linespread{1.2}
+% \date{}
+\begin{document}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{exercise}{Exercise}[section]
+\numberwithin{equation}{section}
+\renewcommand{\baselinestretch}{1.1}
+
+\begin{CJK*}{UTF8}{gkai}
+  \title{震源反演小结 }
+  \author{赵书博}
+  \maketitle
+
+  \section{问题介绍}
+
+  \begin{itemize}
+  \item \textbf{Input:}
+    \begin{enumerate}
+    \item $D=\{d^k\}$ 检波器坐标;
+    \item $T=\{t^k\}$ 检波器拾取的到时;
+    \item $L=\{l_i\}$ 地层界面 (数据或者函数形式);
+    \item  $V=\{v_i\}$ 地层速度 (\textbf{假设波在同一层地层的速度为常数});
+    \end{enumerate}
+
+  \item \textbf{Output:}
+    \begin{enumerate}
+    \item  $X=(x,y,z)$ 震源坐标
+    \end{enumerate}
+  \item \textbf{Note:}
+    \begin{enumerate}
+    \item 地层界面一般不是平面;
+    \item 地震波在地层界面处会发生折射现象;
+
+    \end{enumerate}
+  \end{itemize}
+
+  \section{算法流程}
+
+  \tikzstyle{io} = [trapezium, trapezium left angle = 70,trapezium right angle=110,minimum width=1cm,minimum height=0.5cm,text centered]
+  \tikzstyle{process} = [rectangle,minimum width=5cm,minimum height=0.5cm,text width =5.7cm,draw=black]
+
+  \tikzstyle{arrow} = [thick,->,>=stealth]
+  \begin{figure}[h]
+    \centering
+    \scriptsize
+    \begin{tikzpicture}[node distance=0.9cm]
+      \node (input1)  [trapezium, trapezium left angle = 70,trapezium right angle=110,minimum width=1cm,minimum height=0.5cm,text centered,draw=black] {输入数据};
+      \node (process1) [process,text centered,below of=input1,minimum width=3cm,text width =3cm] {简化地层,计算初值$X^n$};
+
+      \node (process2) [process,text centered,minimum width=2cm,text width =4cm,below of=process1] {利用$X^n$计算折射点$R^n$};
+      \node (process3) [process,text centered,minimum width=2cm,text width =5cm,below of=process2] {计算反演模型$F(X^{n+1},R^{n})=0$};
+      \node (decision1)[diamond,aspect=2,draw,thin,below of=process3,yshift=-0.5cm]  {$\Vert X^n-X^{n+1} \Vert\leq \epsilon$};
+      \node (decision2)[diamond,aspect=2,draw,thin,right of=decision1,xshift=3cm]  {$n+1<M$};
+      \node (output)  [trapezium, trapezium left angle = 70,trapezium right angle=110,minimum width=1cm,minimum height=0.5cm,text centered,draw=black,below of=decision1, yshift=-0.7cm] {输出$X^{n+1}$};
+      \node (output2)  [trapezium, trapezium left angle = 70,trapezium right angle=110,minimum width=1cm,minimum height=0.5cm,text centered,draw=black,below of=decision2, yshift=-0.7cm] {不收敛};
+      \draw [arrow] (input1) -- (process1);
+      \draw [arrow] (process1) -- (process2);
+      \draw [arrow] (process2) -- (process3);
+      \draw [arrow] (process3) -- (decision1);
+      \draw [arrow] (decision1) -- node[anchor=east] {yes} (output);
+      \draw [arrow] (decision1) -- node[anchor=south] {no} (decision2);
+      \draw [arrow] (decision2.north) |- node[right] {yes} (process2);
+      \draw [arrow] (decision2.south) -- node [anchor=east]{no} (output2);
+    \end{tikzpicture}
+  \end{figure}
+
+  \section{震源反演}
+
+  \subsection{获取初值}
+  假设地层为均匀地质, 通过对地震波信号处理, 获取平均速度$\overline{v}$. 根据检波器到时与震源地震信号之间的关系, 有等式
+  \begin{equation}\label{eq:1}
+    (x^k-x)^2+(y^k-y)^2+(z^k-z)^2= \overline{v}^2(t^k-t)^2, \quad  k = 1,\cdots, N,
+  \end{equation}
+  $N$为检波器个数.
+
+  将方程组~(\ref{eq:1})两两做差化简为线性超定方程组
+  \begin{equation}\label{eq:2}
+    2(x^k-x^l)x+2(y^k-y^l)y+2(z^k-z^l)z-2 \overline{v}^2(t^k-t^l)t = f^k, \quad k,l = 1, \cdots, N.
+  \end{equation}
+  其中$f^k = ((x^k)^2-(x^l)^2) + ((y^k)^2-(y^l)^2) + ((z^k)^2-(z^l)^2) - \overline{v}^2((t^k)^2-(t^l)^2)$.
+  利用最小二乘方法求解方程组~(\ref{eq:2}),得到初值$X^0$.
+
+  \subsection{射线追踪}
+
+  \subsubsection{输入与输出}
+
+
+  假设震源$X$已知
+  \begin{itemize}
+  \item \textbf{Input:}
+    \begin{enumerate}
+    \item $X $ 震源坐标
+    \item $D=\{d^k\}$ 检波器坐标
+    \item $L=\{l_i\}$ 地层函数
+    \item $V=\{v_i\}$ 地层速度
+    \end{enumerate}
+  \item \textbf{Output:}
+    \begin{enumerate}
+    \item $R=\{ r^k \}$ 折射点坐标
+    \end{enumerate}
+  \end{itemize}
+
+  \subsubsection{算法原理}
+  \begin{itemize}
+  \item \textbf{Fermat原理(最短走时原理)}
+  \end{itemize}
+  \qquad 光在任意介质中从一点传播到另一点时,沿所需时间最短的路径传播.
+
+  \begin{itemize}
+  \item \textbf{Snell定律}
+  \end{itemize}
+  \qquad 光入射到不同介质的界面上会发生反射和折射。其中入射光和折射光位于同一个平面上，并且与界面法线的夹角满足如下关系：
+  \begin{equation*}
+    \frac{\sin \theta_1}{ v_1} = \frac{\sin \theta_2}{ v_2},
+  \end{equation*}其中$\theta_1$和$\theta_2$分别是入射角和折射角, $v_1$和$v_2$分别是光在两个介质的传播速度.
+
+  
+首先, 考虑一条射线与一个地层界面相交的情况: 令$r=(r_x,r_y,l(r_x,r_y))$为地层折射点坐标, $d=(d_x,d_y,d_z)$为检波器坐标，$X=(x,y,z)$为震源坐标, $v_1$和$v_2$表示两个地层的传播速度, 则地震波的旅时函数可以表示为$\overline{T}(r)$:
+\begin{equation*}
+\overline{T}(r) = \frac{s_1(r)}{v_1} +  \frac{s_{2}(r)}{v_{2}} 
+\end{equation*}
+其中$s_1(r) = \Vert r - d \Vert   = \sqrt{(r_x-d_x)^2 + (r_y - d_y)^2 + (l - d_z)^2}$, $s_{2}(r) = \Vert X - r \Vert = \sqrt{(x -r_x )^2 + (y - r_y)^2 + (z-l)^2}$.
+
+根据Fermat原理, 
+
+\begin{equation}\label{eq:3}
+\frac{d \overline{T}}{d r}(r_x,r_y) =0 \Rightarrow
+\begin{cases}
+  \dfrac{\partial \overline{T}}{\partial r_x}(r_x,r_y) = \dfrac{1}{v_1} \dfrac{(r_x - d_x) + (l-d_z)l'_{r_x}}{s_1(r)}  - \dfrac{1}{v_2} \dfrac{(x-r_x) + (z-l)l'_{r_x}}{s_2(r)}= 0, \\
+\dfrac{\partial \overline{T}}{\partial r_y} (r_x,r_y)= \dfrac{1}{v_1} \dfrac{(r_y - d_y) + (l-d_z)l'_{r_y}}{s_1(r)}  - \dfrac{1}{v_2} \dfrac{(y-r_y) + (z-l)l'_{r_y}}{s_2(r)}= 0, \\
+\end{cases}
+\end{equation}
+可以通过拟牛顿法迭代--Broyden方法求解非线性方程组~(\ref{eq:3})得到$r_i$.
+
+\begin{algorithm}[H]
+\caption{Broyden方法}%算法名字
+\LinesNumbered %要求显示行号
+\KwIn{Equations to be solved $F(\mathbf{x})$, initial guess $\mathbf{x}_0$, tolerance value $tol$, maximum iteration steps $M$.}%输入参数
+\KwOut{Approximate solution $\mathbf{x}$.}%输出
+
+Compute Jacobi matrix $A_0=J(\mathbf{x})$, where $J(\mathbf{x})_{i,j} = \dfrac{\partial F_i}{\partial \mathbf{x}_j}(\mathbf{x})$\;
+$\mathbf{f}_0 \leftarrow \mathbf{F}(\mathbf{x}_0)$\;
+$invA \leftarrow A_0^{-1}$(use Gaussian elimination)\;
+$\mathbf{x_1} \leftarrow \mathbf{x}_0 - invA * \mathbf{f}_0$ \;
+$k \leftarrow 1$\;
+\While{$k < M$}{
+  $\mathbf{f}_1 \leftarrow \mathbf{F}(x_k)$\;
+  $\mathbf{y} \leftarrow \mathbf{f}_1 - \mathbf{f}_0$\;
+  $\mathbf{s} \leftarrow - invA*\mathbf{f}_1$\;
+  $invA \leftarrow invA +  \dfrac{(s-invA*y)*s^T*invA}{s^T*invA * y} $\;
+  $\mathbf{t} \leftarrow - invA * \mathbf{f}_1$\;
+  $x_{k+1} \leftarrow x_k + t$\;
+  \eIf{$\vert  \mathbf{t}\vert < $ tol}{break\;}{$\mathbf{f}_0 \leftarrow \mathbf{f}_1$\;}
+}
+  \textbf{return} $\mathbf{x}_{k+1}$\;
+\end{algorithm}
+
+
+\newpage
+针对多地层情况，我们采取分段迭代射线追踪算法,
+
+\begin{algorithm}[H]
+\caption{分段迭代射线追踪}%算法名字
+\LinesNumbered %要求显示行号
+\KwIn{ velocity $= \{ v_i ~|~ v_i\in \mathbb{R}, 1\leq i \leq n, i\in \mathbb{N}^+\}\in \mathbb{R}^n$, layer$=\{l_i ~|~ l_i:\mathbb{R}^{d-1}\rightarrow \mathbb{R}, 1\leq i \leq n, i\in \mathbb{N}^+ \}$, \\ \qquad \qquad $X\in\mathbb{R}^d$, $ d_i\in \mathbb{R}^d$, $M \in \mathbb{N}^+$, $\epsilon \in \mathbb{R}^+$}%输入参数
+\KwOut{$R=\{ r_i ~|~ r_i\in \mathbb{R}^d, 1\leq i \leq m, i\in \mathbb{N}^+ \}$}%输出
+
+$ \text{source} \leftarrow X$
+
+$ \text{detector} \leftarrow d_i$
+
+[initialPoint,relatedVelocity] $\leftarrow$ computeInitialGuess(source,detector,layer)
+
+\For{$j=1:M$}{
+
+  initialPoint0 $\leftarrow$ initialPoint
+  
+  \For{$i=1:\mathrm{numLay}$}{
+    iterPoint $\leftarrow$  initialPoint$(i,i+1,i+2)$
+
+    iterVelocity $\leftarrow$ relatedVelocity$(i,i+1)$
+
+    iterLayer $\leftarrow$ layer$(i)$
+
+    refPoint $\leftarrow$ computeSingleRefPoint(iterPoint,iterVelocity,iterLayer)
+    
+    initialPoint($i$+1) $\leftarrow$ refPoint
+
+    \If{$\vert\mathrm{initialPoint} - \mathrm{initialPoint0}\vert \leq \epsilon$}{
+      break
+    }
+  }
+}
+
+\end{algorithm}
+取检波器与震源连成的直线段与地层的交点作为迭代的初值。
+ \subsection{反演模型}
+
+
+
+假设已知所有的射线路径, $\overline{t}^k_i$为$k$条射线在第$i$个地层的旅时,
+\begin{equation}\label{eq:7}
+S^k(X)  = \sum^{n_k+1}_{i=1} v_i \overline{t}^k_i,
+\end{equation}
+其中
+\begin{equation}
+S^k(X) = \vert d^k-r^k_{1}(X) \vert + \sum^{n_k-1}_{i=1} \vert r^k_{i+1}(X) - r^k_{i}(X) \vert + \vert r^k_{n_k}(X)-X  \vert.
+\end{equation}
+
+\subsubsection{旅时分割}
+根据分段旅时和总旅时的关系, 以及分段地层旅时与地层传播速度的关系, 可以得到
+\begin{equation}
+\begin{cases}
+\sum^{n_k+1}_{i=1} \overline{t}^k_i = T^k\\
+\overline{t}^k_i = \frac{\vert r^k_i - r^k_{i+1} \vert}{v_i}
+\end{cases}
+\Rightarrow \quad \overline{t}^k_i(X) = c^k_i(X) T^k.
+\end{equation}
+
+将$\overline{t}^k_i(X) = c^k_i(X) T^k$代入~(\ref{eq:7})得到
+\begin{equation}\label{eq:4}
+S^k(X) = \sum^{n_k+1}_{i=1} v_i\left(c^k_i(X) T^k\right)  = \left(\sum^{n_k+1}_{i=1} v_ic^k_i(X)\right) T^k = V^k(X)T^k = V^k(X)(t^k-t)
+\end{equation}
+
+
+将方程~(\ref{eq:4})两边同乘$V^l$, 消去未知数$t$, 得到
+\begin{equation}\label{eq:5}
+V^lS^k - V^kS^l - V^lV^k(t^l-t^k) =0, \quad l\leq k.
+\end{equation}
+记方程组~(\ref{eq:5})为
+\begin{equation}\label{eq:6}
+G(X) = 0.
+\end{equation}
+
+其中, $G(X) = \{ g_i\}_{i=1}^{m}$. 最终求解超定非线性系统~(\ref{eq:6}),得到震源$X$. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{CJK*}
+
+
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
