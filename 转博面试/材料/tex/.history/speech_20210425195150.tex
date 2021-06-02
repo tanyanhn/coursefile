@@ -1,0 +1,226 @@
+\documentclass[UTF8]{ctexbeamer}	% Compile at least twice!
+%\setbeamertemplate{navigation symbols}{}
+\usetheme{Berlin}
+% \useinnertheme{rectangles}
+\useoutertheme{infolines}
+\useoutertheme[title,section,subsection=true]{smoothbars}
+% \useoutertheme{split}
+\useinnertheme{rounded}
+\usecolortheme{default}
+% \usecolortheme{whale}
+ 
+% -------------------
+% Packages
+% -------------------
+\usepackage{
+    amsmath,			% Math Environments
+    amssymb,			% Extended Symbols
+    enumerate,		    % Enumerate Environments
+    graphicx,			% Include Images
+    lastpage,			% Reference Lastpage
+    multicol,			% Use Multi-columns
+    multirow,			% Use Multi-rows
+    pifont,			    % For Checkmarks
+    stmaryrd,            % For brackets
+    listings,
+}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+% \usepackage{CJK}
+\lstset{language=C++}
+\lstset{extendedchars=false}
+\lstset{breaklines}
+
+
+% -------------------
+% Colors
+% -------------------
+% \definecolor{UniOrange}{RGB}{212,69,0}
+% \definecolor{UniGray}{RGB}{62,61,60}
+% \definecolor{UniRed}{HTML}{B31B1B}
+% \definecolor{UniGray}{HTML}{222222}
+% \setbeamercolor{title}{fg=UniGray}
+% \setbeamercolor{frametitle}{fg=UniOrange}
+% \setbeamercolor{structure}{fg=UniOrange}
+% \setbeamercolor{section in head/foot}{bg=UniGray}
+% \setbeamercolor{author in head/foot}{bg=UniGray}
+% \setbeamercolor{date in head/foot}{fg=UniGray}
+% \setbeamercolor{structure}{fg=UniOrange}
+% \setbeamercolor{local structure}{fg=black}
+% \beamersetuncovermixins{\opaqueness<1>{0}}{\opaqueness<2->{15}}
+
+
+% -------------------
+% Fonts & Layout
+% -------------------
+\useinnertheme{default}
+\usefonttheme{serif}
+\usepackage{palatino}
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape}
+\setbeamertemplate{itemize items}[circle]
+%\setbeamertemplate{enumerate items}[default]
+
+
+% -------------------
+% Commands
+% -------------------
+
+% Special Characters
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+%\newcommand{\C}{\mathbb{C}}
+
+% Math Operators
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Span}{span}
+
+% Special Commands
+\newcommand{\pf}{\noindent\emph{Proof. }}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\defeq}{\stackrel{\text{def}}{=}}
+\newcommand{\ov}[1]{\overline{#1}}
+\newcommand{\ma}[1]{\stackrel{#1}{\longrightarrow}}
+\newcommand{\twomatrix}[4]{\begin{pmatrix} #1 & #2 \ #3 & #4 \end{pmatrix}}
+
+
+% -------------------
+% Tikz & PGF
+% -------------------
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{
+    calc,
+    decorations.pathmorphing,
+    matrix,arrows,
+    positioning,
+    shapes.geometric
+}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\usepackage{wrapfig}
+\usepackage{cite}
+
+
+% -------------------
+% Theorem Environments
+% -------------------
+\theoremstyle{plain}
+\newtheorem{sit}{Situation}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{rtm}{Theorem}[section]
+\newtheorem{cor}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{das}{Data structure}[section]
+\newtheorem{nex}{Non-Example}[section]
+\newtheorem{cla}{class}[section]
+\newtheorem{emt}{}[section]
+\newtheorem{defn}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}[section] 
+\numberwithin{equation}{section}
+
+\newcommand\caesura{$\mkern -8.5mu\raise -.2ex\hbox{\rotatebox[]{180}{\`}}\ $}
+
+% -------------------
+% Title Page
+% -------------------
+\title{\textcolor{white}{2021年秋季入学硕博连读综合面试报告}}
+%\subtitle{\textcolor{white}{Mathematics Conference for the Mysterious and dMagical}}  
+\author{谭焱(张庆海)}
+\institute{浙江大学数学科学学院}
+\date{\today} 
+
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+% \begin{CJK}{GBK}{kai}
+
+% Title Page
+\begin{frame}
+ 老师们好,我是张老师的硕士研究生谭焱.今天在这里给老师们做一场申请硕博连读的报告.
+\end{frame}
+
+
+
+% Motivation
+\section{个人基本情况介绍}
+
+
+% \begin{frame}
+%     \begin{emt}[过往受教育经历]
+%         \begin{enumerate}
+%             \item 高中在湖南师范大学附属中学就读时参与数学奥林匹克竞赛.
+%         \end{enumerate}
+        
+%     \end{emt}
+% \end{frame}
+
+
+% Definitions & Examples
+\begin{frame}[fragile]
+ 我从高中时期就已经对数学产生了浓厚的兴趣.并且在湖南师大附中就读期间,参与全
+ 国数学竞赛活动.并在高二高三两年取得了省级一等奖.
+
+ 在研究生学习阶段,已经修满硕士学位的必须学分,从与项目相关的课程中取得了良好的成绩.
+ 非线性问题的数学方法和图形学的新进展等.
+
+ 在英语学习方面,培养了良好的英语阅读习惯,在六级考试中获得阅读200分.通过研究生论文
+ 写作指导课程,练习了使用latex进行英文数学文章的写作能力.
+\end{frame}
+
+\begin{frame}[fragile]
+   在攻读硕士学位期间,参与了几次研究项目.锻炼了科研能力,训练可科研思维.
+
+   研一上学期,在张老师的要求下,独立完成程序.实现了二维殷集的布尔代数.
+   以此为之后的三维殷集上的布尔代数研究课题做好铺垫.
+
+   研二上学期,在张老师的指导下,和学长合作解决
+\end{frame}
+
+\section{研究生项目详细介绍}
+\subsection{微地震的反问题}
+
+\begin{frame}
+    \frametitle{微地震探测反问题研究}
+    \begin{itemize}
+        \setlength{\itemsep}{30pt}
+        \item \textbf{背景 : } 项目的意义和要做的问题.
+        \item  \textbf{解决过程 : } 切分问题,分步实现.
+        \item \textbf{实现结果 : } 对真实数据计算结果图和总结.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{emt}[背景及意义]
+      
+    \begin{itemize}
+        \begin{columns}
+            \column{0.8\linewidth}<1->
+    % \begin{wrapfigure}[r]{5cm}
+    %    \centering
+       \includegraphics[width = \textwidth]{fig/s2p1.jpg}
+    %    \caption{\footnote{ 油气田中的生产井和监测井}}
+    % \end{wrapfigure}
+    \column{0.2\linewidth}<1->
+    \item  微地震通常是由于地质勘探或者一些开采活动导致地下裂缝错位,从而形成的
+低频率弹性波.\cite{wu_1991}
+\end{columns}
+\item 作为一种人为产生的地震,其产生的信号可以用于石油工程作业.
+近些年来,国际上众多的研究机构与微震公司已经证明了微地震监测方法在油气田
+规划与开发方面的指导意义.
+
+    \end{itemize}
+
+    
+\end{emt}
+\end{frame}
+
+
+% \end{CJK}
+\end{document}

@@ -1,0 +1,282 @@
+\documentclass[UTF8]{ctexbeamer}	% Compile at least twice!
+%\setbeamertemplate{navigation symbols}{}
+\usetheme{Berlin}
+% \useinnertheme{rectangles}
+\useoutertheme{infolines}
+\useoutertheme[title,section,subsection=true]{smoothbars}
+% \useoutertheme{split}
+\useinnertheme{rounded}
+\usecolortheme{default}
+% \usecolortheme{whale}
+ 
+% -------------------
+% Packages
+% -------------------
+\usepackage{
+    amsmath,			% Math Environments
+    amssymb,			% Extended Symbols
+    enumerate,		    % Enumerate Environments
+    graphicx,			% Include Images
+    lastpage,			% Reference Lastpage
+    multicol,			% Use Multi-columns
+    multirow,			% Use Multi-rows
+    pifont,			    % For Checkmarks
+    stmaryrd,            % For brackets
+    listings,
+}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+% \usepackage{CJK}
+\lstset{language=C++}
+\lstset{extendedchars=false}
+\lstset{breaklines}
+
+
+% -------------------
+% Colors
+% -------------------
+% \definecolor{UniOrange}{RGB}{212,69,0}
+% \definecolor{UniGray}{RGB}{62,61,60}
+% \definecolor{UniRed}{HTML}{B31B1B}
+% \definecolor{UniGray}{HTML}{222222}
+% \setbeamercolor{title}{fg=UniGray}
+% \setbeamercolor{frametitle}{fg=UniOrange}
+% \setbeamercolor{structure}{fg=UniOrange}
+% \setbeamercolor{section in head/foot}{bg=UniGray}
+% \setbeamercolor{author in head/foot}{bg=UniGray}
+% \setbeamercolor{date in head/foot}{fg=UniGray}
+% \setbeamercolor{structure}{fg=UniOrange}
+% \setbeamercolor{local structure}{fg=black}
+% \beamersetuncovermixins{\opaqueness<1>{0}}{\opaqueness<2->{15}}
+
+
+% -------------------
+% Fonts & Layout
+% -------------------
+\useinnertheme{default}
+\usefonttheme{serif}
+\usepackage{palatino}
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape}
+\setbeamertemplate{itemize items}[circle]
+%\setbeamertemplate{enumerate items}[default]
+
+
+% -------------------
+% Commands
+% -------------------
+
+% Special Characters
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+%\newcommand{\C}{\mathbb{C}}
+
+% Math Operators
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Span}{span}
+
+% Special Commands
+\newcommand{\pf}{\noindent\emph{Proof. }}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\defeq}{\stackrel{\text{def}}{=}}
+\newcommand{\ov}[1]{\overline{#1}}
+\newcommand{\ma}[1]{\stackrel{#1}{\longrightarrow}}
+\newcommand{\twomatrix}[4]{\begin{pmatrix} #1 & #2 \ #3 & #4 \end{pmatrix}}
+
+
+% -------------------
+% Tikz & PGF
+% -------------------
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{
+    calc,
+    decorations.pathmorphing,
+    matrix,arrows,
+    positioning,
+    shapes.geometric
+}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\usepackage{wrapfig}
+% \usepackage{cite}
+
+
+% -------------------
+% Theorem Environments
+% -------------------
+\theoremstyle{plain}
+\newtheorem{sit}{Situation}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{rtm}{Theorem}[section]
+\newtheorem{cor}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{das}{Data structure}[section]
+\newtheorem{nex}{Non-Example}[section]
+\newtheorem{cla}{class}[section]
+\newtheorem{emt}{}[section]
+\newtheorem{defn}{Definition}[section]
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}[section] 
+\numberwithin{equation}{section}
+
+\newcommand\caesura{$\mkern -8.5mu\raise -.2ex\hbox{\rotatebox[]{180}{\`}}\ $}
+
+% -------------------
+% Title Page
+% -------------------
+\title{\textcolor{white}{2021年秋季入学硕博连读综合面试报告}}
+%\subtitle{\textcolor{white}{Mathematics Conference for the Mysterious and dMagical}}  
+\author{谭焱(张庆海)}
+\institute{浙江大学数学科学学院}
+\date{\today} 
+
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+% \begin{CJK}{GBK}{kai}
+
+    \begin{frame}
+        \titlepage
+    \end{frame}
+% Title Page
+\begin{frame}
+ 老师们好,我是张老师的硕士研究生谭焱.今天在这里给老师们做一场申请硕博连读的报告.
+\end{frame}
+
+
+
+% Motivation
+\section{个人基本情况介绍}
+
+
+% \begin{frame}
+%     \begin{emt}[过往受教育经历]
+%         \begin{enumerate}
+%             \item 高中在湖南师范大学附属中学就读时参与数学奥林匹克竞赛.
+%         \end{enumerate}
+        
+%     \end{emt}
+% \end{frame}
+
+
+% Definitions & Examples
+\begin{frame}[fragile]
+ 我从高中时期就已经对数学产生了浓厚的兴趣.并且在湖南师大附中就读期间,参与全
+ 国数学竞赛活动.并在高二高三两年取得了省级一等奖.
+
+ 在研究生学习阶段,已经修满硕士学位的必须学分,从与项目相关的课程中取得了良好的成绩.
+ 非线性问题的数学方法和图形学的新进展等.
+
+ 在英语学习方面,培养了良好的英语阅读习惯,在六级考试中获得阅读200分.通过研究生论文
+ 写作指导课程,练习了使用latex进行英文数学文章的写作能力.
+\end{frame}
+
+\begin{frame}[fragile]
+   在攻读硕士学位期间,参与了几次研究项目.锻炼了科研能力,训练可科研思维.
+
+   研一上学期,独立完成程序.实现了二维殷集的布尔代数.
+   以此为之后的三维殷集上的布尔代数研究课题做好铺垫.
+
+   研二上学期,在张老师的指导下,和学长合作解决了微地震反问题.
+
+   这学期,我和学弟分工推进三维殷集的表示,同时编程实现三维殷集上的布尔运算的计算过程.
+\end{frame}
+
+\section{研究生项目详细介绍}
+\subsection{微地震的反问题}
+
+\begin{frame}
+    \frametitle{微地震探测反问题研究}
+    接下来主要介绍部分项目主要实现过程.
+
+    首先是微地震探测反问题的研究,第一步介绍一下项目的研究背景和需要解决的数学问题.
+    然后是将大问题切分为多个部分,分别处理小问题.最后有一些现实中收集的数据经过
+    我们的程序的计算结果和总结.
+\end{frame}
+
+\begin{frame}
+    微地震通常是由于地质勘探或者一些开采活动导致地下裂缝错位,从而形成的低频率弹性波.
+
+    作为一种人为产生的地震,经常在石油天然气工程作业中出现.
+    近些年来,微地震监测在油气田开发方面的指导意义已经取得了共识.
+\end{frame}
+
+\begin{frame}
+    我们要解决的问题是,给定监测井附近的地质信息.接收到微地震信号的同时,能够迅速
+    得到误差较小的微地震的震源,以便定位地下裂缝.
+
+    该问题主要的困难分为两个方面,地震波在不同地层中的传播速度不同,因此还会导致
+    地震波在地下非直线传播,复杂的地层信息会使得检波器到时关于震源是强非线性关系.
+    另一个方面是,微地震通常震级小,能量少.传播距离近.所以只有部分检波器能接受到合理的
+    地震波到时.
+\end{frame}
+
+\begin{frame}
+    切分问题,
+    第一步从地层信息中拟合函数表示相邻地层之间的分界面.
+    第二步假设地震波仅在相邻地层间的分界面上发生折射,在地层内部匀速直线传播.求解
+    地震波从假设震源传播到检波器的路径.
+    第三步有传播路径后可以计算得到理论上检波器接收地震波的时间,根据理论时间
+    和实际接收到地震波的时间建立残差方程描述假设震源与真实震源之间的差距.
+    最后对残差方程组求解得到使得残差最小的假设震源位置,作为真实震源位置输出.
+
+\end{frame}
+
+\begin{frame}
+    拟合地震波发生折射的界面过程就是选取12个表示地层分界面的点,进行最小二乘
+    拟合得到z坐标关于x,y坐标的二元三次函数,如图中蓝色部分所示.限制定义域范围
+    得到一片折射界面的拟合函数,将所有拟合函数合并得到表示地层分界面的分片曲面.
+\end{frame}
+
+\begin{frame}
+    地震波传播路径的求解过程的输入是上一步拟合的地层分界面,检波器和假设震源位置,
+    输出地震波从震源到检波器的传播路径.依据费马原理,光的传播路径是光程取极值的路径.
+    地震波类比为光波可以推断出地震波在速度不变的均匀地层内部直线传播.
+
+    考虑最简单的情况,只有一个两个地层.所求的传播路径所需的时间可以通过这个公式表示.
+\end{frame}
+
+\begin{frame}
+    因为$z$关于$x,y$的函数就是之前拟合的分片三次函数,因此$z$有关于
+          $x,y$的分片连续二阶导数.所以可以通过对$f$求导的牛顿迭代法计算得到使得地震波
+          传播时间最短的折射点.
+
+          对于多个地层多个折射点的情况,固定其他折射点,每次迭代求解一个折射点.
+          循环多次得到所有的折射点位置使得地震波传播时间最短的路径.该算法不是能够严格
+          找到全局最优结果的方法,但是到地层模型变化步剧烈时通常结果是合理的.
+
+          如下是一个假设震源和两个检波器之间迭代得到的传播路径.
+\end{frame}
+
+\begin{frame}
+    选定假定震源和检波器坐标时,定义地震波传播路径长度和传播时间.当检波器接收到
+    地震波信号时,定义如下残差方程描述假设震源和接受到的地震波信号的相关性.
+
+\end{frame}
+
+\begin{frame}
+    残差方程组求解有两种思路,当接收到地震波信号的检波器数量较多时,
+    使用迭代法寻找使得残差最小的震源.其中将关于震源位置求导过程转化为差分形式,
+    并在迭代过程中加入模拟退火等防止陷入局部解的方法.
+
+               但是,微地震是一种能量非常小的地震.通常情况由于接收到信号的检波器太少,
+            距离太接近会导致残差方程组的求解过程条件数过大.并且由于检波器都在一条几乎
+            直线的检测井内,震源的x,y坐标也难以计算.因此有反应的检波器比较少时用检索法计算残差
+            最小的假设震源.
+
+            预先在监测井附近的空间上均匀选取样本点,计算每个样本点作为假设震源时每个检波器理论
+接收到地震波的时间.当检波器接收到真实信号时,根据每个样本点的理论到时和实际到时计
+算残差方程输出残差较小的样本点集合.最后依据微地震一般发生在地层断层附近,对输出的样本点
+进行筛选
+            
+\end{frame}
+
+
+% \end{CJK}
+\end{document}
