@@ -1,0 +1,16 @@
+\frametitle{背景}
+    \begin{itemize}
+        \item  微地震通常是由于地质勘探或者一些开采活动导致地下裂缝错位,从而形成的
+        低频率弹性波.
+        \item 作为一种人为产生的地震, 其产生的信号经常出现于石油天然气工
+        程作业. 近些年来, 国际上众多的研究机构与微震公司已经证明了
+        微地震监测方法在油气田规划与开发方面的指导意义.
+        \begin{columns}
+            \column{0.4\linewidth}<1->
+                \includegraphics[width = \textwidth]{fig/s2p1.jpg}
+            \column{0.6\linewidth}<1->
+            \includegraphics[width = \textwidth]{fig/layer.png}
+        \end{columns}
+        \item 因为地质结构的复杂,地震波非直线传播,并且微地震常发生于地下深处,检波器获取的信息少
+        ,高精度反演非常困难.
+    \end{itemize}

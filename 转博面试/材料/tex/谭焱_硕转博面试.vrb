@@ -1,0 +1,26 @@
+\begin{emt}[地震波传播路径求解]
+    \begin{itemize}
+        \item \textbf{输入 : } 地质模型,检波器和假设震源的坐标.
+        \item \textbf{输出 : } 地震波从震源传播到检波器的路径.
+    \end{itemize}
+ \end{emt}
+
+ \begin{defn}[Fermat's principle]
+    光传播的路径是光程取极值的路径.
+ \end{defn}
+
+ \begin{emt}[转化为数学问题]
+    \begin{itemize}
+        \item 不妨设起始点和终点分别为$(x_0,y_0,z_0),(x_1,y_1,z_1)$,两个地层中地震波传播速度为$v_0,v_1$.
+        传播时间函数$f(x,y)$如下定义
+        \begin{tiny}
+         \begin{equation}
+            f(x,y) = \sqrt{(x - x_0)^2 + (y - y_0)^2 + (z(x,y) - z_0)^2} / v_0 +
+            \sqrt{(x - x_1)^2 + (y - y_1)^2 + (z(x,y) - z_1)^2} / v_1.
+        \end{equation}
+    \end{tiny}
+        % 上式为地震波从起点传播到终点的时间关于地震波在地层分界面上的折射点$(x,y,z(x,y))$的函数
+        % $f(x,y)$.
+    \end{itemize}
+
+ \end{emt}

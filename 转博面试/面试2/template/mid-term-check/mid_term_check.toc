@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{课程学习}{3}{0}{1}
+\beamer@sectionintoc {2}{研究内容}{4}{0}{2}
+\beamer@sectionintoc {3}{前期准备}{5}{0}{3}
+\beamer@sectionintoc {4}{研究进展}{11}{0}{4}
+\beamer@sectionintoc {5}{后期研究计划}{15}{0}{5}
