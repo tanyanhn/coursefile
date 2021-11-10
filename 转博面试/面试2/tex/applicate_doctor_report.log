@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.30)  10 NOV 2021 06:31
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.4)  10 NOV 2021 16:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/ytan/Desktop/Github/myrepo/coursefile/转博面试/面试2/tex/applicate_doctor_report
-(/home/ytan/Desktop/Github/myrepo/coursefile/转博面试/面试2/tex/applicate_doctor_report.tex
+**/home/yan/Desktop/Github/myrep/coursefile/转博面试/面试2/tex/applicate_doctor_report
+(/home/yan/Desktop/Github/myrep/coursefile/转博面试/面试2/tex/applicate_doctor_report.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/ctex/ctexbeamer.cls (/usr/local/texlive/2021/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2021/03/14 v2.5.6 Backend configuration file (CTEX)
@@ -1359,11 +1359,11 @@ Package rerunfilecheck Info: File `applicate_doctor_report.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  43896 strings out of 476919
- 1067472 string characters out of 5821840
- 1557672 words of memory out of 5000000
+ 1067466 string characters out of 5821841
+ 1556673 words of memory out of 5000000
  62960 multiletter control sequences out of 15000+600000
  413992 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 145i,14n,146p,799b,751s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 145i,14n,146p,797b,751s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on applicate_doctor_report.pdf (17 pages).

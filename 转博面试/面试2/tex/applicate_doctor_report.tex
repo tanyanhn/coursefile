@@ -218,7 +218,7 @@
 \subsection{微地震的反问题}
 
 \begin{frame}[fragile]
-    \frametitle{背景}
+    \frametitle{研究背景}
     \begin{itemize}
         \item  微地震通常是由于地质勘探或者一些开采活动导致地下裂缝错位,从而形成的
         低频率弹性波.
@@ -231,15 +231,15 @@
             \column{0.6\linewidth}<1->
             \includegraphics[width = \textwidth]{fig/layer.png}
         \end{columns}
-        \item 因为地质结构的复杂,地震波非直线传播,并且微地震常发生于地下深处,检波器获取的信息少
-        ,高精度反演非常困难. 
+        \item 地质结构的复杂,地震波非直线传播,微地震常发生于地下深处,检波器获取的信息少
+        ,导致高精度反演非常困难. 
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{解决思路}
     \begin{itemize}
-        \item 因为检波器获取的到时是地震波最早到时,计算假设震源到检波器
+        \item 检波器获取的到时是地震波最早到时,计算假设震源到检波器
         的最短时间,得到超定方程组.
         \begin{equation}
             V^lS^k - V^kS^l - V^lV^k(t^l-t^k) =0, \quad l \neq k.
@@ -282,8 +282,7 @@
         \end{enumerate}
         这些方法舍弃了界面上的拓扑信息,几何问题转化为求解微分方程.过去几十年这些方法取得
         了大量的成果.
-        \item 现在想在复杂拓扑区域上进行数值模拟.
-        \item 但是这些方法避免了几何建模使得很难严格地处理拓扑变化.
+        \item 想在复杂拓扑区域上进行数值模拟,这些方法避免了几何建模使得很难严格地处理拓扑变化.
         \item 张老师2020年的论文中建立了一种流体建模的理论基础,在二维空间中
         提出了数学模型殷集来表示任意有物理意义的区域.
     \end{itemize}
@@ -398,7 +397,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{工作的方向} 
+    \frametitle{研究的方向} 
     \begin{itemize}
         \item 在CubicMars方法的基础上，结合二维殷集，增添对拓扑变化的处理.
         \item 需要在有拓扑变化的流相追踪过程中保持计算精度.
@@ -425,7 +424,7 @@
 \section*{}
 \begin{frame}
     \centering\huge
-    \textcolor{red}{请各位老师批评指针！}
+    \textcolor{red}{请各位老师批评指正！}
 \end{frame}
 % \end{CJK}
 \end{document}
