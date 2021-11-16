@@ -1,7 +1,7 @@
 \babel@toc {english}{}
 \beamer@sectionintoc {1}{个人基本情况介绍}{3}{0}{1}
-\beamer@sectionintoc {2}{研究生项目详细介绍}{5}{0}{2}
-\beamer@subsectionintoc {2}{1}{微地震的反问题}{5}{0}{2}
-\beamer@subsectionintoc {2}{2}{三维殷集和布尔运算}{8}{0}{2}
-\beamer@subsectionintoc {2}{3}{CubicMars方法追踪拓扑变化}{14}{0}{2}
-\beamer@sectionintoc {3}{博士阶段的研究计划}{16}{0}{3}
+\beamer@sectionintoc {2}{硕士阶段的科研工作}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{涉密的军工项目}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{\leavevmode {\color {red}非涉密的三维殷集和布尔代数}}{5}{0}{2}
+\beamer@sectionintoc {3}{博士阶段的研究计划}{14}{0}{3}
+\beamer@subsectionintoc {3}{1}{流相的拓扑变化}{14}{0}{3}

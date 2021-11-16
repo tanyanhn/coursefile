@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.4)  10 NOV 2021 16:25
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.30)  16 NOV 2021 20:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/yan/Desktop/Github/myrep/coursefile/转博面试/面试2/tex/applicate_doctor_report
-(/home/yan/Desktop/Github/myrep/coursefile/转博面试/面试2/tex/applicate_doctor_report.tex
+**/home/ytan/Desktop/Github/myrepo/coursefile/转博面试/面试2/tex/applicate_doctor_report
+(/home/ytan/Desktop/Github/myrepo/coursefile/转博面试/面试2/tex/applicate_doctor_report.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/ctex/ctexbeamer.cls (/usr/local/texlive/2021/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2021/03/14 v2.5.6 Backend configuration file (CTEX)
@@ -684,7 +684,7 @@ Package fontspec Info: Font family 'FandolSong-Regular(0)' created for font
 
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/ctex/config/ctex.cfg
 File: ctex.cfg 2021/03/14 v2.5.6 Configuration file (CTEX)
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerthemeAntibes.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerouterthemetree.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerinnerthemerectangles.sty)) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamercolorthemebeaver.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/lastpage/lastpage.sty
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerthemeMadrid.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamercolorthemewhale.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamercolorthemeorchid.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerinnerthemerounded.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerouterthemeinfolines.sty)) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerouterthemesplit.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamercolorthemebeaver.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/lastpage/lastpage.sty
 Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
@@ -821,64 +821,140 @@ Package babel Info: \l@australian = using hyphenrules for ukenglish
 (babel)             (\language21) on input line 105.
 Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 (babel)             (\language21) on input line 108.
-)) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerfontthemeserif.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/palatino.sty
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/animate/animate.sty
+Package: animate 2020/10/07 PDF & SVG animations from files and inline graphics
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks45
+\XKV@tempa@toks=\toks46
+)
+\XKV@depth=\count377
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/oberdiek/ifdraft.sty
+Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count378
+\calc@Bcount=\count379
+\calc@Adimen=\dimen334
+\calc@Bdimen=\dimen335
+\calc@Askip=\skip76
+\calc@Bskip=\skip77
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count380
+\calc@Cskip=\skip78
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+)
+\c@abspage=\count381
+Package zref Info: New property: abspage on input line 66.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/media9/pdfbase.sty
+Package: pdfbase 2021/03/01 v0.46 driver independent access to low-level PDF features
+\g_pbs_page_int=\count382
+\g_pbs_obj_int=\count383
+\g_pbs_oc_int=\count384
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/ocgx2/ocgbase.sty
+Package: ocgbase 2021/01/25 v0.18 support package for ocgx2.sty
+\g_ocgbase_nd_int=\count385
+)
+\@anim@box=\box124
+\@anim@measbox=\box125
+\@anim@tmpdima=\dimen336
+\@anim@tmpdimb=\dimen337
+\@anim@num=\count386
+\@anim@curframe=\count387
+\@anim@curframe@zb=\count388
+\@anim@resizeflags=\count389
+\@anim@skipfram=\count390
+\@anim@mulframecnt=\count391
+\@anim@@tmlnfile=\read4
+\@anim@tmpcnt=\count392
+\c@@anim@ltxcnt=\count393
+\@anim@curlayer=\count394
+\@anim@lineno=\count395
+\@anim@curfield=\count396
+\@anim@@resizeflags=\count397
+)
+
+Package xeCJK Warning: Redefining CJKfamily `\CJKrmdefault'
+(xeCJK)                (FandolSong-Regular(0)).
+
+
+Package fontspec Warning: Font "gkai00mp" does not contain requested Script
+(fontspec)                "CJK".
+
+
+Package fontspec Info: Font family 'gkai00mp.ttf(0)' created for font
+(fontspec)             'gkai00mp.ttf' with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[gkai00mp.ttf]/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerfontthemeserif.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/palatino.sty
 Package: palatino 2020/03/25 PSNFSS-v9.3 (SPQR) 
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfnodeparttextbox=\box124
+\pgfnodeparttextbox=\box126
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@nodesepstart=\dimen334
-\pgf@nodesepend=\dimen335
+\pgf@nodesepstart=\dimen338
+\pgf@nodesepend=\dimen339
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen336
-\pgffor@skip=\dimen337
-\pgffor@stack=\toks45
-\pgffor@toks=\toks46
+\pgffor@iter=\dimen340
+\pgffor@skip=\dimen341
+\pgffor@stack=\toks47
+\pgffor@toks=\toks48
 )) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@plot@mark@count=\count377
-\pgfplotmarksize=\dimen338
+\pgf@plot@mark@count=\count398
+\pgfplotmarksize=\dimen342
 )
-\tikz@lastx=\dimen339
-\tikz@lasty=\dimen340
-\tikz@lastxsaved=\dimen341
-\tikz@lastysaved=\dimen342
-\tikz@lastmovetox=\dimen343
-\tikz@lastmovetoy=\dimen344
-\tikzleveldistance=\dimen345
-\tikzsiblingdistance=\dimen346
-\tikz@figbox=\box125
-\tikz@figbox@bg=\box126
-\tikz@tempbox=\box127
-\tikz@tempbox@bg=\box128
-\tikztreelevel=\count378
-\tikznumberofchildren=\count379
-\tikznumberofcurrentchild=\count380
-\tikz@fig@count=\count381
+\tikz@lastx=\dimen343
+\tikz@lasty=\dimen344
+\tikz@lastxsaved=\dimen345
+\tikz@lastysaved=\dimen346
+\tikz@lastmovetox=\dimen347
+\tikz@lastmovetoy=\dimen348
+\tikzleveldistance=\dimen349
+\tikzsiblingdistance=\dimen350
+\tikz@figbox=\box127
+\tikz@figbox@bg=\box128
+\tikz@tempbox=\box129
+\tikz@tempbox@bg=\box130
+\tikztreelevel=\count399
+\tikznumberofchildren=\count400
+\tikznumberofcurrentchild=\count401
+\tikz@fig@count=\count402
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfmatrixcurrentrow=\count382
-\pgfmatrixcurrentcolumn=\count383
-\pgf@matrix@numberofcolumns=\count384
+\pgfmatrixcurrentrow=\count403
+\pgfmatrixcurrentcolumn=\count404
+\pgf@matrix@numberofcolumns=\count405
 )
-\tikz@expandcount=\count385
+\tikz@expandcount=\count406
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ))) (/usr/local/texlive/2021/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
@@ -889,28 +965,28 @@ File: tikzlibrarymatrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 File: tikzlibraryquotes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfarrowinset=\dimen347
-\pgfarrowlength=\dimen348
-\pgfarrowwidth=\dimen349
-\pgfarrowlinewidth=\dimen350
+\pgfarrowinset=\dimen351
+\pgfarrowlength=\dimen352
+\pgfarrowwidth=\dimen353
+\pgfarrowlinewidth=\dimen354
 ))) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen351
-\pgfdecoratedremainingdistance=\dimen352
-\pgfdecoratedinputsegmentcompleteddistance=\dimen353
-\pgfdecoratedinputsegmentremainingdistance=\dimen354
-\pgf@decorate@distancetomove=\dimen355
-\pgf@decorate@repeatstate=\count386
-\pgfdecorationsegmentamplitude=\dimen356
-\pgfdecorationsegmentlength=\dimen357
+\pgfdecoratedcompleteddistance=\dimen355
+\pgfdecoratedremainingdistance=\dimen356
+\pgfdecoratedinputsegmentcompleteddistance=\dimen357
+\pgfdecoratedinputsegmentremainingdistance=\dimen358
+\pgf@decorate@distancetomove=\dimen359
+\pgf@decorate@repeatstate=\count407
+\pgfdecorationsegmentamplitude=\dimen360
+\pgfdecorationsegmentlength=\dimen361
 )
-\tikz@lib@dec@box=\box129
+\tikz@lib@dec@box=\box131
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\arrowsize=\dimen358
+\arrowsize=\dimen362
 )) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
@@ -920,134 +996,87 @@ File: pgflibraryshapes.geometric.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks47
-\t@pgfplots@tokb=\toks48
-\t@pgfplots@tokc=\toks49
-\pgfplots@tmpa=\dimen359
-\c@pgfplots@coordindex=\count387
-\c@pgfplots@scanlineindex=\count388
+\t@pgfplots@toka=\toks49
+\t@pgfplots@tokb=\toks50
+\t@pgfplots@tokc=\toks51
+\pgfplots@tmpa=\dimen363
+\c@pgfplots@coordindex=\count408
+\c@pgfplots@scanlineindex=\count409
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count389
+\c@pgfplotsarray@tmp=\count410
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count390
-\t@pgfplotstable@a=\toks50
+\c@pgfplotstable@counta=\count411
+\t@pgfplotstable@a=\toks52
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count391
+\c@pgfplotslibrarysurf@no=\count412
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-xetex.def (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-dvipdfmx.def
-\c@pgfplotslibrarysurf@streamlen=\count392
+\c@pgfplotslibrarysurf@streamlen=\count413
 )))) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex))
-\pgfplots@numplots=\count393
-\pgfplots@xmin@reg=\dimen360
-\pgfplots@xmax@reg=\dimen361
-\pgfplots@ymin@reg=\dimen362
-\pgfplots@ymax@reg=\dimen363
-\pgfplots@zmin@reg=\dimen364
-\pgfplots@zmax@reg=\dimen365
+\pgfplots@numplots=\count414
+\pgfplots@xmin@reg=\dimen364
+\pgfplots@xmax@reg=\dimen365
+\pgfplots@ymin@reg=\dimen366
+\pgfplots@ymax@reg=\dimen367
+\pgfplots@zmin@reg=\dimen368
+\pgfplots@zmax@reg=\dimen369
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ))) (/usr/local/texlive/2021/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen366
-\WF@size=\dimen367
-\c@WF@wrappedlines=\count394
-\WF@box=\box130
-\WF@everypar=\toks51
+\wrapoverhang=\dimen370
+\WF@size=\dimen371
+\c@WF@wrappedlines=\count415
+\WF@box=\box132
+\WF@everypar=\toks53
 Package: wrapfig 2003/01/31  v 3.6
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
-\c@sit=\count395
-\c@prop=\count396
-\c@rtm=\count397
-\c@cor=\count398
-\c@das=\count399
-\c@nex=\count400
-\c@cla=\count401
-\c@emt=\count402
-\c@defn=\count403
-\c@rem=\count404
+\c@sit=\count416
+\c@prop=\count417
+\c@rtm=\count418
+\c@cor=\count419
+\c@das=\count420
+\c@nex=\count421
+\c@cla=\count422
+\c@emt=\count423
+\c@defn=\count424
+\c@rem=\count425
+LaTeX Font Info:    Trying to load font information for TU+ppl on input line 154.
+LaTeX Font Info:    No file TUppl.fd. on input line 154.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 140.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 1.82538pt
-(hyperref)                removed on input line 140.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\newline' on input line 140.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\newline' on input line 140.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 140.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 1.82538pt
-(hyperref)                removed on input line 140.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\newline' on input line 140.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\newline' on input line 140.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 140.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 1.82538pt
-(hyperref)                removed on input line 140.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 140.
-
-LaTeX Font Info:    Trying to load font information for TU+ppl on input line 149.
-LaTeX Font Info:    No file TUppl.fd. on input line 149.
 
 LaTeX Font Warning: Font shape `TU/ppl/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 149.
+(Font)              using `TU/lmr/m/n' instead on input line 154.
 
 (./applicate_doctor_report.aux)
 \openout1 = `applicate_doctor_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 154.
+LaTeX Font Info:    ... okay on input line 154.
  ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 149.
+LaTeX Info: Redefining \selectfont on input line 154.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1057,14 +1086,14 @@ LaTeX Info: Redefining \selectfont on input line 149.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(28.45274pt, 307.28987pt, 28.45274pt)
+* h-part:(L,W,R)=(10.95pt, 342.29536pt, 10.95pt)
 * v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
 * \paperwidth=364.19536pt
 * \paperheight=273.14662pt
-* \textwidth=307.28987pt
+* \textwidth=342.29536pt
 * \textheight=244.6939pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
+* \oddsidemargin=-61.31999pt
+* \evensidemargin=-61.31999pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -1083,7 +1112,7 @@ LaTeX Info: Redefining \selectfont on input line 149.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 149.
+Package hyperref Info: Link coloring OFF on input line 154.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1091,11 +1120,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count405
+\c@section@level=\count426
 )
-LaTeX Info: Redefining \ref on input line 149.
-LaTeX Info: Redefining \pageref on input line 149.
-LaTeX Info: Redefining \nameref on input line 149.
+LaTeX Info: Redefining \ref on input line 154.
+LaTeX Info: Redefining \pageref on input line 154.
+LaTeX Info: Redefining \nameref on input line 154.
  (./applicate_doctor_report.out) (./applicate_doctor_report.out)
 \@outlinefile=\write5
 \openout5 = `applicate_doctor_report.out'.
@@ -1103,41 +1132,41 @@ LaTeX Info: Redefining \nameref on input line 149.
 \symnumbers=\mathgroup7
 \sympureletters=\mathgroup8
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/ppl/m/n on input line 149.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+(Font)                  OT1/cmr/m/n --> TU/ppl/m/n on input line 154.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/ppl/b/n on input line 149.
+(Font)                  OT1/cmr/bx/n --> TU/ppl/b/n on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/ppl/b/n on input line 149.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 149.
+(Font)                  OT1/cmr/bx/n --> TU/ppl/b/n on input line 154.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 149.
+(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/phv/m/n on input line 149.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 149.
+(Font)                  OT1/cmss/bx/n --> TU/phv/m/n on input line 154.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/ppl/m/it on input line 149.
+(Font)                  OT1/cmr/m/it --> TU/ppl/m/it on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/ppl/m/it on input line 149.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 149.
+(Font)                  OT1/cmr/bx/it --> TU/ppl/m/it on input line 154.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 149.
+(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 149.
+(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 154.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  TU/ppl/m/n --> TU/ppl/b/n on input line 149.
+(Font)                  TU/ppl/m/n --> TU/ppl/b/n on input line 154.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  TU/ppl/m/it --> TU/ppl/b/it on input line 149.
+(Font)                  TU/ppl/m/it --> TU/ppl/b/it on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/ppl/b/n on input line 149.
+(Font)                  OT1/cmr/bx/n --> TU/ppl/b/n on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  TU/ppl/b/n --> TU/ppl/b/n on input line 149.
+(Font)                  TU/ppl/b/n --> TU/ppl/b/n on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/phv/m/n --> TU/phv/b/n on input line 149.
+(Font)                  TU/phv/m/n --> TU/phv/b/n on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/ppl/m/it --> TU/ppl/b/it on input line 149.
+(Font)                  TU/ppl/m/it --> TU/ppl/b/it on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/pcr/m/n --> TU/pcr/b/n on input line 149.
+(Font)                  TU/pcr/m/n --> TU/pcr/b/n on input line 154.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
@@ -1159,128 +1188,114 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 149.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 149.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 149.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 149.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 149.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 149.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 149.
-LaTeX Font Info:    Redeclaring math accent \check on input line 149.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 149.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 149.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 149.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 149.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 149.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 154.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 154.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 154.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 154.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 154.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 154.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 154.
+LaTeX Font Info:    Redeclaring math accent \check on input line 154.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 154.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 154.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 154.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 154.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 149.
+(Font)              `operators' in the math version `normal' on input line 154.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/ppl/m/n on input line 149.
+(Font)                  OT1/cmr/m/n --> TU/ppl/m/n on input line 154.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 149.
+(Font)              `operators' in the math version `bold' on input line 154.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/ppl/m/n on input line 149.
+(Font)                  OT1/cmr/bx/n --> TU/ppl/m/n on input line 154.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/ppl/m/n --> TU/ppl/m/n on input line 149.
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 149.
+(Font)                  TU/ppl/m/n --> TU/ppl/m/n on input line 154.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  TU/ppl/m/it --> TU/ppl/m/it on input line 149.
+(Font)                  TU/ppl/m/it --> TU/ppl/m/it on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  TU/ppl/b/n --> TU/ppl/b/n on input line 149.
+(Font)                  TU/ppl/b/n --> TU/ppl/b/n on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  TU/phv/m/n --> TU/phv/m/n on input line 149.
+(Font)                  TU/phv/m/n --> TU/phv/m/n on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  TU/pcr/m/n --> TU/pcr/m/n on input line 149.
+(Font)                  TU/pcr/m/n --> TU/pcr/m/n on input line 154.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/ppl/m/n --> TU/ppl/b/n on input line 149.
+(Font)                  TU/ppl/m/n --> TU/ppl/b/n on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/ppl/b/it --> TU/ppl/b/it on input line 149.
+(Font)                  TU/ppl/b/it --> TU/ppl/b/it on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/phv/b/n --> TU/phv/b/n on input line 149.
+(Font)                  TU/phv/b/n --> TU/phv/b/n on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/pcr/b/n --> TU/pcr/b/n on input line 149.
+(Font)                  TU/pcr/b/n --> TU/pcr/b/n on input line 154.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 149.
-\c@lstlisting=\count406
+(lastpage)             ! on input line 154.
+\c@lstlisting=\count427
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.17}).
 
-(./applicate_doctor_report.nav) [1
+(./applicate_doctor_report.nav)
+Missing character: There is no 5 ("35) in font nullfont!
+LaTeX Font Info:    Trying to load font information for U+msa on input line 160.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 160.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 160.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+
+LaTeX Font Warning: Font shape `TU/ppl/m/it' undefined
+(Font)              using `TU/ppl/m/n' instead on input line 160.
+
+[1
 
 ] (./applicate_doctor_report.toc)
 
 LaTeX Font Warning: Font shape `TU/ppl/m/sc' undefined
-(Font)              using `TU/ppl/m/n' instead on input line 161.
+(Font)              using `TU/ppl/m/n' instead on input line 166.
 
 
-LaTeX Font Warning: Font shape `TU/FandolSong-Regular(0)/m/sc' undefined
-(Font)              using `TU/FandolSong-Regular(0)/m/n' instead on input line 161.
+LaTeX Font Warning: Font shape `TU/gkai00mp.ttf(0)/m/sc' undefined
+(Font)              using `TU/gkai00mp.ttf(0)/m/n' instead on input line 166.
 
 [2
 
 ]
 \openout4 = `applicate_doctor_report.vrb'.
 
- (./applicate_doctor_report.vrb
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 5.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-
-LaTeX Font Warning: Font shape `TU/ppl/m/it' undefined
-(Font)              using `TU/ppl/m/n' instead on input line 5.
-
-) [3
+ (./applicate_doctor_report.vrb) [3
 
 ]
-\openout4 = `applicate_doctor_report.vrb'.
-
- (./applicate_doctor_report.vrb
-File: fig/articlename1.png Graphic file (type bmp)
-<fig/articlename1.png>
-) [4
+File: fig/s12.png Graphic file (type bmp)
+<fig/s12.png>
+ [4
 
 ]
-\openout4 = `applicate_doctor_report.vrb'.
-
- (./applicate_doctor_report.vrb
-File: fig/s2p1.jpg Graphic file (type bmp)
-<fig/s2p1.jpg>
-File: fig/layer.png Graphic file (type bmp)
-<fig/layer.png>
-) [5
+File: fig/s14.png Graphic file (type bmp)
+<fig/s14.png>
+ [5
 
 ]
-File: fig/layer1.png Graphic file (type bmp)
-<fig/layer1.png>
-File: fig/layer2.png Graphic file (type bmp)
-<fig/layer2.png>
+File: fig/s18.png Graphic file (type bmp)
+<fig/s18.png>
+File: fig/s19.png Graphic file (type bmp)
+<fig/s19.png>
  [6
-
-]
-File: fig/sol122.png Graphic file (type bmp)
-<fig/sol122.png>
- [7
-
-] [8
 
 ]
 File: fig/p.png Graphic file (type bmp)
@@ -1289,20 +1304,32 @@ File: fig/m.png Graphic file (type bmp)
 <fig/m.png>
 File: fig/pm.png Graphic file (type bmp)
 <fig/pm.png>
- [9
+ [7
+
+]
+File: fig/s15.png Graphic file (type bmp)
+<fig/s15.png>
+ [8
 
 ]
 File: fig/s1.png Graphic file (type bmp)
 <fig/s1.png>
 File: fig/s2.png Graphic file (type bmp)
 <fig/s2.png>
- [10
+ [9
 
 ]
 File: fig/s3.png Graphic file (type bmp)
 <fig/s3.png>
 File: fig/s4.png Graphic file (type bmp)
 <fig/s4.png>
+ [10
+
+]
+File: fig/s16.png Graphic file (type bmp)
+<fig/s16.png>
+File: fig/s17.png Graphic file (type bmp)
+<fig/s17.png>
 File: fig/s5.png Graphic file (type bmp)
 <fig/s5.png>
 File: fig/s6.png Graphic file (type bmp)
@@ -1314,29 +1341,215 @@ File: fig/s7.png Graphic file (type bmp)
 <fig/s7.png>
 File: fig/s8.png Graphic file (type bmp)
 <fig/s8.png>
-File: fig/s9.png Graphic file (type bmp)
-<fig/s9.png>
 File: fig/s10.png Graphic file (type bmp)
 <fig/s10.png>
+File: fig/s9.png Graphic file (type bmp)
+<fig/s9.png>
 File: fig/s11.png Graphic file (type bmp)
 <fig/s11.png>
  [12
 
-] [13
+]
+File: fig/SIAM_Review.png Graphic file (type bmp)
+<fig/SIAM_Review.png>
 
-] [14
+Overfull \vbox (31.79657pt too high) detected at line 422
+ []
+
+[13
 
 ]
-File: fig/s13.png Graphic file (type bmp)
-<fig/s13.png>
- [15
+File: fig/gif/1/vortex80N64step000.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step000.png>
+ <a0,fr0>
+File: fig/gif/1/vortex80N64step001.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step001.png>
+ <a0,fr1>
+File: fig/gif/1/vortex80N64step002.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step002.png>
+ <a0,fr2>
+File: fig/gif/1/vortex80N64step003.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step003.png>
+ <a0,fr3>
+File: fig/gif/1/vortex80N64step004.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step004.png>
+ <a0,fr4>
+File: fig/gif/1/vortex80N64step005.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step005.png>
+ <a0,fr5>
+File: fig/gif/1/vortex80N64step006.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step006.png>
+ <a0,fr6>
+File: fig/gif/1/vortex80N64step007.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step007.png>
+ <a0,fr7>
+File: fig/gif/1/vortex80N64step008.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step008.png>
+ <a0,fr8>
+File: fig/gif/1/vortex80N64step009.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step009.png>
+ <a0,fr9>
+File: fig/gif/1/vortex80N64step0010.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0010.png>
+ <a0,fr10>
+File: fig/gif/1/vortex80N64step0011.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0011.png>
+ <a0,fr11>
+File: fig/gif/1/vortex80N64step0012.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0012.png>
+ <a0,fr12>
+File: fig/gif/1/vortex80N64step0013.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0013.png>
+ <a0,fr13>
+File: fig/gif/1/vortex80N64step0014.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0014.png>
+ <a0,fr14>
+File: fig/gif/1/vortex80N64step0015.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0015.png>
+ <a0,fr15>
+File: fig/gif/1/vortex80N64step0016.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0016.png>
+ <a0,fr16>
+File: fig/gif/1/vortex80N64step0017.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0017.png>
+ <a0,fr17>
+File: fig/gif/1/vortex80N64step0018.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0018.png>
+ <a0,fr18>
+File: fig/gif/1/vortex80N64step0019.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0019.png>
+ <a0,fr19>
+File: fig/gif/1/vortex80N64step0020.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0020.png>
+ <a0,fr20>
+File: fig/gif/1/vortex80N64step0021.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0021.png>
+ <a0,fr21>
+File: fig/gif/1/vortex80N64step0022.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0022.png>
+ <a0,fr22>
+File: fig/gif/1/vortex80N64step0023.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0023.png>
+ <a0,fr23>
+File: fig/gif/1/vortex80N64step0024.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0024.png>
+ <a0,fr24>
+File: fig/gif/1/vortex80N64step0025.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0025.png>
+ <a0,fr25>
+File: fig/gif/1/vortex80N64step0026.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0026.png>
+ <a0,fr26>
+File: fig/gif/1/vortex80N64step0027.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0027.png>
+ <a0,fr27>
+File: fig/gif/1/vortex80N64step0028.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0028.png>
+ <a0,fr28>
+File: fig/gif/1/vortex80N64step0029.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0029.png>
+ <a0,fr29>
+File: fig/gif/1/vortex80N64step0030.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0030.png>
+ <a0,fr30>
+File: fig/gif/1/vortex80N64step0031.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0031.png>
+ <a0,fr31>
+File: fig/gif/1/vortex80N64step0032.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0032.png>
+ <a0,fr32>
+File: fig/gif/1/vortex80N64step0033.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0033.png>
+ <a0,fr33>
+File: fig/gif/1/vortex80N64step0034.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0034.png>
+ <a0,fr34>
+File: fig/gif/1/vortex80N64step0035.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0035.png>
+ <a0,fr35>
+File: fig/gif/1/vortex80N64step0036.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0036.png>
+ <a0,fr36>
+File: fig/gif/1/vortex80N64step0037.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0037.png>
+ <a0,fr37>
+File: fig/gif/1/vortex80N64step0038.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0038.png>
+ <a0,fr38>
+File: fig/gif/1/vortex80N64step0039.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0039.png>
+ <a0,fr39>
+File: fig/gif/1/vortex80N64step0040.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0040.png>
+ <a0,fr40>
+File: fig/gif/1/vortex80N64step0041.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0041.png>
+ <a0,fr41>
+File: fig/gif/1/vortex80N64step0042.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0042.png>
+ <a0,fr42>
+File: fig/gif/1/vortex80N64step0043.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0043.png>
+ <a0,fr43>
+File: fig/gif/1/vortex80N64step0044.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0044.png>
+ <a0,fr44>
+File: fig/gif/1/vortex80N64step0045.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0045.png>
+ <a0,fr45>
+File: fig/gif/1/vortex80N64step0046.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0046.png>
+ <a0,fr46>
+File: fig/gif/1/vortex80N64step0047.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0047.png>
+ <a0,fr47>
+File: fig/gif/1/vortex80N64step0048.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0048.png>
+ <a0,fr48>
+File: fig/gif/1/vortex80N64step0049.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0049.png>
+ <a0,fr49>
+File: fig/gif/1/vortex80N64step0050.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0050.png>
+ <a0,fr50>
+File: fig/gif/1/vortex80N64step0051.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0051.png>
+ <a0,fr51>
+File: fig/gif/1/vortex80N64step0052.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0052.png>
+ <a0,fr52>
+File: fig/gif/1/vortex80N64step0053.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0053.png>
+ <a0,fr53>
+File: fig/gif/1/vortex80N64step0054.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0054.png>
+ <a0,fr54>
+File: fig/gif/1/vortex80N64step0055.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0055.png>
+ <a0,fr55>
+File: fig/gif/1/vortex80N64step0056.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0056.png>
+ <a0,fr56>
+File: fig/gif/1/vortex80N64step0057.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0057.png>
+ <a0,fr57>
+File: fig/gif/1/vortex80N64step0058.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0058.png>
+ <a0,fr58>
+File: fig/gif/1/vortex80N64step0059.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0059.png>
+ <a0,fr59>
+File: fig/gif/1/vortex80N64step0060.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0060.png>
+ <a0,fr60>
+File: fig/gif/1/vortex80N64step0061.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0061.png>
+ <a0,fr61>
+File: fig/gif/1/vortex80N64step0062.png Graphic file (type bmp)
+<fig/gif/1/vortex80N64step0062.png>
+ <a0,fr62> [14
 
-]
-File: fig/s12.png Graphic file (type bmp)
-<fig/s12.png>
- [16
-
-] [17
+] [15
 
 ]
 \tf@nav=\write6
@@ -1355,15 +1568,15 @@ AED: lastpage setting LastPage
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `applicate_doctor_report.out' has not changed.
-(rerunfilecheck)             Checksum: 1701CB3E25B070D23885501F6E797CD3;781.
+(rerunfilecheck)             Checksum: D10FE5FDF88D352C5148C21718687911;760.
  ) 
 Here is how much of TeX's memory you used:
- 43896 strings out of 476919
- 1067466 string characters out of 5821841
- 1556673 words of memory out of 5000000
- 62960 multiletter control sequences out of 15000+600000
- 413992 words of font info for 93 fonts, out of 8000000 for 9000
+ 46051 strings out of 476919
+ 1115652 string characters out of 5821840
+ 1653471 words of memory out of 5000000
+ 65019 multiletter control sequences out of 15000+600000
+ 414008 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 145i,14n,146p,797b,751s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 145i,15n,146p,799b,766s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on applicate_doctor_report.pdf (17 pages).
+Output written on applicate_doctor_report.pdf (15 pages).
