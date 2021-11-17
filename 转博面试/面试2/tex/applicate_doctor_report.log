@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.4)  17 NOV 2021 16:27
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.30)  18 NOV 2021 01:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/yan/Desktop/Github/myrep/coursefile/转博面试/面试2/tex/applicate_doctor_report
-(/home/yan/Desktop/Github/myrep/coursefile/转博面试/面试2/tex/applicate_doctor_report.tex
+**/home/ytan/Desktop/Github/myrepo/coursefile/转博面试/面试2/tex/applicate_doctor_report
+(/home/ytan/Desktop/Github/myrepo/coursefile/转博面试/面试2/tex/applicate_doctor_report.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/ctex/ctexbeamer.cls (/usr/local/texlive/2021/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2021/03/14 v2.5.6 Backend configuration file (CTEX)
@@ -801,18 +801,37 @@ Package: listings 2020/03/24 1.8d (Carsten Heinz)
 Package: xeCJK-listings 2020/10/19 v3.8.6 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count373
 \l__xeCJK_listings_flag_int=\count374
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip76
+\subfigcapskip=\skip77
+\subfigcaptopadj=\dimen333
+\subfigbottomskip=\skip78
+\subfigcapmargin=\dimen334
+\subfiglabelskip=\skip79
+\c@subfigure=\count375
+\c@lofdepth=\count376
+\c@subtable=\count377
+\c@lotdepth=\count378
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2021/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip80
+\subfig@bottom=\skip81
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2021/03/24 3.56 The Babel package
  (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2021/03/24 3.56 Babel common definitions
-\babel@savecnt=\count375
-\U@D=\dimen333
+\babel@savecnt=\count379
+\U@D=\dimen335
 \l@babelnohyphens=\language87
  (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/xebabel.def (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/txtbabel.def))
 \bbl@readstream=\read3
 )
 LaTeX Info: Redefining \textlatin on input line 717.
-\bbl@dirlevel=\count376
+\bbl@dirlevel=\count380
  (/usr/local/texlive/2021/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: \l@canadian = using hyphenrules for english
@@ -829,7 +848,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks45
 \XKV@tempa@toks=\toks46
 )
-\XKV@depth=\count377
+\XKV@depth=\count381
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
@@ -837,16 +856,16 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count378
-\calc@Bcount=\count379
-\calc@Adimen=\dimen334
-\calc@Bdimen=\dimen335
-\calc@Askip=\skip76
-\calc@Bskip=\skip77
+\calc@Acount=\count382
+\calc@Bcount=\count383
+\calc@Adimen=\dimen336
+\calc@Bdimen=\dimen337
+\calc@Askip=\skip82
+\calc@Bskip=\skip83
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count380
-\calc@Cskip=\skip78
+\calc@Ccount=\count384
+\calc@Cskip=\skip84
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
  (/usr/local/texlive/2021/texmf-dist/tex/latex/zref/zref-base.sty
@@ -855,57 +874,195 @@ Package zref Info: New property list: main on input line 764.
 Package zref Info: New property: default on input line 765.
 Package zref Info: New property: page on input line 766.
 )
-\c@abspage=\count381
+\c@abspage=\count385
 Package zref Info: New property: abspage on input line 66.
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/media9/pdfbase.sty
 Package: pdfbase 2021/03/01 v0.46 driver independent access to low-level PDF features
-\g_pbs_page_int=\count382
-\g_pbs_obj_int=\count383
-\g_pbs_oc_int=\count384
+\g_pbs_page_int=\count386
+\g_pbs_obj_int=\count387
+\g_pbs_oc_int=\count388
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/ocgx2/ocgbase.sty
 Package: ocgbase 2021/01/25 v0.18 support package for ocgx2.sty
-\g_ocgbase_nd_int=\count385
+\g_ocgbase_nd_int=\count389
 )
 \@anim@box=\box124
 \@anim@measbox=\box125
-\@anim@tmpdima=\dimen336
-\@anim@tmpdimb=\dimen337
-\@anim@num=\count386
-\@anim@curframe=\count387
-\@anim@curframe@zb=\count388
-\@anim@resizeflags=\count389
-\@anim@skipfram=\count390
-\@anim@mulframecnt=\count391
+\@anim@tmpdima=\dimen338
+\@anim@tmpdimb=\dimen339
+\@anim@num=\count390
+\@anim@curframe=\count391
+\@anim@curframe@zb=\count392
+\@anim@resizeflags=\count393
+\@anim@skipfram=\count394
+\@anim@mulframecnt=\count395
 \@anim@@tmlnfile=\read4
-\@anim@tmpcnt=\count392
-\c@@anim@ltxcnt=\count393
-\@anim@curlayer=\count394
-\@anim@lineno=\count395
-\@anim@curfield=\count396
-\@anim@@resizeflags=\count397
+\@anim@tmpcnt=\count396
+\c@@anim@ltxcnt=\count397
+\@anim@curlayer=\count398
+\@anim@lineno=\count399
+\@anim@curfield=\count400
+\@anim@@resizeflags=\count401
 )
+
+Package fontspec Info: Could not resolve font "Times New Roman Cyr/I" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: Font family 'TimesNewRomanCyr(0)' created for font
+(fontspec)             'Times New Roman Cyr' with options [Ligatures=TeX].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New Roman
+(fontspec)             Cyr/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Times New Roman
+(fontspec)             Cyr/B/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Times New
+(fontspec)             Roman Cyr/BI/OT:language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
 
 Package xeCJK Warning: Redefining CJKfamily `\CJKrmdefault'
 (xeCJK)                (FandolSong-Regular(0)).
 
 
-Package fontspec Warning: Font "gkai00mp" does not contain requested Script
-(fontspec)                "CJK".
+Package fontspec Info: Could not resolve font "方正新楷体简体/BI" (it probably
+(fontspec)             doesn't exist).
 
 
-Package fontspec Info: Font family 'gkai00mp.ttf(0)' created for font
-(fontspec)             'gkai00mp.ttf' with options [Script={CJK}].
+Package fontspec Info: Could not resolve font "方正新楷体简体/B" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Could not resolve font "方正新楷体简体/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Font family '方正新楷体简体(0)' created for font '方正新楷体简体'
+(fontspec)             with options [Script={CJK}].
 (fontspec)              
 (fontspec)              This font family consists of the following NFSS
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"[gkai00mp.ttf]/OT:language=dflt;"
+(fontspec)             <->"方正新楷体简体/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerfontthemeserif.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/psnfss/palatino.sty
-Package: palatino 2020/03/25 PSNFSS-v9.3 (SPQR) 
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+
+Package fontspec Info: Font family 'OpenSans(0)' created for font 'Open Sans'
+(fontspec)             with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Open
+(fontspec)             Sans/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Open
+(fontspec)             Sans/B/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->"Open
+(fontspec)             Sans/I/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Open
+(fontspec)             Sans/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+
+Package fontspec Info: Could not resolve font "Open Sans Condensed/BI" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Open Sans Condensed/B" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Open Sans Condensed/I" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: Font family 'OpenSansCondensed(0)' created for font
+(fontspec)             'Open Sans Condensed' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Open Sans
+(fontspec)             Condensed/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Could not resolve font "Times New Roman/BI" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Times New Roman/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Times New Roman/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
+(fontspec)             New Roman' with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Times New
+(fontspec)             Roman/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Could not resolve font "Times/BI" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Could not resolve font "Times/B" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Could not resolve font "Times/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: Font family 'Times(0)' created for font 'Times' with
+(fontspec)             options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Times/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+
+Package fontspec Info: Could not resolve font "Rockwell/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'Rockwell(0)' created for font 'Rockwell'
+(fontspec)             with options [].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"Rockwell/OT:language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"Rockwell/B/OT:language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"Rockwell/BI/OT:language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/beamer/beamerfontthemeserif.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
@@ -914,47 +1071,47 @@ File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@nodesepstart=\dimen338
-\pgf@nodesepend=\dimen339
+\pgf@nodesepstart=\dimen340
+\pgf@nodesepend=\dimen341
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen340
-\pgffor@skip=\dimen341
+\pgffor@iter=\dimen342
+\pgffor@skip=\dimen343
 \pgffor@stack=\toks47
 \pgffor@toks=\toks48
 )) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@plot@mark@count=\count398
-\pgfplotmarksize=\dimen342
+\pgf@plot@mark@count=\count402
+\pgfplotmarksize=\dimen344
 )
-\tikz@lastx=\dimen343
-\tikz@lasty=\dimen344
-\tikz@lastxsaved=\dimen345
-\tikz@lastysaved=\dimen346
-\tikz@lastmovetox=\dimen347
-\tikz@lastmovetoy=\dimen348
-\tikzleveldistance=\dimen349
-\tikzsiblingdistance=\dimen350
+\tikz@lastx=\dimen345
+\tikz@lasty=\dimen346
+\tikz@lastxsaved=\dimen347
+\tikz@lastysaved=\dimen348
+\tikz@lastmovetox=\dimen349
+\tikz@lastmovetoy=\dimen350
+\tikzleveldistance=\dimen351
+\tikzsiblingdistance=\dimen352
 \tikz@figbox=\box127
 \tikz@figbox@bg=\box128
 \tikz@tempbox=\box129
 \tikz@tempbox@bg=\box130
-\tikztreelevel=\count399
-\tikznumberofchildren=\count400
-\tikznumberofcurrentchild=\count401
-\tikz@fig@count=\count402
+\tikztreelevel=\count403
+\tikznumberofchildren=\count404
+\tikznumberofcurrentchild=\count405
+\tikz@fig@count=\count406
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfmatrixcurrentrow=\count403
-\pgfmatrixcurrentcolumn=\count404
-\pgf@matrix@numberofcolumns=\count405
+\pgfmatrixcurrentrow=\count407
+\pgfmatrixcurrentcolumn=\count408
+\pgf@matrix@numberofcolumns=\count409
 )
-\tikz@expandcount=\count406
+\tikz@expandcount=\count410
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ))) (/usr/local/texlive/2021/texmf-dist/tex/latex/tikz-cd/tikz-cd.sty
@@ -965,28 +1122,28 @@ File: tikzlibrarymatrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 File: tikzlibraryquotes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfarrowinset=\dimen351
-\pgfarrowlength=\dimen352
-\pgfarrowwidth=\dimen353
-\pgfarrowlinewidth=\dimen354
+\pgfarrowinset=\dimen353
+\pgfarrowlength=\dimen354
+\pgfarrowwidth=\dimen355
+\pgfarrowlinewidth=\dimen356
 ))) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen355
-\pgfdecoratedremainingdistance=\dimen356
-\pgfdecoratedinputsegmentcompleteddistance=\dimen357
-\pgfdecoratedinputsegmentremainingdistance=\dimen358
-\pgf@decorate@distancetomove=\dimen359
-\pgf@decorate@repeatstate=\count407
-\pgfdecorationsegmentamplitude=\dimen360
-\pgfdecorationsegmentlength=\dimen361
+\pgfdecoratedcompleteddistance=\dimen357
+\pgfdecoratedremainingdistance=\dimen358
+\pgfdecoratedinputsegmentcompleteddistance=\dimen359
+\pgfdecoratedinputsegmentremainingdistance=\dimen360
+\pgf@decorate@distancetomove=\dimen361
+\pgf@decorate@repeatstate=\count411
+\pgfdecorationsegmentamplitude=\dimen362
+\pgfdecorationsegmentlength=\dimen363
 )
 \tikz@lib@dec@box=\box131
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\arrowsize=\dimen362
+\arrowsize=\dimen364
 )) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
@@ -999,34 +1156,34 @@ Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
 \t@pgfplots@toka=\toks49
 \t@pgfplots@tokb=\toks50
 \t@pgfplots@tokc=\toks51
-\pgfplots@tmpa=\dimen363
-\c@pgfplots@coordindex=\count408
-\c@pgfplots@scanlineindex=\count409
+\pgfplots@tmpa=\dimen365
+\c@pgfplots@coordindex=\count412
+\c@pgfplots@scanlineindex=\count413
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count410
+\c@pgfplotsarray@tmp=\count414
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count411
+\c@pgfplotstable@counta=\count415
 \t@pgfplotstable@a=\toks52
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count412
+\c@pgfplotslibrarysurf@no=\count416
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-xetex.def (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-dvipdfmx.def
-\c@pgfplotslibrarysurf@streamlen=\count413
+\c@pgfplotslibrarysurf@streamlen=\count417
 )))) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex))) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex))
-\pgfplots@numplots=\count414
-\pgfplots@xmin@reg=\dimen364
-\pgfplots@xmax@reg=\dimen365
-\pgfplots@ymin@reg=\dimen366
-\pgfplots@ymax@reg=\dimen367
-\pgfplots@zmin@reg=\dimen368
-\pgfplots@zmax@reg=\dimen369
+\pgfplots@numplots=\count418
+\pgfplots@xmin@reg=\dimen366
+\pgfplots@xmax@reg=\dimen367
+\pgfplots@ymin@reg=\dimen368
+\pgfplots@ymax@reg=\dimen369
+\pgfplots@zmin@reg=\dimen370
+\pgfplots@zmax@reg=\dimen371
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2020/12/27 v3.1.8b (3.1.8b)
  (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ))) (/usr/local/texlive/2021/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen370
-\WF@size=\dimen371
-\c@WF@wrappedlines=\count415
+\wrapoverhang=\dimen372
+\WF@size=\dimen373
+\c@WF@wrappedlines=\count419
 \WF@box=\box132
 \WF@everypar=\toks53
 Package: wrapfig 2003/01/31  v 3.6
@@ -1035,48 +1192,41 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
-\c@sit=\count416
-\c@prop=\count417
-\c@rtm=\count418
-\c@cor=\count419
-\c@das=\count420
-\c@nex=\count421
-\c@cla=\count422
-\c@emt=\count423
-\c@defn=\count424
-\c@rem=\count425
-LaTeX Font Info:    Trying to load font information for TU+ppl on input line 154.
-LaTeX Font Info:    No file TUppl.fd. on input line 154.
-
-
-LaTeX Font Warning: Font shape `TU/ppl/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 154.
-
-No file applicate_doctor_report.aux.
+\c@sit=\count420
+\c@prop=\count421
+\c@rtm=\count422
+\c@cor=\count423
+\c@das=\count424
+\c@nex=\count425
+\c@cla=\count426
+\c@emt=\count427
+\c@defn=\count428
+\c@rem=\count429
+ (./applicate_doctor_report.aux)
 \openout1 = `applicate_doctor_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 154.
-LaTeX Font Info:    ... okay on input line 154.
-ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 154.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+ ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 164.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1112,7 +1262,7 @@ LaTeX Info: Redefining \selectfont on input line 154.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 154.
+Package hyperref Info: Link coloring OFF on input line 164.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1120,57 +1270,54 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count426
+\c@section@level=\count430
 )
-LaTeX Info: Redefining \ref on input line 154.
-LaTeX Info: Redefining \pageref on input line 154.
-LaTeX Info: Redefining \nameref on input line 154.
+LaTeX Info: Redefining \ref on input line 164.
+LaTeX Info: Redefining \pageref on input line 164.
+LaTeX Info: Redefining \nameref on input line 164.
+ (./applicate_doctor_report.out) (./applicate_doctor_report.out)
 \@outlinefile=\write5
 \openout5 = `applicate_doctor_report.out'.
-
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 \symnumbers=\mathgroup7
 \sympureletters=\mathgroup8
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/ppl/m/n on input line 154.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 154.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRomanCyr(0)/m/n on input line 164.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/ppl/b/n on input line 154.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRomanCyr(0)/b/n on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/ppl/b/n on input line 154.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 154.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRomanCyr(0)/b/n on input line 164.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/phv/m/n on input line 154.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/phv/m/n on input line 154.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 154.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/m/n on input line 164.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/ppl/m/it on input line 154.
+(Font)                  OT1/cmr/m/it --> TU/TimesNewRomanCyr(0)/m/it on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/ppl/m/it on input line 154.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 154.
+(Font)                  OT1/cmr/bx/it --> TU/TimesNewRomanCyr(0)/m/it on input line 164.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 154.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/pcr/m/n on input line 154.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 164.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  TU/ppl/m/n --> TU/ppl/b/n on input line 154.
+(Font)                  TU/TimesNewRomanCyr(0)/m/n --> TU/TimesNewRomanCyr(0)/b/n on input line 164.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  TU/ppl/m/it --> TU/ppl/b/it on input line 154.
+(Font)                  TU/TimesNewRomanCyr(0)/m/it --> TU/TimesNewRomanCyr(0)/b/it on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/ppl/b/n on input line 154.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRomanCyr(0)/b/n on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  TU/ppl/b/n --> TU/ppl/b/n on input line 154.
+(Font)                  TU/TimesNewRomanCyr(0)/b/n --> TU/TimesNewRomanCyr(0)/b/n on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/phv/m/n --> TU/phv/b/n on input line 154.
+(Font)                  TU/lmss/m/n --> TU/lmss/b/n on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/ppl/m/it --> TU/ppl/b/it on input line 154.
+(Font)                  TU/TimesNewRomanCyr(0)/m/it --> TU/TimesNewRomanCyr(0)/b/it on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/pcr/m/n --> TU/pcr/b/n on input line 154.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
+(Font)                  TU/lmtt/m/n --> TU/lmtt/b/n on input line 164.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
 Dictionary: translator-bibliography-dictionary, Language: English 
@@ -1191,93 +1338,69 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 154.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 154.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 154.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 154.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 154.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 154.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 154.
-LaTeX Font Info:    Redeclaring math accent \check on input line 154.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 154.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 154.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 154.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 154.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 154.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 154.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 154.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 154.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 154.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 154.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 154.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 154.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 154.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 154.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 154.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 154.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 164.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 164.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 164.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 164.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 164.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 164.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 164.
+LaTeX Font Info:    Redeclaring math accent \check on input line 164.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 164.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 164.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 164.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 164.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 154.
+(Font)              `operators' in the math version `normal' on input line 164.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/ppl/m/n on input line 154.
+(Font)                  OT1/cmr/m/n --> TU/TimesNewRomanCyr(0)/m/n on input line 164.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 154.
+(Font)              `operators' in the math version `bold' on input line 164.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/ppl/m/n on input line 154.
+(Font)                  OT1/cmr/bx/n --> TU/TimesNewRomanCyr(0)/m/n on input line 164.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/ppl/m/n --> TU/ppl/m/n on input line 154.
-LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 154.
+(Font)                  TU/TimesNewRomanCyr(0)/m/n --> TU/TimesNewRomanCyr(0)/m/n on input line 164.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  TU/ppl/m/it --> TU/ppl/m/it on input line 154.
+(Font)                  TU/TimesNewRomanCyr(0)/m/it --> TU/TimesNewRomanCyr(0)/m/it on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  TU/ppl/b/n --> TU/ppl/b/n on input line 154.
+(Font)                  TU/TimesNewRomanCyr(0)/b/n --> TU/TimesNewRomanCyr(0)/b/n on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  TU/phv/m/n --> TU/phv/m/n on input line 154.
+(Font)                  TU/lmss/m/n --> TU/lmss/m/n on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  TU/pcr/m/n --> TU/pcr/m/n on input line 154.
+(Font)                  TU/lmtt/m/n --> TU/lmtt/m/n on input line 164.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/ppl/m/n --> TU/ppl/b/n on input line 154.
+(Font)                  TU/TimesNewRomanCyr(0)/m/n --> TU/TimesNewRomanCyr(0)/b/n on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  TU/ppl/b/it --> TU/ppl/b/it on input line 154.
+(Font)                  TU/TimesNewRomanCyr(0)/b/it --> TU/TimesNewRomanCyr(0)/b/it on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  TU/phv/b/n --> TU/phv/b/n on input line 154.
+(Font)                  TU/lmss/b/n --> TU/lmss/b/n on input line 164.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  TU/pcr/b/n --> TU/pcr/b/n on input line 154.
+(Font)                  TU/lmtt/b/n --> TU/lmtt/b/n on input line 164.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 154.
-\c@lstlisting=\count427
+(lastpage)             ! on input line 164.
+\c@lstlisting=\count431
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.17}).
 
 (./applicate_doctor_report.nav)
 Missing character: There is no 5 ("35) in font nullfont!
-LaTeX Font Info:    Trying to load font information for U+msa on input line 160.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 160.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 160.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+ [1
 
-LaTeX Font Warning: Font shape `TU/ppl/m/it' undefined
-(Font)              using `TU/ppl/m/n' instead on input line 160.
-
-[1
-
-]
-No file applicate_doctor_report.toc.
-
-LaTeX Font Warning: Font shape `TU/ppl/m/sc' undefined
-(Font)              using `TU/ppl/m/n' instead on input line 166.
-
-
-LaTeX Font Warning: Font shape `TU/gkai00mp.ttf(0)/m/sc' undefined
-(Font)              using `TU/gkai00mp.ttf(0)/m/n' instead on input line 166.
-
-[2
+] (./applicate_doctor_report.toc) [2
 
 ]
 \openout4 = `applicate_doctor_report.vrb'.
@@ -1290,20 +1413,30 @@ File: fig/s12.png Graphic file (type bmp)
  [4
 
 ]
-
-LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
-(Font)              using `TU/ppl/m/n' instead on input line 270.
-
 File: fig/s14.png Graphic file (type bmp)
 <fig/s14.png>
-[5
+ [5
 
 ]
 File: fig/s18.png Graphic file (type bmp)
 <fig/s18.png>
+LaTeX Font Info:    Trying to load font information for U+msa on input line 323.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 323.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 323.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+
+LaTeX Font Warning: Font shape `TU/TimesNewRomanCyr(0)/m/it' undefined
+(Font)              using `TU/TimesNewRomanCyr(0)/m/n' instead on input line 323.
+
 File: fig/s19.png Graphic file (type bmp)
 <fig/s19.png>
- [6
+[6
 
 ]
 File: fig/p.png Graphic file (type bmp)
@@ -1324,7 +1457,11 @@ File: fig/s1.png Graphic file (type bmp)
 <fig/s1.png>
 File: fig/s2.png Graphic file (type bmp)
 <fig/s2.png>
- [9
+
+Overfull \vbox (12.75238pt too high) detected at line 394
+ []
+
+[9
 
 ]
 File: fig/s3.png Graphic file (type bmp)
@@ -1332,17 +1469,8 @@ File: fig/s3.png Graphic file (type bmp)
 File: fig/s4.png Graphic file (type bmp)
 <fig/s4.png>
 
-
-/home/yan/Desktop/Github/myrep/coursefile/转博面试/面试2/tex/applicate_doctor_report.tex:376: LaTeX Error: \caption outside figure or table.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.376 \end{frame}
-                 
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Overfull \vbox (4.33011pt too high) detected at line 418
+ []
 
 [10
 
@@ -1355,7 +1483,11 @@ File: fig/s5.png Graphic file (type bmp)
 <fig/s5.png>
 File: fig/s6.png Graphic file (type bmp)
 <fig/s6.png>
- [11
+
+Overfull \vbox (1.96405pt too high) detected at line 456
+ []
+
+[11
 
 ]
 File: fig/s7.png Graphic file (type bmp)
@@ -1368,24 +1500,25 @@ File: fig/s9.png Graphic file (type bmp)
 <fig/s9.png>
 File: fig/s11.png Graphic file (type bmp)
 <fig/s11.png>
- [12
+
+Overfull \vbox (0.4314pt too high) detected at line 498
+ []
+
+[12
 
 ]
 File: fig/SIAM_Review.png Graphic file (type bmp)
 <fig/SIAM_Review.png>
 
-Overfull \vbox (31.79657pt too high) detected at line 422
+Overfull \vbox (30.84998pt too high) detected at line 504
  []
 
 [13
 
 ]
-
-LaTeX Warning: Reference `anim@abspage0' on page 14 undefined on input line 478.
-
 File: fig/gif/1/vortex80N64step000.png Graphic file (type bmp)
 <fig/gif/1/vortex80N64step000.png>
-<a0,fr0>
+ <a0,fr0>
 File: fig/gif/1/vortex80N64step001.png Graphic file (type bmp)
 <fig/gif/1/vortex80N64step001.png>
  <a0,fr1>
@@ -1585,41 +1718,22 @@ File: fig/gif/1/vortex80N64step0062.png Graphic file (type bmp)
 \tf@snm=\write8
 \openout8 = `applicate_doctor_report.snm'.
 
-
-
-Package lastpage Warning: Rerun to get the references right on input line 488.
-
-
+ 
 AED: lastpage setting LastPage
-[16] (./applicate_doctor_report.aux)
+(./applicate_doctor_report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-LaTeX Warning: Temporary extra page added at the end. Rerun to get it removed.
-
-
-Package rerunfilecheck Warning: File `applicate_doctor_report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `applicate_doctor_report.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D10FE5FDF88D352C5148C21718687911;760.
+Package rerunfilecheck Info: File `applicate_doctor_report.out' has not changed.
+(rerunfilecheck)             Checksum: D10FE5FDF88D352C5148C21718687911;760.
  ) 
 Here is how much of TeX's memory you used:
- 45997 strings out of 476919
- 1113996 string characters out of 5821841
- 1651865 words of memory out of 5000000
- 64973 multiletter control sequences out of 15000+600000
- 414008 words of font info for 95 fonts, out of 8000000 for 9000
+ 46344 strings out of 476919
+ 1122189 string characters out of 5821840
+ 1658228 words of memory out of 5000000
+ 65246 multiletter control sequences out of 15000+600000
+ 414296 words of font info for 131 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 145i,15n,146p,797b,766s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 145i,15n,146p,799b,762s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on applicate_doctor_report.pdf (16 pages).
+Output written on applicate_doctor_report.pdf (15 pages).
