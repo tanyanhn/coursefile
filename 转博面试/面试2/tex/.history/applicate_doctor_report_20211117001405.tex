@@ -198,7 +198,7 @@
         \item 科研训练
               \begin{itemize}
                   \item 系统地学习了代数拓扑和微分方程数值解的相关理论.
-                  \item 锻炼了算法设计和编程实现能力.
+                  \item 锻炼加强了算法设计和编程实现能力.
                   \item 培养了将代数拓扑和微分方程数值解结合进行科学研究的思维方式.
               \end{itemize}
               % \item 编程学习
@@ -233,7 +233,7 @@
         \item 潜艇湍流尾迹的海洋表面特征等内波现象的研究, 用于潜艇追踪和隐身
               (\textcolor{red}{军科委基础加强重点项目}).
               \begin{figure}
-                  \includegraphics[width = 0.7\textwidth]{fig/s12.png}
+                  \includegraphics[width = 0.7\textwidth]{fig/s12.png};
                   \caption{水下潜艇产生的各种尾迹示意图, 包括开尔文尾迹, 内波, 湍流尾迹, 涡尾迹, 煎
                       饼旋涡.}
               \end{figure}
@@ -262,7 +262,7 @@
                   \item 很难对拓扑变化进行严格的处理.
               \end{enumerate}
         \item 张庆海教授的思路是用\textcolor{red}{几何和拓扑的手段
-                  研究几何和拓扑的问题},在二维空间中提出了殷集的定义(\textbf{MATH COMP, 2020}).
+                  研究几何和拓扑的问题},在二维空间中提出了殷集的定义(MATH COMP, 2020).
     \end{itemize}
     \begin{center}
         \includegraphics[width = 0.9\textwidth]{fig/s14.png}
@@ -307,7 +307,7 @@
     \begin{itemize}
         \item 二维空间中,任一个殷集可以唯一表示为
               \[\mathcal{Y} = \cup_j^{\bot \bot}\cap_i \text{int}(\gamma_{j, i} ),\]
-              约当曲线 $\gamma_{j, i}$是$\mathcal{Y}$内第$j$个连通分量
+              Jordan Curve $\gamma_{j, i}$是$\mathcal{Y}$内第$j$个连通分量
               的第$i$条边界.
         \item 高效实现了殷集上的布尔代数.
               \begin{columns}
@@ -318,7 +318,7 @@
                   \column{0.3\linewidth}<1->
                   \includegraphics[width = \textwidth]{fig/pm.png}
               \end{columns}
-              % \item 我编程实现了二维殷集的表示和布尔代数.
+        \item 我编程实现了二维殷集的表示和布尔代数.
     \end{itemize}
 \end{frame}
 
@@ -360,25 +360,25 @@
 \begin{frame}
     \frametitle{布尔代数实现方式}
     \begin{enumerate}
-        \item 计算殷集边界上的所有非流形点.
-        \item 沿非流形点剪开黏合紧曲面得到若干曲面片.
+        \item 计算殷集边界上的所有非流行点.
+        \item 沿非流行点剪开黏合紧曲面得到若干曲面片.
         \item 根据交并补的需要删除曲面片或改变曲面片方向.
         \item 将曲面片重新黏合成黏合紧曲面集合.
         \item 黏合紧曲面集合唯一表示一个三维殷集作为布尔运算结果.
     \end{enumerate}
+    示例:计算如下两个三维殷集的布尔代数.
     \begin{columns}
         \column{0.4\linewidth}<1->
         \includegraphics[width = \textwidth]{fig/s3.png}
         \column{0.4\linewidth}<1->
         \includegraphics[width = \textwidth]{fig/s4.png}
-        \caption{示例:计算如下两个三维殷集的布尔代数.}
     \end{columns}
 \end{frame}
 
 \begin{frame}
     \frametitle{布尔代数结果图}
     \begin{itemize}
-        \item 沿非流形点剪开黏合紧曲面得到曲面片集合
+        \item 沿非流行点剪开黏合紧曲面得到曲面片集合
               \begin{columns}
                   \column{0.4\linewidth}<1->
                   \includegraphics[width = \textwidth]{fig/s16.png}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.4)  17 NOV 2021 00:03
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.7.4)  17 NOV 2021 16:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1052,7 +1052,7 @@ LaTeX Font Info:    No file TUppl.fd. on input line 154.
 LaTeX Font Warning: Font shape `TU/ppl/m/n' undefined
 (Font)              using `TU/lmr/m/n' instead on input line 154.
 
-(./applicate_doctor_report.aux)
+No file applicate_doctor_report.aux.
 \openout1 = `applicate_doctor_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 154.
@@ -1075,7 +1075,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 154.
 LaTeX Font Info:    ... okay on input line 154.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 154.
 LaTeX Font Info:    ... okay on input line 154.
- ABD: EverySelectfont initializing macros
+ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 154.
 
 *geometry* driver: auto-detecting
@@ -1125,9 +1125,12 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 154.
 LaTeX Info: Redefining \pageref on input line 154.
 LaTeX Info: Redefining \nameref on input line 154.
- (./applicate_doctor_report.out) (./applicate_doctor_report.out)
 \@outlinefile=\write5
 \openout5 = `applicate_doctor_report.out'.
+
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 \symnumbers=\mathgroup7
 \sympureletters=\mathgroup8
@@ -1167,7 +1170,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  TU/ppl/m/it --> TU/ppl/b/it on input line 154.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  TU/pcr/m/n --> TU/pcr/b/n on input line 154.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
+(/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-bibliography-dictionary-English.dict
 Dictionary: translator-bibliography-dictionary, Language: English 
@@ -1264,7 +1267,8 @@ LaTeX Font Warning: Font shape `TU/ppl/m/it' undefined
 
 [1
 
-] (./applicate_doctor_report.toc)
+]
+No file applicate_doctor_report.toc.
 
 LaTeX Font Warning: Font shape `TU/ppl/m/sc' undefined
 (Font)              using `TU/ppl/m/n' instead on input line 166.
@@ -1286,9 +1290,13 @@ File: fig/s12.png Graphic file (type bmp)
  [4
 
 ]
+
+LaTeX Font Warning: Font shape `TU/ppl/b/n' undefined
+(Font)              using `TU/ppl/m/n' instead on input line 270.
+
 File: fig/s14.png Graphic file (type bmp)
 <fig/s14.png>
- [5
+[5
 
 ]
 File: fig/s18.png Graphic file (type bmp)
@@ -1323,7 +1331,20 @@ File: fig/s3.png Graphic file (type bmp)
 <fig/s3.png>
 File: fig/s4.png Graphic file (type bmp)
 <fig/s4.png>
- [10
+
+
+/home/yan/Desktop/Github/myrep/coursefile/转博面试/面试2/tex/applicate_doctor_report.tex:376: LaTeX Error: \caption outside figure or table.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.376 \end{frame}
+                 
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[10
 
 ]
 File: fig/s16.png Graphic file (type bmp)
@@ -1359,9 +1380,12 @@ Overfull \vbox (31.79657pt too high) detected at line 422
 [13
 
 ]
+
+LaTeX Warning: Reference `anim@abspage0' on page 14 undefined on input line 478.
+
 File: fig/gif/1/vortex80N64step000.png Graphic file (type bmp)
 <fig/gif/1/vortex80N64step000.png>
- <a0,fr0>
+<a0,fr0>
 File: fig/gif/1/vortex80N64step001.png Graphic file (type bmp)
 <fig/gif/1/vortex80N64step001.png>
  <a0,fr1>
@@ -1561,22 +1585,41 @@ File: fig/gif/1/vortex80N64step0062.png Graphic file (type bmp)
 \tf@snm=\write8
 \openout8 = `applicate_doctor_report.snm'.
 
- 
+
+
+Package lastpage Warning: Rerun to get the references right on input line 488.
+
+
 AED: lastpage setting LastPage
-(./applicate_doctor_report.aux)
+[16] (./applicate_doctor_report.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `applicate_doctor_report.out' has not changed.
-(rerunfilecheck)             Checksum: D10FE5FDF88D352C5148C21718687911;760.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+LaTeX Warning: Temporary extra page added at the end. Rerun to get it removed.
+
+
+Package rerunfilecheck Warning: File `applicate_doctor_report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `applicate_doctor_report.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D10FE5FDF88D352C5148C21718687911;760.
  ) 
 Here is how much of TeX's memory you used:
- 46051 strings out of 476919
- 1115646 string characters out of 5821841
- 1652449 words of memory out of 5000000
- 65019 multiletter control sequences out of 15000+600000
+ 45997 strings out of 476919
+ 1113996 string characters out of 5821841
+ 1651865 words of memory out of 5000000
+ 64973 multiletter control sequences out of 15000+600000
  414008 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  145i,15n,146p,797b,766s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on applicate_doctor_report.pdf (15 pages).
+Output written on applicate_doctor_report.pdf (16 pages).
