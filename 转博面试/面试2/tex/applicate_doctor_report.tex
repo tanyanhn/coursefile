@@ -43,6 +43,7 @@
 \newfontfamily\os{Open Sans}
 \newfontfamily\oscl{Open Sans Condensed}
 \newfontfamily\tnr{Times New Roman}
+\newfontfamily\tnrc{Times New Roman Cyr}
 \newfontfamily\tim{Times}
 \newfontfamily\roc{Rockwell}
 % \usepackage{CJK}
@@ -142,7 +143,7 @@
 \numberwithin{equation}{section}
 
 \newcommand\caesura{$\mkern -8.5mu\raise -.2ex\hbox{\rotatebox[]{180}{\`}}\ $}
-
+\setbeamertemplate{caption}[numbered]
 % -------------------
 % Title Page
 % -------------------
@@ -236,15 +237,17 @@
 % \end{frame}
 
 \section{硕士阶段的科研工作}
-\subsection{涉密的军工项目}
+\subsection{涉密的项目}
 \begin{frame}
-    \frametitle{涉密军工项目}
+    \frametitle{涉密的项目}
     \begin{itemize}
-        \item 潜艇湍流尾迹的海洋表面特征等内波现象的研究, 用于潜艇追踪和隐身
-              (\textcolor{red}{军科委基础加强重点项目}).
+        \item Qian Ting湍流尾迹的海洋表面特征等内波现象的研究, 用于Qian Ting追踪和隐身
+              (\textcolor{red}{Jun Ke Wei
+                  %   军科委
+                  基础加强重点项目}).
               \begin{figure}
                   \includegraphics[width = 0.7\textwidth]{fig/s12.png}
-                  \caption{水下潜艇产生的各种尾迹示意图, 包括开尔文尾迹, 内波, 湍流尾迹, 涡尾迹, 煎
+                  \caption{水下Qian Ting产生的各种尾迹示意图, 包括开尔文尾迹, 内波, 湍流尾迹, 涡尾迹, 煎
                       饼旋涡.}
               \end{figure}
     \end{itemize}
@@ -252,7 +255,7 @@
 
 \subsection{\textcolor{red}{非涉密的三维殷集和布尔代数}}
 \begin{frame}
-    \frametitle{三维殷集的研究背景}
+    \frametitle{殷集的研究背景}
     \begin{itemize}
         \item 含有动边界的不可压流体在军工领域是非常重要的研究课题.
               % \item 流体建模相关研究少,数学模型和计算机算法都设计成避免在数值模拟时对流体
@@ -262,9 +265,9 @@
               %     \item FT方法追踪边界上的示踪点,按顺序连接得到边界.
               %     \item LS方法求解隐式函数的边界.
               % \end{enumerate}
-        \item 现在的主流方法
+        \item 现有方法
               % (volume-of-fluids方法, front-tracking方法, level-set方法)的核心思想
-              是对界面的几何和拓扑问题进行回避.
+              是对界面的几何和拓扑问题进行回避,导致了:
               \begin{enumerate}
                   \item 对等距变换的流场不能保证几何性质.
                   \item 对同胚映射的流场不能保证拓扑性质.
@@ -272,8 +275,8 @@
                   \item 很难对拓扑变化进行严格的处理.
               \end{enumerate}
         \item 我们的核心思想是用\textcolor{red}{几何和拓扑的手段
-                  研究几何和拓扑的问题},已经在二维空间定义了殷集
-              (Zhang and Li 2020 Math. Comput.).
+                  研究几何和拓扑的问题},其中首要工作在于对流相建模
+              (Zhang and Li, \tnr{ Math. Comput.}\tnrc{, \ 2020).}
 
               %   \os (Zhang and Li 2020 Math. Comput.).
 
@@ -292,15 +295,22 @@
 
 
 \begin{frame}
-    \frametitle{三维殷集建模和实现布尔代数的意义}
+    \frametitle{殷集和布尔代数的重要性}
     \begin{itemize}
-        \item 三维殷集对三维的动流相的建模是军工项目的核心之一.
-              % \item 是使用几何和拓扑的手段解决问题的奠基工作.
-        \item 现有的``实体建模''与分析格格不入,无法追踪拓扑变化.
-        \item 布尔代数是研究多相流流相拓扑的核心工具之一.
-        \item 提供殷集的简单表示,可用于提高界面追踪的精度.
-        \item 综上,为处理拓扑变化提供了算法和理论支撑.
+        \item 几何和拓扑的手段集中体现在殷空间和布尔代数.
+        \item 为连续介质提供了简单高效的表示(以O(1)时间得到欧拉示性数).
+        \item 给动边界的界面追踪的高保真算法提供理论支撑.
+        \item 给多相流的流相拓扑变化刻画和高阶算法设计提供理论支撑.
+        \item 是许多重大科学问题(军工项目)的核心难点.
     \end{itemize}
+    % \begin{itemize}
+    %     \item 殷集对动流相的建模是军工项目的核心之一.
+    %           % \item 是使用几何和拓扑的手段解决问题的奠基工作.
+    %     \item 现有的``实体建模''与分析格格不入,无法追踪拓扑变化.
+    %     \item 布尔代数是研究多相流流相拓扑的核心工具之一.
+    %     \item 综上,为处理拓扑变化提供了算法和理论支撑.
+    %     \item 并且提供殷集的简单表示,可用于提高界面追踪的精度.
+    % \end{itemize}
 
     \begin{columns}
         \column{0.5\linewidth}<1->
@@ -326,6 +336,8 @@
 \begin{frame}
     \frametitle{二维殷集}
     \begin{itemize}
+        \item \textcolor{red}{殷集}:空间中边界有界的正则半解析开集.所有殷集构
+              成的集合被称为殷空间,记为 $\mathbb{Y}$.
         \item 二维空间中,任一个殷集可以唯一表示为
               \[\mathcal{Y} = \cup_j^{\bot \bot}\cap_i \text{int}(\gamma_{j, i} ),\]
               约当曲线 $\gamma_{j, i}$是$\mathcal{Y}$内第$j$个连通分量
@@ -341,7 +353,7 @@
               %   \end{columns}
               % \item 我编程实现了二维殷集的表示和布尔代数.
     \end{itemize}
-    \begin{figure}[!htb]
+    \begin{figure}[htb]
         \centering
         \subfigure{\includegraphics[width=0.3\textwidth]{fig/p.png}}
         \subfigure{\includegraphics[width=0.3\textwidth]{fig/m.png}}
@@ -352,27 +364,27 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{黏合紧曲面}
+    \frametitle{科研成果---三维殷集的数学模型及布尔代数}
     \begin{itemize}
         \item
               \textcolor{red}{二流形的分类定理} \newline
-              有向的紧二流形是同胚于球或者圆环或它们的有限个的连通和.
+              有向的紧二流形是同胚于球或者圆环或它们的有限个连通和.
               \begin{center}
                   \includegraphics[width = .9\textwidth]{fig/s15.png}
               \end{center}
 
 
-        \item 黏合紧曲面是一个二维连通紧流形或这种流形的一个商空间, 其商映射
+        \item 黏合紧曲面是一个二维连通紧流形或这种流形的商空间, 其商映射
               将多个与一维 CW 复形同胚的子集粘在一起; 将这个一维子集删除后
               该黏合紧曲面仍然是连通的.
     \end{itemize}
 \end{frame}
 
 \begin{frame}
-    \frametitle{科研成果---三维殷集的数学模型及布尔代数}
+    \frametitle{三维殷集的唯一表示}
     \begin{itemize}
-        \item \textcolor{red}{三维殷集}:三维空间中边界有界的正则半解析开集.所有三维殷集构
-              成的集合被称为殷空间,记为 $\mathbb{Y}$.
+        % \item \textcolor{red}{三维殷集}:三维空间中边界有界的正则半解析开集.所有三维殷集构
+        %       成的集合被称为殷空间,记为 $\mathbb{Y}$.
         \item 任一个殷集$\mathcal{Y} \in \mathbb{Y}$可以唯一表示为
               \[\mathcal{Y} = \cup_j^{\bot \bot} \cap_i \text{int}(\Gamma_{j, i}),\]
               黏合紧曲面$\Gamma_{j, i}$是$\mathcal{Y}$的第$j$个连通分量的第$i$个边界.
@@ -384,7 +396,7 @@
     %     \column{0.5\linewidth}<1->
     %     \includegraphics[width = \textwidth]{fig/s2.png}
     % \end{columns}
-    \begin{figure}[!htb]
+    \begin{figure}[htbp]
         \centering
         \subfigure[殷集$\mathcal{Y}$]{\includegraphics[width=0.4\textwidth]{fig/s1.png}} \qquad
         \subfigure[表示$\mathcal{Y}$的两个黏合紧曲面]{\includegraphics[width=0.4\textwidth]{fig/s2.png}}
@@ -394,7 +406,7 @@
 \end{frame}
 
 \begin{frame}
-    \frametitle{布尔代数实现方式}
+    \frametitle{布尔代数的实现方式}
     \begin{enumerate}
         \item 计算殷集边界上的所有非流形点.
         \item 沿非流形点剪开黏合紧曲面得到若干曲面片.
@@ -492,13 +504,13 @@
         \subfigure
         {\includegraphics[width=0.27\textwidth]{fig/s11.png}}
         \vspace{-0.05in}
-        \caption{几何结构复杂的殷集求交}
+        \caption{几何特征复杂的殷集求交}
         %   \vspace{0.2in}
     \end{figure}
 \end{frame}
 
 \begin{frame}
-    \frametitle{论文在投}
+    \frametitle{论文在写}
     \centering
     \includegraphics[height = \textheight]{fig/SIAM_Review.png}
 \end{frame}
@@ -552,7 +564,7 @@
     \end{center}
     \begin{itemize}
         \item 现有方法不能精确捕捉和刻画拓扑变化.
-        \item 结合殷集对流体建模,在MARS方法(Zhang 2018 SISC)上
+        \item 结合殷集对流体建模,在MARS方法(Zhang, \tnr{ SISC}\tnrc{, \ 2018)}上
               新增对拓扑变化的处理,并且高精度捕捉拓扑变化的时间点和位置.
         \item 这个研究是三维殷集在军工项目中的重要应用,是项目的核心部分.
     \end{itemize}
