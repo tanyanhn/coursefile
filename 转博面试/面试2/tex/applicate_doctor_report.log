@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.30)  24 NOV 2021 22:44
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.30)  25 NOV 2021 13:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1478,7 +1478,11 @@ File: fig/s1.png Graphic file (type bmp)
 <fig/s1.png>
 File: fig/s2.png Graphic file (type bmp)
 <fig/s2.png>
- [9
+
+Overfull \vbox (10.73515pt too high) detected at line 409
+ []
+
+[9
 
 ]
 File: fig/s3.png Graphic file (type bmp)
@@ -1486,7 +1490,7 @@ File: fig/s3.png Graphic file (type bmp)
 File: fig/s4.png Graphic file (type bmp)
 <fig/s4.png>
 
-Overfull \vbox (4.33011pt too high) detected at line 430
+Overfull \vbox (4.33011pt too high) detected at line 433
  []
 
 [10
@@ -1501,7 +1505,7 @@ File: fig/s5.png Graphic file (type bmp)
 File: fig/s6.png Graphic file (type bmp)
 <fig/s6.png>
 
-Overfull \vbox (1.96405pt too high) detected at line 468
+Overfull \vbox (1.96405pt too high) detected at line 471
  []
 
 [11
@@ -1518,7 +1522,7 @@ File: fig/s9.png Graphic file (type bmp)
 File: fig/s11.png Graphic file (type bmp)
 <fig/s11.png>
 
-Overfull \vbox (0.4314pt too high) detected at line 510
+Overfull \vbox (0.4314pt too high) detected at line 513
  []
 
 [12
@@ -1527,7 +1531,7 @@ Overfull \vbox (0.4314pt too high) detected at line 510
 File: fig/SIAM_Review.png Graphic file (type bmp)
 <fig/SIAM_Review.png>
 
-Overfull \vbox (30.84998pt too high) detected at line 516
+Overfull \vbox (30.84998pt too high) detected at line 519
  []
 
 [13
