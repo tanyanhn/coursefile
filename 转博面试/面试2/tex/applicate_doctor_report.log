@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.30)  24 NOV 2021 22:44
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.30)  30 NOV 2021 00:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1441,19 +1441,19 @@ File: fig/s14.png Graphic file (type bmp)
 ]
 File: fig/s18.png Graphic file (type bmp)
 <fig/s18.png>
-LaTeX Font Info:    Trying to load font information for U+msa on input line 333.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 334.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 333.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 334.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 333.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 334.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 
 LaTeX Font Warning: Font shape `TU/TimesNewRomanCyr(0)/m/it' undefined
-(Font)              using `TU/TimesNewRomanCyr(0)/m/n' instead on input line 333.
+(Font)              using `TU/TimesNewRomanCyr(0)/m/n' instead on input line 334.
 
 File: fig/s19.png Graphic file (type bmp)
 <fig/s19.png>
@@ -1478,7 +1478,11 @@ File: fig/s1.png Graphic file (type bmp)
 <fig/s1.png>
 File: fig/s2.png Graphic file (type bmp)
 <fig/s2.png>
- [9
+
+Overfull \vbox (10.73515pt too high) detected at line 410
+ []
+
+[9
 
 ]
 File: fig/s3.png Graphic file (type bmp)
@@ -1486,7 +1490,7 @@ File: fig/s3.png Graphic file (type bmp)
 File: fig/s4.png Graphic file (type bmp)
 <fig/s4.png>
 
-Overfull \vbox (4.33011pt too high) detected at line 430
+Overfull \vbox (4.33011pt too high) detected at line 434
  []
 
 [10
@@ -1501,7 +1505,7 @@ File: fig/s5.png Graphic file (type bmp)
 File: fig/s6.png Graphic file (type bmp)
 <fig/s6.png>
 
-Overfull \vbox (1.96405pt too high) detected at line 468
+Overfull \vbox (1.96405pt too high) detected at line 472
  []
 
 [11
@@ -1518,7 +1522,7 @@ File: fig/s9.png Graphic file (type bmp)
 File: fig/s11.png Graphic file (type bmp)
 <fig/s11.png>
 
-Overfull \vbox (0.4314pt too high) detected at line 510
+Overfull \vbox (0.4314pt too high) detected at line 514
  []
 
 [12
@@ -1527,7 +1531,7 @@ Overfull \vbox (0.4314pt too high) detected at line 510
 File: fig/SIAM_Review.png Graphic file (type bmp)
 <fig/SIAM_Review.png>
 
-Overfull \vbox (30.84998pt too high) detected at line 516
+Overfull \vbox (30.84998pt too high) detected at line 520
  []
 
 [13
@@ -1747,7 +1751,7 @@ Package rerunfilecheck Info: File `applicate_doctor_report.out' has not changed.
 Here is how much of TeX's memory you used:
  46371 strings out of 476919
  1122912 string characters out of 5821840
- 1658543 words of memory out of 5000000
+ 1657541 words of memory out of 5000000
  65271 multiletter control sequences out of 15000+600000
  414312 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
