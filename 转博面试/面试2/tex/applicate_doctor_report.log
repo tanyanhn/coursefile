@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.30)  26 NOV 2021 18:22
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.6.30)  30 NOV 2021 00:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1751,7 +1751,7 @@ Package rerunfilecheck Info: File `applicate_doctor_report.out' has not changed.
 Here is how much of TeX's memory you used:
  46371 strings out of 476919
  1122912 string characters out of 5821840
- 1657543 words of memory out of 5000000
+ 1657541 words of memory out of 5000000
  65271 multiletter control sequences out of 15000+600000
  414312 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
