@@ -1,0 +1,37 @@
+\begin{pro}
+  Prove the strengthened version of Theorem 8,
+  for $(x, t)\in[0, L]^2$,
+  with $f\in\mathcal{C}^2, g\in\mathcal{C}^1$ instead.
+  [Hint: use the general solutions for wave equations]
+\end{pro}
+
+\begin{proof}
+  Define $u(x, t)$ by d'Alembert's formula
+  \begin{equation}
+    u(x, t) = \frac{1}{2}[f(x+t)+f(x-t)] + \frac{1}{2}\int_{x-t}^{x+t}g(y)
+    \dif y \quad (x\in\mathbb{R}, t \ge 0).
+  \end{equation}
+
+  It's quite trivial to verify that the following statements hold.
+  \begin{itemize}
+  \item[(i)]
+    $u\in\mathcal{C}^2(\mathbb{R}\times[0, \infty])$;
+
+  \item[(ii)]
+    $u_{tt}-u_{xx}=0$ in $\mathbb{R}\infty(, \infty)$;
+
+  \item[(iii)]
+    $\lim_{(x, t)\to(x^0, 0), t>0}u(x, t) = f(x^0)$,
+    $\lim_{{x,t}\to(x^0, 0), t>0}u_t(x, t) = g(x^0)$
+    for each point $x^0\in\mathbb{R}$;
+
+  \item[(iv)]
+    The uniqueness of the solution follows from the energy methods
+    as in Problem 3.
+  \end{itemize}
+  Combining the above completes the proof.
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw2"
+%%% End:

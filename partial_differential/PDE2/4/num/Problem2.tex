@@ -1,0 +1,29 @@
+\begin{pro}
+  Let $g\in L^1(\mathbb{R}^n)$ with
+  $\int_{\mathbb{R}^n}g\dif\mathbf{x} = 1$,
+  then $g_{\epsilon}(\mathbf{x}) =
+  \epsilon^{-n}g(\epsilon^{-1}\mathbf{x})$
+  converges to $\delta$ as $\epsilon\to 0^+$,
+  in $\mathcal{D}'(\mathbb{R}^n)$.
+\end{pro}
+
+\begin{proof}
+  By the change of variable $\mathbf{x}\to\epsilon\mathbf{x}$
+  we see that $\int_{\mathbb{R}^n}g_{\epsilon}(\mathbf{x})\dif\mathbf{x}=1$ for all $\epsilon>0$.
+  Hence $\forall\phi\in\mathcal{C}_c^{\infty}(\mathbb{R}^n)$,
+  \begin{align*}
+    \left\langle g_{\epsilon}, \phi\right\rangle -
+    \left\langle \delta, \phi\right\rangle &=
+    \int_{\mathbb{R}^n}g_{\epsilon}(\mathbf{x})\phi(\mathbf{x})\dif\mathbf{x} - \phi(\mathbf{0})
+                                              = \int_{\mathbb{R}^n}\epsilon^{-n}g(\epsilon^{-1}\mathbf{x})\phi(\mathbf{x})\dif\mathbf{x} - \int_{\mathbb{R}^n}g(\mathbf{x})\phi(\mathbf{0})\dif\mathbf{x} \\
+                                           &= \int_{\mathbb{R}^n}g(\mathbf{x})\phi(\epsilon\mathbf{x})\dif\mathbf{x} - \int_{\mathbb{R}^n}g(\mathbf{x})\phi(\mathbf{0})\dif\mathbf{x} \\
+    &= \int_{\mathbb{R}^n}g(\mathbf{x})\LP\phi(\epsilon\mathbf{x})-\phi(\mathbf{0})\RP\dif\mathbf{x} \to 0 \text{ as } \epsilon\to 0^+
+  \end{align*}
+  by the dominated convergence theorem.
+  Therefore $g_{\epsilon}$ converges to $\delta$ as $\epsilon\to 0^+$, in
+  $\mathcal{D}'(\mathbb{R}^n)$.
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw4"
+%%% End:

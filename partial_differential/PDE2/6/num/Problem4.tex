@@ -1,0 +1,45 @@
+\begin{pro}
+  Consider the (uniformly) elliptic operator with (continuous) variable-coefficient
+  \begin{displaymath}
+    L = \sum_{i, j}a^{ij}(\mathbf{x})\partial_i\partial_j + \sum_ib^i(\mathbf{x})\partial_i + c(\mathbf{x})
+  \end{displaymath}
+  Assume that $\exists\mu>0 \text{ s.t. the matrix } A-\mu I$ is positive
+  semidefinite, i.e.,
+  \begin{displaymath}
+    \exists \mu>0 \text{ s.t. } \forall\mathbf{x}\in\Omega,
+    \forall\xi\in\mathbb{R}^n, \sum_{i,j=1}^na^{ij}(\mathbf{x})\xi_i\xi_j
+    \ge \mu\|\xi\|^2.
+  \end{displaymath}
+  Prove the following theorem.
+  \begin{thm}[Weak maximum principle(version 2)]
+    If $u\in\mathcal{C}^2(\Omega)\cap\mathcal{C}(\overline{\Omega})$
+    such that
+    \begin{displaymath}
+      Lu \ge 0 \ge c(\mathbf{x}) \text{ in } \Omega,
+    \end{displaymath}
+    then
+    \begin{displaymath}
+      \max_{\overline{\Omega}} u \le \max_{\partial\Omega}u^+, 
+    \end{displaymath}
+    where $u^+(\mathbf{x}) = \max(u(\mathbf{x}), 0)$.
+  \end{thm}
+\end{pro}
+\begin{proof}
+  Set $V := \{\mathbf{x}\in\Omega| u(\mathbf{x})>0\}$.
+  Then
+  \begin{displaymath}
+    Ku := Lu - cu \ge -cu \ge 0 \text{ in } V.
+  \end{displaymath}
+  The operator $K$ has no zeroth-order term
+  and consequently the theorem in Problem 3 implies
+  \begin{displaymath}
+    \max_{\overline{V}}u = \max_{\partial V}u = \max_{\partial U}u^+.
+  \end{displaymath}
+  This gives the desired result in the case that $V\neq \emptyset$.
+  Otherwise $u\le 0$ everywhere in $U$,
+  and the desired result likewise follows.
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw6"
+%%% End:

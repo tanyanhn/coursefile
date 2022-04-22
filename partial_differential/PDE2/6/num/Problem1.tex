@@ -1,0 +1,54 @@
+\begin{pro}
+  Let $\Omega$ be an open bounded domain in $\mathbb{R}^n$,
+  $c$ and $q$ nonnegative smooth functions.
+  Assume
+  $\exists\delta>0 \text{ s.t. }\delta<c(\mathbf{x})<\delta^{-1}$
+  for any $\mathbf{x}\in\Omega$.
+  Consider the real-valued variable-coefficient wave equation
+  \begin{equation}
+    \label{eq:1}
+    u_{tt}-\nabla\cdot(c^2(\mathbf{x})\nabla u) + q(\mathbf{x})u = 0,
+    u(0,\mathbf{x})=f(\mathbf{x}),
+    u_t(0,\mathbf{x}) = g(\mathbf{x}),
+    \mathbf{x}\in\Omega,
+  \end{equation}
+  with homogoneous Neumann boundary condition
+  \begin{displaymath}
+    \mathbf{n}(\mathbf{x})\cdot\nabla u(t,\mathbf{x}) = 0, \mathbf{x}\in\partial\Omega,
+  \end{displaymath}
+  where $\mathbf{n}(\mathbf{x})$ denotes the outward unit normal.
+  Multiply the equation by $u_t$ and apply the integration-by-parts formula
+  to find the energy corresponding to this problem and prove that
+  the energy so defined is conserved,
+  assuming $u\in\mathcal{C}^2$ with compact support for any time $t$.
+\end{pro}
+\begin{proof}
+  Multiplying the wave equation by $u_t$ and integrating over $\Omega$ yields
+  \begin{displaymath}
+    \int_{\Omega}u_tu_{tt}\dif\mathbf{x}
+    - \int_{\Omega}u_t\nabla\cdot(c^2\nabla u)\dif\mathbf{x}
+    + \int_{\Omega}u_tqu = 0.
+  \end{displaymath}
+  Use the fact that $\frac{1}{2}(u_t^2)_t = u_tu_{tt},
+  \frac{1}{2}(u^2)_t = uu_t$ and integrate by part,
+  and we have
+  \begin{align*}
+    0 &= \int_{\Omega}\frac{1}{2}\frac{\dif}{\dif t} u_t^2\dif\mathbf{x}
+    + \int_{\Omega}\frac{q}{2}\frac{\dif}{\dif t}u^2\dif\mathbf{x}
+    + \int_{\Omega}c^2\nabla u\cdot(\nabla u)_t\dif\mathbf{x} -
+        \int_{\partial\Omega}u_t c^2\nabla u\cdot\mathbf{n}\dif S \\
+      &=\frac{1}{2}\frac{\dif}{\dif t}\LP
+        \int_{\Omega}u_t^2 + qu^2 +c^2\|\nabla u\|^2\dif\mathbf{x}\RP,
+  \end{align*}
+  where the second equality follows by applying the boundary condition.
+  If we define the energy $E(t)$ by
+  \begin{displaymath}
+    E(t) = \frac{1}{2}\int_{\Omega}u_t^2+qu^2+c^2\|\nabla u\|^2\dif \mathbf{x},
+  \end{displaymath}
+  the above argument shows that $E'(t)\equiv 0$,
+  and therefore the energy $E(t)$ is conserved.
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw6"
+%%% End:

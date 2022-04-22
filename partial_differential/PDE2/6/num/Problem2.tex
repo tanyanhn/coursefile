@@ -1,0 +1,62 @@
+\begin{pro}
+  Prove the following finite speed of propagation property for problem \eqref{eq:1},
+  with homogeneous Dirichlet or Neumann boundary conditions.
+  If $f=g=0$ in $B_1(\mathbf{0})\subset\Omega$,
+  then there exists a region in $\mathbb{R}_+\times\Omega$
+  where $u$ vanishes identically.
+\end{pro}
+\begin{proof}
+  First we introduce some notations for convenience.
+  Denote the ball $B_t$
+  in $\mathbb{R}_+\times\Omega$ by
+  \begin{displaymath}
+    B_t = \{(\mathbf{x}, t)| \|\mathbf{x}\|\le 1-t\},
+  \end{displaymath}
+  and the cone $K(\mathbf{0}, 1)$ in $\mathbb{R}_+\times\Omega$ by
+  \begin{displaymath}
+    K(\mathbf{0}, 1) = \cup_{t\in[0,1]}B_t
+    = \{(\mathbf{x},t) | 0\le t\le 1, \|\mathbf{x}\|\le 1-t\}.
+  \end{displaymath}
+  Define the energy $e(t)$ by
+  \begin{displaymath}
+    e(t) = \frac{1}{2}\int_{B_t}u_t^2+qu^2+c^2\|\nabla u\|^2\dif \mathbf{x},
+  \end{displaymath}
+  compute that
+  \begin{align*}
+    e'(t) &= \int_{B_t}u_tu_{tt} + quu_t+c^2\nabla u\cdot(\nabla u)_t\dif\mathbf{x} - \frac{1}{2}\int_{\partial B_t}u_t^2+qu^2+c^2\|\nabla u\|^2\dif S \\
+          &= \int_{B_t}u_t\nabla\cdot(c^2\nabla u) + c^2\nabla u\cdot(\nabla u)_t\dif\mathbf{x} - \frac{1}{2}\int_{\partial B_t}u_t^2+qu^2+c^2\|\nabla u\|^2\dif S \\
+          &= \int_{\partial B_t}u_t(c^2\nabla u)\cdot \mathbf{n}\dif S - \frac{1}{2}\int_{\partial B_t}u_t^2+qu^2+c^2\|\nabla u\|^2\dif S \\
+          &\le \int_{\partial B_t}\frac{1}{2}u_t^2 + \frac{1}{2}\LP c^2\nabla u\cdot \mathbf{n}\RP^2\dif S - \frac{1}{2}\int_{\partial B_t}u_t^2+qu^2+c^2\|\nabla u\|^2\dif S \\
+          &\le \int_{\partial B_t}\frac{1}{2}u_t^2 + \frac{1}{2}\|c^2\nabla u\|^2\|\mathbf{n}\|^2\dif S - \frac{1}{2}\int_{\partial B_t}u_t^2+qu^2+c^2\|\nabla u\|^2\dif S \\
+          &= -\frac{1}{2}\int_{\partial B_t}qu^2\dif S - \frac{1}{2}\int_{\partial B_t}c^2(1-c^2)\|\nabla u\|^2\dif S \\
+    &\le 0
+  \end{align*}
+  where the second step follows from \eqref{eq:1},
+  the third from the integration-by-parts formula,
+  the fourth from Cauchy's inequality, the fifth from
+  Cauchy-Schwarz inequality and the last from the assumption that
+  $p(\mathbf{x})$ is nonnegative and $0<c(\mathbf{x})<1, \forall \mathbf{x}\in\Omega$.
+  We have
+  \begin{displaymath}
+    e(0) = \frac{1}{2}\int_{B_1(\mathbf{0})}u_t^2+qu^2+c^2\|\nabla u\|^2\dif \mathbf{x} = \frac{1}{2}\int_{B_1(\mathbf{0})}g^2+qf^2+c^2\|\nabla f\|^2\dif \mathbf{x} = 0,
+  \end{displaymath}
+  and
+  \begin{displaymath}
+    e(t) = \frac{1}{2}\int_{B_t}u_t^2+qu^2+c^2\|\nabla u\|^2\dif \mathbf{x} \ge 0
+  \end{displaymath}
+  $e(t)$ is non-increasing in $[0, \infty)$
+  since we have shown that $e'(t)<0$ for $t\ge 0$,
+  and therefore
+  \begin{displaymath}
+    e(t) = 0, \quad \forall t\ge 0 \Rightarrow
+    u \equiv 0 \text{ in } B_t.
+  \end{displaymath}
+  Consequently,
+  \begin{displaymath}
+    u \equiv 0 \text{ in } K(\mathbf{0}, 1).
+  \end{displaymath}
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw6"
+%%% End:

@@ -1,0 +1,57 @@
+\begin{pro}
+  Solve $u_{xx}+u_{yy}=0$ with data
+  $u(0, y)=e^y, u_x(0, y)=0$,
+  by applying the power series method.
+\end{pro}
+
+\begin{sol}
+  Let
+  \begin{equation}
+    \label{eq:4}
+    u(x, y) = \sum_{i=0}^{\infty}\sum_{j=0}^{\infty}c_{i,j}x^iy^j,
+  \end{equation}
+
+  substituting \eqref{eq:4} into $u(0, y)=e^y$ yields
+
+  \begin{equation}
+    \label{eq:5}
+    u(0, y) = \sum_{j=0}^{\infty}c_{0,j}y^j = e^y =
+    \sum_{j=0}^{\infty}\frac{1}{j!}y^j \Rightarrow c_{0,j} = \frac{1}{j!}.
+  \end{equation}
+
+  Substituting \eqref{eq:4} into $u_x(0, y)=0$ yields
+  \begin{equation}
+    \label{eq:6}
+    u_x(0, y) = \sum_{j=0}^{\infty}c_{1,j}y^j = 0 \Rightarrow c_{1,j} = 0.
+  \end{equation}
+
+  Sustitute \eqref{eq:4} into $u_{xx}+u_{yy}=0$,
+  and we have
+
+  \begin{align*}
+    0 &= \sum_{i=2}^{\infty}\sum_{j=0}^{\infty}i(i-1)c_{i,j}x^{i-2}y^j +
+        \sum_{i=0}^{\infty}\sum_{j=2}^{\infty}j(j-1)c_{i,j}x^iy^{j-2}  \\
+      &= \sum_{i=0}^{\infty}\sum_{j=0}^{\infty}(i+2)(i+1)c_{i+2,j}x^iy^j +
+        \sum_{i=0}^{\infty}\sum_{j=0}^{\infty}(j+2)(j+1)c_{i,j+2}x^iy^j \\
+    \Rightarrow& c_{i+2, j} = -\frac{(j+2)(j+1)}{(i+2)(i+1)}c_{i, j+2}, \quad
+                 \forall i, j\ge 0.
+  \end{align*}
+  Combine with \eqref{eq:5} and \eqref{eq:6},
+  use mathematical induction,
+  and we can show that
+  \begin{align*}
+    c_{2i, j} = \frac{(-1)^i}{(2i)!j!}, \quad c_{2i+1,j} = 0, \quad \forall i, j\ge 0.
+  \end{align*}
+
+  Therefore
+  \begin{align*}
+    u(x, y) &= \sum_{i=0}^{\infty}\sum_{j=0}^{\infty}c_{i,j}x^iy^j
+              = \sum_{i=0}^{\infty}\sum_{j=0}^{\infty}\frac{(-1)^i}{(2i)!j!}x^{2i}y^j \\
+            &= \sum_{i=0}^{\infty}\frac{(-1)^i}{(2i)!}x^{2i}\sum_{j=0}^{\infty}\frac{1}{j!}y^j \\
+    &= \cos(x)e^y.
+  \end{align*}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw2"
+%%% End:

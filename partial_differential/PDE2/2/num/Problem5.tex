@@ -1,0 +1,134 @@
+\begin{pro}[Poisson's formula]
+  Solve the boundary value problem of the Laplace equation in the disc:
+  \begin{displaymath}
+    \begin{cases}
+      \Delta u = u_{xx}+u_{yy} = 0, \quad x^2 + y^2 < R^2, \\
+      u(R\cos\theta, R\sin\theta) = f(\theta)
+    \end{cases}
+  \end{displaymath}
+  by the method of separation of variables (in polar coordinates).
+  You should finally obtain the celebrated Poisson's formula
+  \begin{displaymath}
+    u(r, \theta) = \frac{R^2-r^2}{2\pi}\int_0^{2\pi}\frac{f(\phi)}{R^2-2Rr\cos(\theta-\phi)+r^2}\dif\phi
+    = \frac{R^2-\|\mathbf{x}\|^2}{2\pi R}\int_{\|\mathbf{y}\|=R}
+    \frac{u(\mathbf{y})}{\|\mathbf{x}-\mathbf{y}\|^2}\dif S(\mathbf{y}).
+  \end{displaymath}
+\end{pro}
+
+\begin{sol}
+  First we rewrite the Laplacian in polar coordinates.
+  An application of the chain rule gives
+  \begin{displaymath}
+    \Delta u = \frac{\partial^2 u}{\partial r^2} +
+    \frac{1}{r}\frac{\partial u}{\partial r} + \frac{1}{r^2}\frac{\partial^2u}{\partial\theta^2}.
+  \end{displaymath}
+
+  We now multiply both sides by $r^2$,
+  and since $\Delta u=0$, we get
+  \begin{displaymath}
+    r^2 \frac{\partial^2u}{\partial r^2} + r \frac{\partial u}{\partial r}
+    = -\frac{\partial^2 u}{\partial \theta^2}.
+  \end{displaymath}
+
+  Separating these variables,
+  and looking for a solution of the form $u(r, \theta) = F(r)G(\theta)$,
+  we find
+  \begin{displaymath}
+    \frac{r^2F''(r)+rF'(r)}{F(r)} = -\frac{G''(\theta)}{G(\theta)}.
+  \end{displaymath}
+
+  Since the two sides depend on different variables,
+  they must both be constant, say equal to $\lambda$.
+  We therefore get the following equations:
+  \begin{displaymath}
+    \begin{cases}
+      G''(\theta) + \lambda G(\theta) = 0, \\
+      r^2F''(r) + rF'(r) - \lambda F(r) = 0.
+    \end{cases}
+  \end{displaymath}
+  Since $G$ must be periodic of period $2\pi$,
+  this implies that $\lambda\ge 0$ and that $\lambda=m^2$
+  where $m$ is an integer;
+  hence
+  \begin{displaymath}
+    G(\theta) = \tilde{A}\cos m\theta + \tilde{B}\sin m\theta.
+  \end{displaymath}
+
+  % An application of Euler's identity, $e^{ix}=\cos x+i\sin x$,
+  % allows one to rewrite $G$ in terms of complex exponentials,
+  % \begin{displaymath}
+  %   G(\theta) = Ae^{im\theta} + Be^{-im\theta}.
+  % \end{displaymath}
+
+  With $\lambda=m^2$ and $m\neq 0$,
+  two simple solutions of the equation in $F$ are $F(r)=r^m$ and $F(r)=r^{-m}$.
+  If $m=0$, then $F(r)=0$ and $F(r)=\log r$ are two solutions.
+  If $m>0$,
+  we note that $r^{-m}$ grows unboundedly large as $r$ tends to zero,
+  so $F(r)G(\theta)$ is unbounded at the origin; the same occurs when $m=0$
+  and $F(r)=\log r$.
+  We reject these solutions as contrary to our intuition.
+  Therefore,
+  we are left with the following special functions
+  \begin{displaymath}
+    % u_m(r, \theta) = r^{|m|}e^{im\theta}, \quad m\in\mathbb{Z}.
+    F(r) = r^m, \quad G(\theta) = \tilde{A}\cos m\theta + \tilde{B}\sin m\theta.
+  \end{displaymath}
+  We now make the important observation that the PDE is linear,
+  and so we may superpose the above special solutions to obtain the
+  presumed general solution:
+  \begin{displaymath}
+    u(r, \theta) = \frac{a_0}{2} + \sum_{m=1}^{\infty}(a_mr^m\cos m\theta +
+    b_m r^m\sin m\theta).
+  \end{displaymath}
+  Let $r=R$ and use the boundary condition, and we have
+  \begin{displaymath}
+    f(\theta) = \frac{a_0}{2} + \sum_{m=1}^{\infty}(a_mR^m\cos m\theta + b_mR^m\sin m\theta).
+  \end{displaymath}
+  Thus
+  \begin{displaymath}
+    a_m = \frac{1}{\pi R^m}\int_0^{2\pi}f(\phi)\cos m\phi\dif \phi, \quad
+    b_m = \frac{1}{\pi R^m}\int_0^{2\pi}f(\phi)\sin m\phi\dif \phi.
+  \end{displaymath}
+  \begin{align*}
+    u(r, \theta) = \frac{1}{2\pi}\int_0^{2\pi}f(\phi)\dif \phi
+    + \frac{1}{\pi}\sum_{m=1}^{\infty}\LP \frac{r}{R}\RP^m
+    \int_0^{2\pi}f(\phi)(\cos m\phi\cos m\theta + \sin m\phi\sin m\theta)\dif \phi.
+  \end{align*}
+  Consider $r<\tilde{R}<R$.
+  Since the series converges uniformly there,
+  we can interchange the order of summation and integration,
+  and obtain
+  \begin{equation}
+    \label{eq:7}
+    u(r, \theta) = \frac{1}{\pi}\int_0^{2\pi}f(\phi)\left[ \frac{1}{2} +
+    \sum_{m=1}^{\infty}\LP \frac{r}{R}\RP^m\cos m(\theta-\phi)\right]\dif\phi.
+\end{equation}
+The summation of the infinite series
+\begin{displaymath}
+  \frac{1}{2} + \sum_{m=1}^{\infty}\LP \frac{r}{R}\RP^m\cos m(\theta-\phi)
+\end{displaymath}
+requires a little side calculation.
+Define for this purpose $z=\rho e^{i\alpha}$ and evaluate (for $\rho<1$)
+the geometric sum
+\begin{displaymath}
+  \frac{1}{2} + \sum_{m=1}^{\infty}z^m = \frac{1}{2} + \frac{z}{1-z} =
+  \frac{1-\rho^2+2i\rho \sin\alpha}{2(1-2\rho\cos\alpha+\rho^2)}.
+\end{displaymath}
+Since $z^m = \rho^m(\cos m\alpha + i\sin m\alpha)$,
+we conclude upon separating the real and imaginary parts that
+\begin{displaymath}
+  \frac{1}{2} + \sum_{m=1}^{\infty}\rho^m\cos m\alpha =
+  \frac{1-\rho^2}{2(1-2\rho\cos\alpha+\rho^2)}.
+\end{displaymath}
+Returning to \eqref{eq:7} using $\rho=r/R, \alpha=\theta-\phi$,
+we obtain the Poisson formula
+\begin{displaymath}
+  u(r, \theta) = \frac{R^2-r^2}{2\pi}\int_0^{2\pi}\frac{f(\phi)}{R^2-2Rr\cos(\theta-\phi)+r^2}\dif\phi = \frac{R^2-\|\mathbf{x}\|^2}{2\pi R}\int_{\|\mathbf{y}\|=R}
+    \frac{u(\mathbf{y})}{\|\mathbf{x}-\mathbf{y}\|^2}\dif S(\mathbf{y}).
+\end{displaymath}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw2"
+%%% End:

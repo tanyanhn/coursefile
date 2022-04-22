@@ -1,0 +1,24 @@
+\begin{pro}
+  Define $\hat{K}_{\delta} = |\xi|^{-2}e^{-\delta|\xi|^2}$,
+  show that
+  \begin{displaymath}
+    \mathcal{F}^{-1}\hat{K}_{\delta} = \frac{1}{8\pi^{3/2}r}
+    \int_{|\lambda|\ge r/\sqrt{\delta}}e^{-\frac{\lambda^2}{4}}\dif\lambda
+    \to \frac{(4\pi)^{1/2}}{8\pi^{3/2}r} = \frac{1}{4\pi r}.
+  \end{displaymath}
+\end{pro}
+
+\begin{proof}
+  \begin{align*}
+    \mathcal{F}^{-1}\hat{K}_{\delta} &= \frac{1}{(2\pi)^3}\int_{\mathbb{R}^3}e^{-i\mathbf{x}\cdot\xi}|\xi|^{-2}e^{-\delta|\xi|^2}\dif\xi
+                                     = \frac{1}{(2\pi)^3}\int_{\mathbb{R}^3}e^{-\frac{|\mathbf{x}|^2}{4\delta}}|\xi|^{-2}e^{-\left|\sqrt{\delta}\xi+\frac{i\mathbf{x}}{2\sqrt{\delta}}\right|^2}\dif\xi \\
+    &= \frac{1}{8\pi^{3/2}r}
+    \int_{|\lambda|\ge r/\sqrt{\delta}}e^{-\frac{\lambda^2}{4}}\dif\lambda
+    \to \frac{1}{8\pi^{3/2}r}
+    \int_{\mathbb{R}}e^{-\frac{\lambda^2}{4}}\dif\lambda\to \frac{(4\pi)^{1/2}}{8\pi^{3/2}r} = \frac{1}{4\pi r}.
+  \end{align*}
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw4"
+%%% End:

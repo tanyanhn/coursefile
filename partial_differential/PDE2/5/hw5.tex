@@ -1,0 +1,89 @@
+\documentclass[10pt,a4paper]{article}
+\setlength{\paperheight}{29.7cm}
+\setlength{\textheight}{25cm}
+
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{CJKutf8}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+% \usepackage{CJKutf8}   % for Chinese characters
+
+
+\usepackage{graphicx}  % for figures
+\usepackage{layout}
+\usepackage{multicol}  % multiple columns to reduce number of pages
+\usepackage{mathrsfs}  
+\usepackage{fancyhdr}
+\usepackage{subfigure}
+\usepackage{tcolorbox}
+\usepackage{tikz-cd}
+
+\usepackage{mathtools}
+\usepackage{float}
+\usepackage{bm}
+\usepackage{booktabs}
+
+\geometry{margin=2.5cm, vmargin={2cm,2cm}}
+\setlength\parindent{0pt}
+
+\newtheorem{pro}{Problem}
+\newtheorem{defn}{Definition}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{thm}{Theorem}
+
+
+% Define a Solution environment like proof
+\makeatletter
+\newenvironment{sol}[1][\solname]{\par
+  \pushQED{\qed}
+  \normalfont \topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \item[\hskip\labelsep
+        \itshape
+    #1\@addpunct{.}]\ignorespaces
+}{\popQED\endtrivlist\@endpefalse}
+\providecommand{\solname}{Solution}
+\makeatother
+
+% Define the average integration notation: \bbint
+\newcommand\tbbint{-\mkern -16mu\int}
+\newcommand\dbbint{-\mkern -19mu\int}
+\newcommand\bbint{
+  {\mathchoice{\dbbint}{\tbbint}{\tbbint}{\tbbint}}
+}
+
+\newcommand{\LP}{\left(}
+  \newcommand{\RP}{\right)}
+\newcommand{\LI}{\left\langle}
+  \newcommand{\RI}{\right\rangle}
+\newcommand{\dif}{\mathrm{d}}
+\title{PDE Homework \#5}
+\author{\begin{CJK*}{UTF8}{gkai}
+    李阳
+    \end{CJK*}\, 11935018}
+
+\begin{document}
+
+\maketitle
+
+\renewcommand\theenumi{\roman{enumi}}
+\renewcommand\labelenumi{(\theenumi)}
+
+\input{num/Problem1.tex}
+
+\input{num/Problem2.tex}
+
+\input{num/Problem3.tex}
+
+\input{num/Problem4.tex}
+
+\input{num/Problem5.tex}
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

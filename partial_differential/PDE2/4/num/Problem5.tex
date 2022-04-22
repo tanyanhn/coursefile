@@ -1,0 +1,29 @@
+\begin{pro}
+  Prove that the following holds in the sense of tempered distributions $\mathcal{S}'(\mathbb{R}^2)$.
+  \begin{displaymath}
+    (|x|^{-\epsilon}-1)\epsilon^{-1} = [\exp(\epsilon\ln|x|^{-1})-1]
+    \epsilon^{-1} \to \ln(|x|^{-1}).
+  \end{displaymath}
+\end{pro}
+
+\begin{proof}
+  We have
+  \begin{displaymath}
+    \forall x\in\mathbb{R}^2, \quad
+    [\exp(\epsilon\ln|x|^{-1})-1]\epsilon^{-1} - \ln(|x|^{-1}) \to 0
+    \text{ as } \epsilon\to 0^+.
+  \end{displaymath}
+  Therefore, by the dominated convergence therem,
+  $\forall \phi\in\mathcal{S}(\mathbb{R}^2)$,
+  \begin{align*}
+    \left\langle [\exp(\epsilon\ln|x|^{-1})-1]\epsilon^{-1}, \phi\right\rangle -
+    \left\langle \ln(|x|^{-1}), \phi\right\rangle =
+    \int_{\mathbb{R}^2}\LP[\exp(\epsilon\ln|x|^{-1})-1]\epsilon^{-1}-
+    \ln(|x|^{-1})\RP\phi(x)\dif x \to 0 \text{ as } \epsilon\to 0^+,
+  \end{align*}
+  which gives the desired result.
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw4"
+%%% End:

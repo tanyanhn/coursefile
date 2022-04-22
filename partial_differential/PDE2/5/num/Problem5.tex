@@ -1,0 +1,80 @@
+\begin{pro}
+  For 2D wave,
+  viewing $u(t, \mathbf{x})=w(t, \mathbf{x}, 0)$ with $(\mathbf{x}, 0)\in\mathbb{R}^3$,
+  using (9) to write down the solution representation formula for $n=2$.
+\end{pro}
+\begin{sol}
+  We use the method of descent.
+
+  Let us write
+  \begin{displaymath}
+    \bar{u}(x_1, x_2, x_3, t) := u(x_1, x_2, t).
+  \end{displaymath}
+  Then
+  \begin{displaymath}
+    \begin{cases}
+      \bar{u}_{tt} - \Delta\bar{u} = 0 \text{ in } \mathbb{R}^3\times(0, \infty) \\
+      \bar{u} = \bar{g}, \bar{u}_t = \bar{h} \text{ on } \mathbb{R}^3\times\{t=0\},
+    \end{cases}
+  \end{displaymath}
+  for
+  \begin{displaymath}
+    \bar{g}(x_1, x_2, x_3) := g(x_1, x_2), \quad
+    \bar{h}(x_1, x_2, x_3) := h(x_1, x_2).
+  \end{displaymath}
+  If we write $\mathbf{x}=(x_1, x_2)\in\mathbb{R}^2$ and
+  $\bar{\mathbf{x}} = (x_1, x_2, 0)\in\mathbb{R}^3$,
+  then Kirchhoff's formula implies
+  \begin{displaymath}
+    u(\mathbf{x}, t) = \bar{u}(\bar{\mathbf{x}}, t) =
+    \frac{\partial}{\partial t}\LP t\bbint_{\partial \bar{B}(\bar{\mathbf{x}}, t)}\bar{g}
+    \dif\bar{S}\RP + t\bbint_{\partial\bar{B}(\bar{\mathbf{x}}, t)}\bar{h}\dif\bar{S},
+  \end{displaymath}
+  where $\bar{B}(\bar{\mathbf{x}}, t)$ denotes the ball in $\mathbb{R}^3$
+  with center $\bar{\mathbf{x}}$, radius $t>0$ and
+  where $\dif\bar{S}$ denotes two-dimensional surface measure on $\partial\bar{B}(\bar{\mathbf{x}}, t)$.
+  We simplify the above formula by observing
+  \begin{displaymath}
+    \bbint_{\partial\bar{B}(\bar{\mathbf{x}}, t)}\bar{g}\dif\bar{S} =
+    \frac{1}{4\pi t^2}\int_{\partial\bar{B}(\bar{\mathbf{x}}, t)}\bar{g}\dif\bar{S}
+    = \frac{2}{4\pi t^2}\int_{B(\mathbf{x}, t)}g(\mathbf{y})(1+\|D\gamma(\mathbf{y})\|^2)^{1/2}\dif\mathbf{y},
+  \end{displaymath}
+  where $\gamma(\mathbf{y}) = (t^2-\|\mathbf{y}-\mathbf{x}\|^2)^{1/2}$
+  for $\mathbf{y}\in B(\mathbf{x}, t)$.
+  The factor ``2'' enters since $\partial \bar{B}(\bar{\mathbf{x}}, t)$
+  consists of two hemispheres.
+  Observe that $(1+\|D\gamma\|^2)^{1/2} = t(t^2-\|\mathbf{y}-\mathbf{x}\|^2)^{-1/2}$.
+  Therefore
+  \begin{displaymath}
+    \bbint_{\partial\bar{B}(\bar{\mathbf{x}}, t)}\bar{g}\dif\bar{S} = \frac{1}{2\pi t}
+    \int_{B(\mathbf{x}, t)} \frac{g(\mathbf{y})}{(t^2-\|\mathbf{y}-\mathbf{x}\|^2)^{1/2}}\dif\mathbf{y}
+    = \frac{t}{2}\bbint_{B(\mathbf{x}, t)}\frac{g(\mathbf{y})}{(t^2-\|\mathbf{y}-\mathbf{x}\|^2)^{1/2}}\dif\mathbf{y}.
+  \end{displaymath}
+  Consequently
+  \begin{displaymath}
+    u(\mathbf{x}, t) = \frac{1}{2}\frac{\partial}{\partial t}\LP t^2
+    \bbint_{B(\mathbf{x}, t)}\frac{g(\mathbf{y})}{(t^2-\|\mathbf{y}-\mathbf{x}\|^2)^{1/2}}\dif\mathbf{y}\RP + \frac{t^2}{2}\bbint_{B(\mathbf{x}, t)}
+    \frac{h(\mathbf{y})}{(t^2-\|\mathbf{y}-\mathbf{x}\|^2)^{1/2}}\dif\mathbf{y}.
+  \end{displaymath}
+  But
+  \begin{displaymath}
+    t^2\bbint_{B(\mathbf{x}, t)}\frac{g(\mathbf{y})}{(t^2-\|\mathbf{y}-\mathbf{x}\|^2)^{1/2}}\dif\mathbf{y}
+    = t\bbint_{B(\mathbf{0}, 1)}\frac{g(\mathbf{x}+t\mathbf{z})}{(1-\|\mathbf{z}^2\|)^{1/2}}\dif\mathbf{z},
+  \end{displaymath}
+  and so
+  \begin{align*}
+    \frac{\partial}{\partial t}\LP t^2
+    \bbint_{B(\mathbf{x}, t)}\frac{g(\mathbf{y})}{(t^2-\|\mathbf{y}-\mathbf{x}\|^2)^{1/2}}\dif\mathbf{y}\RP &= \bbint_{B(\mathbf{0}, 1)}\frac{g(\mathbf{x}+t\mathbf{z})}{(1-\|\mathbf{z}\|^2)^{1/2}}\dif\mathbf{z} + t\bbint_{B(\mathbf{0}, 1)}\frac{Dg(\mathbf{x}+t\mathbf{z})\cdot\mathbf{z}}{(1-\|\mathbf{z}\|^2)^{1/2}}\dif\mathbf{z} \\
+    &= t\bbint_{B(\mathbf{x}, t)}\frac{g(\mathbf{y})}{(t^2-\|\mathbf{y}-\mathbf{x}\|^2)^{1/2}}\dif\mathbf{y} + t\bbint_{B(\mathbf{x}, t)}\frac{Dg(\mathbf{y})\cdot(\mathbf{y}-\mathbf{x})}{(t^2-\|\mathbf{y}-\mathbf{x}\|^2)^{1/2}}\dif\mathbf{y}.
+  \end{align*}
+  Hence we obtain
+  \begin{displaymath}
+    u(\mathbf{x}, t) = \frac{1}{2}\bbint_{B(\mathbf{x}, t)}
+    \frac{tg(\mathbf{y})+t^2h(\mathbf{y})+tDg(\mathbf{y})\cdot(\mathbf{y}-\mathbf{x})}{(t^2-\|\mathbf{y}-\mathbf{x}\|^2)^{1/2}}\dif\mathbf{y} \text{ for }
+    \mathbf{x}\in\mathbb{R}^2, t>0.
+  \end{displaymath}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw5"
+%%% End:

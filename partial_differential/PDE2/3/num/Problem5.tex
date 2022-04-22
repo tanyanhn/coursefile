@@ -1,0 +1,51 @@
+\begin{lem}[Gaussian function]
+  If $G_{\lambda}=e^{-\lambda\|\mathbf{x}\|^2}$,
+  where $\mathscr{R}\lambda>0$,
+  then
+  \begin{equation}
+    \label{eq:7}
+    \widehat{G}_{\lambda}(\xi) = \LP \frac{\pi}{\lambda}\RP^{n/2}
+    e^{-\frac{\|\xi\|^2}{4\lambda}} = \LP \frac{\pi}{\lambda}\RP^{n/2}
+    G_{1/(4\lambda)}.
+  \end{equation}
+\end{lem}
+
+\begin{pro}
+  Based on \eqref{eq:7} with $\lambda=\epsilon-it$,
+  $\epsilon>0$,
+  $t\in\mathbb{R}\backslash\{0\}$.
+  By considering the limit in $\mathcal{S}'(\mathbb{R})$
+  as $\epsilon\to 0^+$, deduce that
+  \begin{equation}
+    \mathcal{F}_{\mathbf{x}}e^{it\|\mathbf{x}\|^2}(\xi) =
+    \LP \frac{\pi}{|t|}\RP^{n/2}e^{i \frac{n\pi}{4}\mathrm{sgn}t
+    -\frac{i\|\xi\|^2}{4t}}.
+  \end{equation}
+\end{pro}
+
+\begin{proof}
+  Based on \eqref{eq:7} with $\lambda=\epsilon-it$,
+  we obtain
+  \begin{displaymath}
+    \mathcal{F}e^{-(\epsilon-it)\|\mathbf{x}\|^2}(\xi) = \LP \frac{\pi}{\epsilon-it}\RP^{n/2}e^{-\frac{\|\xi\|^2}{4(\epsilon-it)}},
+  \end{displaymath}
+  considering the limit in $\mathcal{S}'(\mathbb{R})$ as $\epsilon\to 0^+$,
+  we have
+  \begin{align*}
+    \mathcal{F}_{\mathbf{x}}e^{it\|\mathbf{x}\|^2}(\xi) &= \LP \frac{\pi}{-it}\RP^{n/2}e^{-\frac{i\|\xi\|^2}{4t}} \\
+    &=
+      \begin{cases}
+        \LP \frac{\pi}{t}\RP^{n/2}i^{n/2}e^{-\frac{i\|\xi\|^2}{4t}} =
+        \LP \frac{\pi}{|t|}\RP^{n/2}e^{i \frac{n\pi}{4}\mathrm{sgn}t-\frac{i\|\xi\|^2}{4t}} \text{ if } t>0, \\
+        \LP \frac{\pi}{|t|}\RP^{n/2}(-i)^{n/2}e^{-\frac{i\|\xi\|^2}{4t}} =
+        \LP \frac{\pi}{|t|}\RP^{n/2}e^{i \frac{n\pi}{4}\mathrm{sgn}t-\frac{i\|\xi\|^2}{4t}} \text{ if } t<0,
+      \end{cases}
+  \end{align*}
+  where we have used Euler's identity $e^{ix}=\cos x+i\sin x$,
+  in particular, $i = e^{i \frac{\pi}{2}}$ and $-i=e^{-i \frac{\pi}{2}}$.
+  Therefore, we have the desired result.
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

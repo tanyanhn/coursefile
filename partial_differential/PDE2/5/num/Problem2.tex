@@ -1,0 +1,24 @@
+\begin{pro}
+  Consider the heat operator $L=\partial_t-\Delta$,
+  is it hypoelliptic?
+  Explain in details.
+\end{pro}
+\begin{sol}
+  The heat operator $L=\partial_t-\Delta$ is hypoelliptic.
+
+  Recall the regularity of solutions of the heat equation:
+  \begin{thm}[Smoothness]
+    Suppose $u\in C_1^2(U_T)$ solves the heat equation in $U_T$.
+    Then
+    \begin{displaymath}
+      u\in C^{\infty}(U_T).
+    \end{displaymath}
+    This regularity assertion is valid even if $u$ attains nonsmooth boundary values on
+    $\Gamma_T$.
+  \end{thm}
+  Hence the heat operator $L$ is hypoelliptic by definition.
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw5"
+%%% End:

@@ -1,0 +1,122 @@
+\begin{pro}
+  Consider the (uniformly) elliptic operator with (continuous)
+  variable-coefficient
+  \begin{displaymath}
+  L=\sum_{i,j}a^{ij}(\mathbf{x})\partial_i\partial_j +
+  \sum_ib^i(\mathbf{x})\partial_i.
+\end{displaymath}
+Assume that $\exists \mu>0 \text{ s.t. the matrix } A-\mu I$ is positive semidefinite,
+i.e.,
+  \begin{displaymath}
+    \exists \mu>0 \text{ s.t. } \forall \mathbf{x}\in\Omega,
+    \forall \xi\in\mathbb{R}^n, \sum_{i,j=1}^na^{ij}(\mathbf{x})\xi_i\xi_j \ge
+    \mu\|\xi\|^2.
+  \end{displaymath}
+  Try to formulate and prove the corresponding weak maximum principle in $\Omega$.
+  (Hint: You may want to construct $\phi=e^{\lambda x_1}$ with
+  $1\ll \lambda$.)
+\end{pro}
+\begin{sol}
+  The following is a reiteration of the classical PDE textbook by Evans.
+  \begin{thm}[Weak maximum principle]
+    Let $\Omega$ be a connected open bounded set.
+    Assume
+    $u\in\mathcal{C}^2(\Omega)\cap\mathcal{C}(\overline{\Omega})$,
+    if
+    \begin{displaymath}
+      Lu \ge 0 \text{ in } \Omega,
+    \end{displaymath}
+    then
+    \begin{displaymath}
+      \max_{\overline{\Omega}}u = \max_{\partial\Omega}u.
+    \end{displaymath}
+  \end{thm}
+  \begin{proof}
+    \begin{itemize}
+    \item[1.]
+      Let us first suppose we have the strict inequality
+      \begin{equation}
+        \label{eq:2}
+        Lu > 0 \text{ in } \Omega,
+      \end{equation}
+      and yet there exists a point $\mathbf{x}_0\in\Omega$ with
+      \begin{equation}
+        \label{eq:3}
+        u(\mathbf{x}_0) = \max_{\overline{\Omega}}u.
+      \end{equation}
+      Now at this maximum point $\mathbf{x}_0$,
+      we have
+      \begin{equation}
+        \label{eq:4}
+        Du(\mathbf{x}_0) = 0
+      \end{equation}
+      and
+      \begin{equation}
+        \label{eq:5}
+        D^2u(\mathbf{x}_0) \le 0.
+      \end{equation}
+
+    \item[2.]
+      Since the matrix $A=((a^{jk}(\mathbf{x}_0)))$ is symmetric
+      and positive definite,
+      there exists an orthogonal matrix $O = ((o_{ij}))$ so that
+      \begin{equation}
+        \label{eq:6}
+        OAO^T = \text{diag}(d_1, \ldots, d_n), \quad OO^T = I.
+      \end{equation}
+      with $d_k>0 (k=1, \ldots, n)$.
+      Write $\mathbf{y}=\mathbf{x}_0+O(\mathbf{x}-\mathbf{x}_0)$.
+      Then $\mathbf{x}-\mathbf{x}_0=O^T(\mathbf{y}-\mathbf{x}_0)$,
+      and so
+      \begin{displaymath}
+        u_{x_i} = \sum_{k=1}^nu_{y_k}o_{ki}, \quad
+        u_{x_ix_j} = \sum_{k, l=1}^nu_{y_ky_l}o_{ki}o_{lj} \quad
+        (i, j = 1, \ldots, n).
+      \end{displaymath}
+      Hence at the point $\mathbf{x}_0$,
+      \begin{equation}
+        \label{eq:7}
+        \sum_{i,j=1}^na^{ij}u_{x_ix_j} = \sum_{k,l=1}^n\sum_{i,j=1}^na^{ij}
+        u_{y_ky_l}o_{ki}o_{lj} = \sum_{k=1}^nd_ku_{y_ky_k} \text{ (by \eqref{eq:6})} \le 0,
+      \end{equation}
+      since $d_k>0$ and $u_{y_ky_k}(\mathbf{x}_0)\le 0 (k=1, \ldots, n)$,
+      according to \eqref{eq:5}.
+
+    \item[3.]
+      Thus at $\mathbf{x}_0$
+      \begin{displaymath}
+        Lu = \sum_{i,j=1}^na^{ij}u_{x_ix_j} + \sum_{i=1}b^iu_{x_i} \le 0,
+      \end{displaymath}
+      in light of \eqref{eq:4} and \eqref{eq:7}.
+      So \eqref{eq:2} and \eqref{eq:3} are incompatible,
+      and we have a contradiction.
+
+    \item[4.]
+      In the general case,
+      write
+      \begin{displaymath}
+        u^{\epsilon}(\mathbf{x}) := u(\mathbf{x}) + \epsilon e^{\lambda x_1}
+        \quad (\mathbf{x}\in\Omega),
+      \end{displaymath}
+      where $\lambda>0$ will be selected below and $\epsilon>0$.
+      Recall that the uniform ellipticity condition implies
+      $a^{ii}(\mathbf{x})\ge \mu (i=1, \ldots, n, \mathbf{x}\in\Omega)$.
+      Therefore
+      \begin{displaymath}
+        Lu^{\epsilon} = Lu + \epsilon L(e^{\lambda x_1})
+        \ge \epsilon e^{\lambda x_1}(\lambda^2a^{11}+\lambda b^1)
+        \ge \epsilon e^{\lambda x_1}(\lambda^2\mu - \|\mathbf{b}\|_{L^{\infty}}\lambda) > 0 \text{ in }\Omega,
+      \end{displaymath}
+      provided we choose $\lambda>0$ sufficiently large.
+      Then according to steps 1 and 2 above
+      $\max_{\overline{\Omega}}u^{\epsilon} = \max_{\partial\Omega}u^{\epsilon}$.
+      Let $\epsilon\to 0$ to find
+      $\max_{\overline{\Omega}}u = \max_{\partial\Omega} u$.
+      This completes the proof.
+    \end{itemize}
+  \end{proof}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw6"
+%%% End:

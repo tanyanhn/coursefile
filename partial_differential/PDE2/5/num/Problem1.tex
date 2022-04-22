@@ -1,0 +1,99 @@
+\begin{pro}
+  Consider the operator $L=\partial_x+i\partial_y$ in $\mathbb{R}^2$,
+  is it hypoelliptic?
+  Explain in details.
+\end{pro}
+\begin{sol}
+  The Cauchy-Riemann operator $L=\partial_x+i\partial_y$ is hypoelliptic.
+
+  Consider $L$ on $\Omega\subset\mathbb{R}^2$,
+  we know from complex analysis that solutions of $Lu=0$
+  are homomorphic functions of $z=x+iy$ on $\Omega$.
+  Therefore $L$ is hypoelliptic by definition.
+ %  From Theorem 4 in the Lecture notes,
+ %  we know that $L$ is hypoelliptic if
+ %  \begin{equation}
+ %    \label{eq:1}
+ %    \exists K\in\mathcal{D}', LK = \delta \Rightarrow
+ %    K\in C^{\infty}(\mathbb{R}^n\backslash\{\mathbf{0}\}).
+ %  \end{equation}
+ %  From Lecture notes \#4 \S 4.1,
+ %  \pageref{eq:1} is a true statement.
+ %  Therefore the Cauchy-Riemann operator is hypoelliptic.
+
+ %  The following is a reiteration of \S 4.1 of the lecture notes:
+
+ %  For the Cauchy-Riemann operator $L=\partial_x+i\partial_y$,
+ %  to find a $K\in\mathcal{S}'$ with $LK=\delta$,
+ %  we use Fourier tranform on $y$,
+ %  to obtain
+ %  \begin{displaymath}
+ %    (\partial_x-\eta)\hat{K}(x, \eta) = \delta(x).
+ %  \end{displaymath}
+ %  Multiplying the integrating factor $e^{-x\eta}$,
+ %  we obtain
+ %  \begin{displaymath}
+ %    \partial_x(e^{-x\eta}\hat{K}(x, \eta)) = \delta(x)e^{-x\eta} = \delta(x).
+ %  \end{displaymath}
+ %  View as an ODE in $x$,
+ %  we get,
+ %  for any fixed $\eta$,
+ %  \begin{displaymath}
+ %    e^{-x\eta}\hat{K}(x, \eta) = H(x) + C.
+ %  \end{displaymath}
+ %  But it is a PDE,
+ %  we have in general
+ %  \begin{displaymath}
+ %    e^{-x\eta}\hat{K}(x, \eta) = H(x) + C(\eta), \quad
+ %    \hat{K}(x, \eta) = (H(x) + C(\eta))e^{x\eta}.
+ %  \end{displaymath}
+ %  As we have seen,
+ %  it is not in $\mathcal{S}'$ in general,
+ %  because of the factor $e^{x\eta}$ in the case of $x\eta>0$.
+
+ %  To avoid the bad behavior,
+ %  for $x>0$,
+ %  we want to set for $\eta>0, 1+C(\eta)=0$;
+ %  while for $x<0$,
+ %  we want to set for $\eta<0, 0+C(\eta)=0$.
+ %  In conclusion,
+ %  we choose to set $C(\eta)=-H(\eta)$ for $\eta\neq 0$.
+ %  In general,
+ %  we could set $C(\eta)=-H(\eta)+c\delta$.
+ %  Here for simplicity,
+ %  let us set $C(\eta)=-H(\eta)$.
+
+ %  With this choice,
+ %  we see that $\hat{K}\in L^1$ for fixed $x\neq 0$,
+ %  and we can find $2\pi K$ by (classical) Fourier inversion:
+ %  \begin{displaymath}
+ %    \int(H(x)-H(\eta))e^{x\eta}e^{iy\eta}\dif\eta = \int_{-\infty}^0H(x)e^{x\eta}e^{iy\eta}\dif\eta
+ %    + \int_0^{\infty}(H(x)-1)e^{x\eta}e^{iy\eta}\dif\eta = \frac{1}{x+iy},
+ %  \end{displaymath}
+ %  $K=\mathcal{O}(1/r)\in L_{\text{loc}}^1\cap \mathcal{S}'$.
+
+ %  Let us check that $LK=\delta$.
+ %  Actually,
+ %  in polar coordinates $(x,y)=r(\cos\theta, \sin\theta)$,
+ %  we have
+ %  \begin{displaymath}
+ %    r\partial_r = x\partial_x + y\partial_y, \partial_{\theta} = -y\partial_x+x\partial_y,
+ %  \end{displaymath}
+ %  \begin{displaymath}
+ %    \partial_x = \cos\theta\partial_r-\frac{\sin\theta}{r}\partial_{\theta},
+ %    \partial_y = \sin\theta\partial_r+\frac{\cos\theta}{r}\partial_{\theta},
+ %  \end{displaymath}
+ %  \begin{displaymath}
+ %    \partial_x+i\partial_y = e^{i\theta}(\partial_r-\frac{i}{r}\partial_{\theta}),
+ %  \end{displaymath}
+ %  \begin{displaymath}
+ %    \langle LK, \phi\rangle = -\langle K, L\phi\rangle = -\int_0^{2\pi}\int_0^{\infty}
+ %    (2\pi re^{i\theta})^{-1}e^{i\theta}[(\partial_r-\frac{i}{r}\partial_{\theta})\phi]r\dif r\dif\theta
+ %   = \phi(0),
+ % \end{displaymath}
+ % for any $\phi\in\mathcal{D}(\mathbb{R}^2)$.
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw5"
+%%% End:

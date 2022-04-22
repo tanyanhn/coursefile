@@ -1,0 +1,100 @@
+\begin{pro}
+  Solve $u_{tt}-c^2u_{xx}=F(t, x)$ for
+  $t>0$ and $x\in\mathbb{R}$,
+  with data $u(0, x)=0, u_t(0, x) = 0$
+  for $x\in\mathbb{R}$.
+\end{pro}
+
+\begin{sol}
+  First, let's review Duhamel's principle.
+  
+  Define $u=u(t, x; s)$ to be the solution of
+  \begin{displaymath}
+    \begin{cases}
+      u_{tt}(s; \cdot) - c^2u_{xx}(s; \cdot) = 0 \text{ in } (s, \infty)\times\mathbb{R} \\
+      u(s; \cdot) = 0, u_t(s; \cdot) = F(\cdot, s) \text{ on } \{t=s\}\times\mathbb{R}.
+    \end{cases}
+  \end{displaymath}
+
+  Now set
+  \begin{displaymath}
+    u(t, x) := \int_0^tu(t, x; s) \dif s \quad (t\ge 0, x\in\mathbb{R}).
+  \end{displaymath}
+
+  Duhamel's principle asserts this is a solution of
+  \begin{displaymath}
+    \begin{cases}
+      u_{tt}-c^2u_{xx} = F \text{ in } (0, \infty)\times\mathbb{R} \\
+      u=0, u_t = 0 \text{ on } \{t=0\}\times\mathbb{R}.
+    \end{cases}
+  \end{displaymath}
+
+  Apply d'Alembert's formula and Duhamel's principle, and we have
+  \begin{displaymath}
+    u(t, x; s) = \frac{1}{2c}\int_{x-c(t-s)}^{x+c(t-s)}F(s, y)\dif y.
+  \end{displaymath}
+  \begin{align*}
+    u(t, x) = \int_0^tu(t, x; s)\dif s = \frac{1}{2c}\int_0^t\int_{x-c(t-s)}^{x+c(t-s)}F(s, y)\dif y\dif s.
+  \end{align*}
+  % \begin{lem}
+  %   The solution of the following nonhomogeneous transport equation
+  %   \begin{displaymath}
+  %     \begin{cases}
+  %       u_t + \mathbf{b}\cdot Du = f \text{ in } \mathbb{R}^n\times(0, \infty) \\
+  %       u = g \text{ on } \mathbb{R}^n\times\{t=0\}.
+  %     \end{cases}
+  %   \end{displaymath}
+  %   is
+  %   \begin{displaymath}
+  %     u(\mathbf{x}, t) = g(\mathbf{x}-t\mathbf{b}) + \int_0^t f(\mathbf{x}+(s-t)\mathbf{b}, s) \dif s
+  %     \quad (x\in\mathbb{R}^n, t\ge 0).
+  %   \end{displaymath}
+  % \end{lem}
+
+  % Note that the PDE can be ``factored'',
+  % to read
+  % \begin{equation}
+  %   \label{eq:1}
+  %   \LP \frac{\partial}{\partial t} - c\frac{\partial}{\partial x}\RP
+  %   \LP \frac{\partial}{\partial t} + c\frac{\partial}{\partial x}\RP u
+  %   = u_{tt} - c^2u_{xx} = F(t, x).
+  % \end{equation}
+
+  % Write
+  % \begin{equation}
+  %   \label{eq:2}
+  %   v(t, x) := \LP \frac{\partial}{\partial t} + c\frac{\partial}{\partial x}\RP u(t, x).
+  % \end{equation}
+
+  % Then \eqref{eq:1} says
+  % \begin{displaymath}
+  %   v_t(t, x) - cv_x(t, x) = F(t, x) \quad (x\in\mathbb{R}, t>0).
+  % \end{displaymath}
+  
+  % Applying the above lemma (with $n=1, b=c$),
+  % we find
+  % \begin{equation}
+  %   \label{eq:3}
+  %   v(t, x) = \int_0^tF(s, x-c(s-t))\dif s.
+  % \end{equation}
+
+  % Combining now \eqref{eq:1}-\eqref{eq:3},
+  % we obtain
+  % \begin{displaymath}
+  %   u_t(t, x) + cu_x(t, x) = v(t, x)\text{ in }
+  %   \mathbb{R}\times(0, \infty).
+  % \end{displaymath}
+
+  % Applying the above lemma gives
+  % \begin{align*}
+  %   u(t, x) &= \int_0^tv(s, x+c(s-t))\dif s =
+  %             \int_0^t\int_0^sF(\tau, x+c(s-t)-c(\tau-s))\dif \tau\dif s \\
+  %           &= \int_0^t\int_0^sF(\tau, x-c(t+\tau-2s))\dif\tau\dif s \\
+  %           &= \int_0^t\int_0^{\tau}F(\tau, x-c(t+\tau-2s))\dif s\dif \tau \\
+  %   &= \frac{1}{2c}\int_0^t\int_{x+c(t-\tau)}^{x+c(t+\tau)}F(\tau, \xi)\dif \xi\dif \tau
+  % \end{align*}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw2"
+%%% End:

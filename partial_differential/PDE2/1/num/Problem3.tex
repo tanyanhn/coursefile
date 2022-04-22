@@ -1,0 +1,94 @@
+\begin{pro}
+  Solve using characteristics:
+  \begin{itemize}
+  \item[(a) ]
+    $u_t + xu_x = x, u(0, x) = x^2$.
+  \item[(b) ]
+    $u_t + uu_x = 0, u(0, x) = -x$.
+  \end{itemize}
+\end{pro}
+
+\begin{sol}
+  Recall that the characteristic equations of
+a first-order nonlinear PDE are defined as follows:
+\begin{defn}
+  \begin{subequations}
+    \label{eq:characteristics}
+    \begin{align}
+      \dot{\mathbf{p}}(s) &= -D_{\mathbf{x}}F(\mathbf{p}(s), z(s), \mathbf{x}(s)) -
+      D_z F(\mathbf{p}(s), z(s), \mathbf{x}(s))\mathbf{p}(s); \\
+      \dot{z}(s) &= D_{\mathbf{p}}F(\mathbf{p}(s), z(s), \mathbf{x}(s))\cdot\mathbf{p}(s); \\
+      \dot{\mathbf{x}}(s) &= D_{\mathbf{p}}F(\mathbf{p}(s), z(s), \mathbf{x}(s)).
+    \end{align}
+  \end{subequations}
+\end{defn}
+
+\begin{itemize}
+\item[(a) ]
+  Substituting
+  \begin{displaymath}
+    F(p_1, p_2; z; x, t) = xp_1 + p_2 - x
+  \end{displaymath}
+  into \eqref{eq:characteristics} yields
+  \begin{align*}
+    \dot{x}(s) &= x(s), \quad \dot{t}(s) = 1; \\
+    \dot{z}(s) &= x(s).
+  \end{align*}
+  Consequently
+  \begin{align*}
+    x(s) &= x^0e^s, \quad t(s) = s; \\
+    z(s) &= g(x^0) + \int_0^sx^0e^{\tau}\dif\tau = g(x^0) + x^0(e^s-1),
+  \end{align*}
+  where $x^0\in\mathbb{R}, s\geq 0$.
+
+  Fix a point $(t, x)\in(0, \infty)\times\mathbb{R}$.
+  We select $s>0$ and $x^0\in\mathbb{R}$ so that
+  $(t, x) = (t(s), x(s)) = (s, x^0e^s)$;
+  that is,
+  $s = t, x^0 = xe^{-s}$.
+  Then
+  \begin{displaymath}
+    u(t, x) = u(t(s), x(s)) = z(s) = g(x^0) + x^0(e^s - 1) = g(xe^{-t}) + xe^{-t}(e^t-1) = x^2e^{-2t} - xe^{-t} +x.
+  \end{displaymath}
+  Therefore
+  \begin{equation}
+    u(t, x) = x^2e^{-2t} - xe^{-t} + x.
+  \end{equation}
+
+  \item[(b) ]
+  Substituting
+  \begin{displaymath}
+    F(p_1, p_2; z; x, t) = zp_1 + p_2
+  \end{displaymath}
+  into \eqref{eq:characteristics} yields
+  \begin{align*}
+    \dot{x}(s) &= z(s), \quad \dot{t}(s) = 1; \\
+    \dot{z}(s) &= 0.
+  \end{align*}
+  Consequently
+  \begin{align*}
+    x(s) &= -x^0s + x^0, \quad t(s) = s; \\
+    z(s) &= g(x^0) = -x^0,
+  \end{align*}
+  where $x^0\in\mathbb{R}, s\geq 0$.
+
+  Fix a point $(t, x)\in(0, \infty)\times\mathbb{R}$.
+  We select $s>0$ and $x^0\in\mathbb{R}$ so that
+  $(t, x) = (t(s), x(s)) = (s, -x^0s+x^0)$;
+  that is,
+  $s = t, x^0 = \frac{x}{1-t}$.
+  Then
+  \begin{displaymath}
+    u(t, x) = u(t(s), x(s)) = z(s) = g(x^0)= g\left(\frac{x}{1-t}\right) =
+    -\frac{x}{1-t}.
+  \end{displaymath}
+  Therefore
+  \begin{equation}
+    u(t, x) = \frac{x}{t-1}.
+  \end{equation}
+\end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw1"
+%%% End:

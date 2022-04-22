@@ -1,0 +1,62 @@
+\begin{pro}
+  A linear form $u$ on $\mathcal{D}(\Omega)$ is continuous
+  ($u(\phi_j)\to 0$ for every sequence $\phi_j\in\mathcal{D}(\Omega)$ converging to $0$)
+  iff it satisfies the following property:
+  for any compact set $K\subset \Omega$
+  there exist an integer $k$ and a constant $C = C_{K, k}$ such that
+  \begin{displaymath}
+    |\left\langle u, \phi\right\rangle| \le Cp_{K, k}(\phi), \quad\forall\phi\in\mathcal{C}_c^{\infty}(K).
+  \end{displaymath}
+\end{pro}
+
+\begin{proof}
+  \begin{itemize}
+  \item Sufficiency:
+    Let $\phi_j\in\mathcal{D}(\Omega)$ be a sequence converging to $0$,
+    then the definition of the topology of
+    $\mathcal{C}_c^{\infty}(\Omega)$ yields
+    \begin{itemize}
+    \item[(1)]
+      there exists a compact set $K\subset \Omega$,
+      $\mathrm{supp}\phi_j\subset K$,
+      for all $j\ge 1$.
+    \item[(2)]
+      for any $k$,
+      \begin{displaymath}
+        p_{K, k}(\phi_j) := \sup_{|\alpha|\le k}\sup_{x\in K}|\partial^{\alpha}\phi_j(x)|\to 0 \text{ as } j\to\infty.
+      \end{displaymath}
+      By assumption
+      \begin{displaymath}
+        |u(\phi_j)| = |\left\langle u, \phi_j\right\rangle| \le
+        Cp_{K, k}(\phi_j) \to 0 \text{ as } j\to\infty.
+      \end{displaymath}
+      Therefore $u$ is continuous.
+    \end{itemize}
+
+  \item Necessity:
+    We argue by contradiction.
+    If not, then
+    \begin{displaymath}
+      \exists K\subset \Omega, \forall k>0 \text{ s.t. }
+      \exists \phi_k\in\mathcal{C}_c^{\infty}(K) \text{ s.t. }
+      u(\phi_k) \ge k^2P_{K, k_0}(\phi_k).
+    \end{displaymath}
+    Let $\Phi_k=\frac{\phi_k}{kP_{K,k_0}(\phi_k)}\in\mathcal{C}_c^{\infty}(K)$,
+    we have
+    \begin{displaymath}
+      P_{K, k_0}(\Phi_k)\le k^{-1} \to 0 \text{ as } k\to\infty
+      \Rightarrow
+      \Phi_k\to 0 \text{ in } \mathcal{C}_c^{\infty}(K).
+    \end{displaymath}
+    However,
+    by the construction of $\Phi_k$,
+    \begin{displaymath}
+      u(\Phi_k) = u\LP \frac{\phi_k}{kP_{K, k_0}(\phi_k)}\RP \ge k,
+    \end{displaymath}
+    which contradicts the continuity of $u$.
+  \end{itemize}
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw4"
+%%% End:

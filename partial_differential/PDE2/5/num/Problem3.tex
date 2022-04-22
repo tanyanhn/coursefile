@@ -1,0 +1,50 @@
+\begin{pro}
+  Prove (2), i.e.,
+  \begin{displaymath}
+    \partial_{\xi}^{\alpha}\hat{K}_1 = \mathcal{O}(\langle\xi\rangle^{-m-|\alpha|}).
+  \end{displaymath}
+\end{pro}
+\begin{proof}
+  Recall that
+  \begin{displaymath}
+   \hat{K}_1 = \frac{1-\chi(\xi)}{P(i\xi)}\in L^{\infty}\cap C^{\infty} \subset \mathcal{S}',
+ \end{displaymath}
+ where
+ \begin{displaymath}
+   P(i\xi) = \sum_{|\alpha|\le m}a_{\alpha}(i\xi)^{\alpha}.
+ \end{displaymath}
+ \begin{lem}
+   A derivative of order $k$ of $1/P(\xi)$ is of the form $Q(\xi)/P(\xi)^{k+1}$
+   with $Q$ of degree no greater than $(m-1)k$.
+ \end{lem}
+ \begin{proof}[Proof of Lemma]
+   We proceed by induction on $k$.
+
+   For $k=0$, the conclusion clearly holds.
+
+   Assume the conclusion to be true for some $k$,
+   then for some $k+1$,
+   by the induction hypothesis,
+   \begin{displaymath}
+     \exists Q(\xi) \text{ s.t. } \deg(Q(\xi))\le (m-1)k \text{ and } \LP 1/P(\xi)\RP^{(k)}
+     = Q(\xi)/P(\xi)^{k+1},
+   \end{displaymath}
+   hence
+   \begin{displaymath}
+     (1/P(\xi))^{(k+1)} = \frac{Q'(\xi)P(\xi)^{k+1}-(k+1)Q(\xi)P(\xi)^kP'(\xi)}{P(\xi)^{2k+2}}
+     = \frac{Q'(\xi)P(\xi)-(k+1)Q(\xi)P'(\xi)}{P(\xi)^{k+2}},
+   \end{displaymath}
+   and
+   \begin{displaymath}
+     \det(Q'(\xi)P(\xi)-(k+1)Q(\xi)P'(\xi)) \leq \max\{(m-1)k-1+m, (m-1)k+m-1\} = (m-1)(k+1),
+   \end{displaymath}
+   which completes the inductive proof.
+ \end{proof}
+
+ Now the result follows immediately from the above Lemma
+ and the expression of $\hat{K}_1$.
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw5"
+%%% End:

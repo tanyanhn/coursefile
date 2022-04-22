@@ -1,0 +1,44 @@
+\begin{pro}
+  Prove the uniqueness in Theorem 8,
+  for $(x,t)\in[0, L]^2$.
+  Hint: it could be proved by method of characteristics,
+  or (odd) extension,
+  or idea of Holmgren's uniqueness theorem.
+\end{pro}
+
+\begin{proof}
+  
+  [Energy methods]
+  
+  If $\tilde{u}$ is another such solution,
+  then $w := u-\tilde{u}$ solves
+  \begin{displaymath}
+    \begin{cases}
+      w_{tt} - w_{xx} = 0 \text{ in }[0, L]\times(0, L) \\
+      w(0, t) = w(L, t) = 0 \text{ in } [0, L] \\
+      w(x, 0) = 0, w_t(x, 0) = 0 \text{ in } [0, L].
+    \end{cases}
+  \end{displaymath}
+  Define the ``energy''
+  \begin{displaymath}
+    e(t) := \frac{1}{2}\int_0^Lw_t^2(x, t) + w_x^2(x, t)\dif x \quad
+    (0\le t \le T).
+  \end{displaymath}
+
+  We compute
+  \begin{displaymath}
+    \dot{e}(t) = \int_0^Lw_tw_{tt} + w_x(w_x)_t \dif x
+    = \int_0^Lw_t(w_{tt}-w_{xx})\dif x=0.
+  \end{displaymath}
+
+  There is no boundary term since $w(0, t)=w(L,t)=0$,
+  and hence $w_t(0,t)=w_t(L,t)=0$ in $[0, L]$.
+  Thus for all $0\le t\le T$, $e(t)=e(0)=0$,
+  and so $w_t, w_x\equiv 0$ within $[0, L]\times[0, L]$.
+  Since $w(x, 0)\equiv 0$ in $[0, L]$,
+  we conclude that $w=u-\tilde{u}\equiv 0$ in $[0, L]^2$.
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw2"
+%%% End:

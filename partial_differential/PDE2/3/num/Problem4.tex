@@ -1,0 +1,42 @@
+\begin{pro}
+  Let $u\in\mathcal{S}'$,
+  calculate
+  $\mathcal{F}(\partial_ju)\in\mathcal{S}'(\mathbb{R}^n)$
+  by definition.
+\end{pro}
+
+\begin{sol}
+  $\forall \phi\in\mathcal{S}(\mathbb{R}^n)$,
+  \begin{align*}
+    \LI\mathcal{F}(\partial_ju), \phi\RI &= \LI\partial_ju, \mathcal{F}(\phi)\RI = -\LI u, \partial_j\mathcal{F}(\phi)\RI \\
+                                           &= -\LI u, -i\mathcal{F}(\xi_j\phi)\RI
+                                             = \LI \mathcal{F}(u), i\xi_j\phi\RI \\
+    &= \LI i\xi_j\mathcal{F}(u), \phi\RI,
+  \end{align*}
+  where the first and third step follow from the definition
+  of the Fourier transform on $\mathcal{S}'(\mathbb{R}^n)$,
+  the second step from the definition of derivatives of
+  tempered distribution and the third step follows from
+  the property of Fourier transforms. Therefore
+  \begin{displaymath}
+    \mathcal{F}(\partial_ju) = i\xi_j\mathcal{F}(u).
+  \end{displaymath}
+  % \begin{align*}
+  %   (\mathcal{F}(\partial_ju))(\phi) &= \int_{\mathbb{R}^n}
+  %   (\partial_ju)(\mathbf{x})\widehat{\phi}(\mathbf{x})\dif\mathbf{x}
+  %   =
+  %                                      \int_{\mathbb{R}^n}\widehat{(\partial_ju)}(\mathbf{x})\phi(\mathbf{x})\dif\mathbf{x}
+  %   \\
+  %   &=
+  %     \int_{\mathbb{R}^n}i\xi_j\widehat{u}(\mathbf{x})\phi(\mathbf{x})\dif\mathbf{x}
+  %     = i\xi_j\int_{\mathbb{R}^n}u(\mathbf{x})\widehat{\phi}(\mathbf{x})\dif\mathbf{x} \\
+  %   &= i\xi_j(\mathcal{F}(u))(\phi),
+  % \end{align*}
+  % where the first and the last step follow from the definition,
+  % the second step from Plancherel theorem and
+  % the third step from 
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

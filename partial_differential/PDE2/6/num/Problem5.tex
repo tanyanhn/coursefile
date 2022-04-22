@@ -1,0 +1,54 @@
+\begin{pro}
+  Let $\Omega$ be an open bounded smooth domain in $\mathbb{R}^n$,
+  $\delta<c(\mathbf{x})<\delta^{-1}$ for any $\mathbf{x}\in\Omega$.
+  Consider
+  \begin{equation}
+    \label{eq:8}
+    u_t - \nabla\cdot(c^2(\mathbf{x})\nabla u) = F
+  \end{equation}
+  with Neumann boundary conditions $\partial_{\nu}u = f$,
+  prove uniqueness for the solutions.
+\end{pro}
+\begin{proof}
+  First,
+  we introduce some notations.
+  \begin{displaymath}
+    \Omega_T := \Omega\times (0, T], \quad \Gamma_T =
+    \overline{\Omega}_T - \Omega_T.
+  \end{displaymath}
+  Hence $\Omega_T$ denotes the parabolic cylinder
+  and $\Gamma_T$ the parabolic boundary of $\Omega_T$.
+  
+  If $\tilde{u}$ is another solution,
+  $w := u - \tilde{u}$ solves
+  \begin{equation}
+    \begin{cases}
+      w_t - \nabla\cdot(c^2(\mathbf{x})\nabla w) = 0 \text{ in } \Omega_T, \\
+      \frac{\partial w}{\partial \nu} = 0 \text{ on } \Gamma_T.
+    \end{cases}
+  \end{equation}
+  Set
+  \begin{displaymath}
+    e(t) := \frac{1}{2}\int_{\Omega}w^2(\mathbf{x}, t)\dif\mathbf{x} \quad (0\le t\le T).
+  \end{displaymath}
+  Then
+  \begin{align*}
+    e'(t) &= \int_{\Omega}ww_t\dif\mathbf{x} =
+    \int_{\Omega}w\nabla\cdot(c^2\nabla w)\dif\mathbf{x}
+    = -\int_{\Omega}c^2\|\nabla w\|^2\dif\mathbf{x}
+    + \int_{\partial\Omega}c^2w \frac{\partial w}{\partial
+            \nu}\dif\mathbf{x} \\
+    &= -\int_{\Omega}c^2\|\nabla w\|^2\dif \mathbf{x}
+    \le 0,
+  \end{align*}
+  and so
+  \begin{displaymath}
+    e(t) \le e(0) = 0 \quad (0\le t \le T).
+  \end{displaymath}
+  Consequently $w = u-\tilde{u}\equiv 0$ in $\Omega_T$,
+  which shows the uniqueness of the solutions.
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw6"
+%%% End:

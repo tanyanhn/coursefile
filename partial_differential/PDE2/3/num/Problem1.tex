@@ -1,0 +1,84 @@
+\begin{pro}
+  Solve the following heat equation:
+  \begin{equation}
+    \label{eq:1}
+    \begin{cases}
+    \partial_t u - \Delta u = F(t, \mathbf{x})
+    \in L^1([0, \infty)\times\mathbb{R}^n), \\
+    u(0, \mathbf{x}) = f(\mathbf{x}) \in L^1(\mathbb{R}).
+  \end{cases}
+  \end{equation}
+\end{pro}
+
+\begin{sol}
+  From the lecture notes,
+  we know that the solution of the
+  following Cauchy problem
+  \begin{equation}
+    \label{eq:2}
+    \begin{cases}
+    \partial_tu - \Delta u = 0 \text{ in } (0, \infty)\times\mathbb{R}^n,\\
+    u = f \text{ on } \{t=0\}\times\mathbb{R}^n.
+  \end{cases}
+\end{equation}
+  is given by
+  \begin{equation}
+    \label{eq:3}
+    u(t, \mathbf{x}) = (K_t * f)(\mathbf{x})
+    = \int_{\mathbb{R}^n}K_t(\mathbf{x}-y)f(\mathbf{y})\dif \mathbf{y},
+  \end{equation}
+  where $K_t$ is the heat kernel defined as
+  \begin{displaymath}
+    K_t(\mathbf{x}) = \frac{1}{(4\pi t)^{n/2}}
+    e^{-\frac{\|\mathbf{x}\|^2}{4t}}.
+  \end{displaymath}
+  Duhamel's principle asserts that
+  we can build a solution of the following
+  nonhomogeneous problem
+  \begin{equation}
+    \label{eq:4}
+    \begin{cases}
+      \partial_t u-\Delta u = F(t, \mathbf{x}) \text{ in }
+      (0, \infty)\times\mathbb{R}^n, \\
+      u = 0 \text{ on } \{t=0\}\times\mathbb{R}^n.
+    \end{cases}
+  \end{equation}
+  out of the solutions of the following homogeneous
+  problem:
+  \begin{equation}
+    \label{eq:5}
+    \begin{cases}
+      \partial_t u(s, \cdot) - \Delta u(s, \cdot) = 0
+      \text{ in } (s, \infty)\times\mathbb{R}^n,\\
+    u(s, \cdot) = F(s, \cdot) \text{ on } \{t=s\}\times\mathbb{R}^n,
+  \end{cases}
+\end{equation}
+by integrating with respect to $s$.
+The idea is to consider
+\begin{displaymath}
+  u(t, \mathbf{x}) = \int_0^tu(t, \mathbf{x};s)\dif s,
+\end{displaymath}
+where $u(t, \mathbf{x}; s)$ is the solution to \eqref{eq:5},
+\begin{displaymath}
+  u(t, \mathbf{x};s) = \int_{\mathbb{R}^n}K_{t-s}(\mathbf{x}-\mathbf{y})F(s, \mathbf{y})\dif\mathbf{y}.
+\end{displaymath}
+Rewriting, we have
+\begin{equation}
+  \label{eq:6}
+  u(t, \mathbf{x}) = \int_0^t\int_{\mathbb{R}^n}K_{t-s}(\mathbf{x}-\mathbf{y})F(s, \mathbf{y})\dif\mathbf{y}\dif s,
+\end{equation}
+for $t>0, \mathbf{x}\in\mathbb{R}^n$.
+\end{sol}
+Since \eqref{eq:1} is a linear PDE,
+we conclude that adding the solution of \eqref{eq:2} and
+\eqref{eq:4} gives the solution to \eqref{eq:1}.
+Hence
+\begin{displaymath}
+  u(t, \mathbf{x}) = \int_{\mathbb{R}^n}K_t(\mathbf{x}-\mathbf{y})f(\mathbf{y})\dif\mathbf{y}
+  + \int_0^t\int_{\mathbb{R}^n}K_{t-s}(\mathbf{x}-\mathbf{y})F(s, \mathbf{y})\dif\mathbf{y}\dif s,
+\end{displaymath}
+for $t>0, \mathbf{x}\in\mathbb{R}^n$.
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

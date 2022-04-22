@@ -1,0 +1,87 @@
+\begin{pro}
+  Find a solution to the following Dirichlet problem for
+  the Laplace equation,
+  by using the Fourier transform:
+  \begin{displaymath}
+    \begin{cases}
+      (\partial_x^2 + \partial_y^2)u = 0, (x, y)\in\mathbb{R}
+      \times\mathbb{R}_+, \\
+      u(x, 0) = f(x) \in \mathcal{S}(\mathbb{R}).
+    \end{cases}
+  \end{displaymath}
+\end{pro}
+
+\begin{sol}
+  Take the Fourier transform,
+  and we have
+  \begin{displaymath}
+    \begin{cases}
+      \partial_y^2\hat{u}(\xi, y) + \xi^2\hat{u}(\xi, y) = 0, \\
+      \hat{u}(\xi, 0) = \hat{f}(\xi).
+    \end{cases}
+  \end{displaymath}
+
+  The general solution of this ordinary differential equation
+  in $y$ (with $\xi$ fixed) takes the form
+  \begin{displaymath}
+    \widehat{u}(\xi, y) = A(\xi)e^{-|\xi|y} + B(\xi)e^{|\xi|y}.
+  \end{displaymath}
+  If we disregard the second term because of
+  its rapid increase we find, after setting $y=0$, that
+  \begin{displaymath}
+    \widehat{u}(\xi, y) = \widehat{f}(\xi)e^{-|\xi|y}.
+  \end{displaymath}
+  Therefore $u$ is given in terms of the convolution of $f$
+  with a kernel whose Fourier transform is $e^{-|\xi|y}$.
+
+  \begin{lem}
+    Define the Poisson kernel $\mathcal{P}_y(x)$ for the upper half-plane
+    \begin{displaymath}
+      \mathcal{P}_y(x) = \frac{2y}{x^2+y^2}
+      \text{ where } x\in\mathbb{R} \text{ and } y>0.
+    \end{displaymath}
+    Then the following two identities hold:
+    \begin{align*}
+      \int_{-\infty}^{\infty}e^{-|\xi|y}e^{i\xi x}\dif\xi &= \mathcal{P}_y(x), \\
+      \int_{-\infty}^{\infty}\mathcal{P}_y(x)e^{ix\xi}\dif x &=
+                                                                     e^{-|\xi|y}.
+    \end{align*}
+  \end{lem}
+  \begin{proof}[Proof of Lemma]
+    The first formula is fairly straightforward since we can split
+    the integral from $-\infty$ to $0$ and $0$ to $\infty$.
+    Then, since $y>0$ we have
+    \begin{displaymath}
+      \int_0^{\infty}e^{-\xi y}e^{i\xi x}\dif \xi =
+      \int_0^{\infty}e^{i(x+iy)\xi}\dif \xi =
+      \left[\frac{e^{i(x+iy)\xi}}{i(x+iy)}\right]_0^{\infty} =
+      -\frac{1}{i(x+iy)},
+    \end{displaymath}
+    and similarly,
+    \begin{displaymath}
+      \int_{-\infty}^0e^{\xi y}e^{i\xi x}\dif \xi = \frac{1}{i(x-iy)}.
+    \end{displaymath}
+    Therefore
+    \begin{displaymath}
+      \int_{-\infty}^{\infty}e^{-|\xi|y}e^{i\xi x}\dif \xi
+      = \frac{1}{i(x-iy)} - \frac{1}{i(x+iy)}
+      = \frac{2y}{x^2+y^2}.
+    \end{displaymath}
+    The second formula is now a consequence of the Fourier
+    inversion theorem applied in the case when
+    $f$ and $\hat{f}$ are of moderate decrease.
+  \end{proof}
+  Therefore
+  \begin{displaymath}
+    u(x, y) = (\mathcal{P}_y*f)(x) =
+    \int_{\mathbb{R}}\mathcal{P}_y(x-z)f(z)\dif z
+    = \int_{\mathbb{R}}\frac{2y}{(x-z)^2+y^2}f(z)\dif z.
+  \end{displaymath}
+%  where $\mathcal{P}_y(x)$ is the Poisson kernel for
+%  the upper space.
+\end{sol}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

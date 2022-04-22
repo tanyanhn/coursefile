@@ -1,0 +1,68 @@
+\begin{pro}
+  Check that any polynomial
+  $p(\mathbf{x})\in\mathcal{S}'(\mathbb{R}^n)$,
+  however,
+  $f(x)=e^{x^2}\notin\mathcal{S}'(\mathbb{R})$,
+  $g(x)=e^x\notin\mathcal{S}'(\mathbb{R})$.
+  (Hint: you may want to use test functions like
+  $e^{-\sqrt{1+x^2}}$.)
+\end{pro}
+
+\begin{sol}
+  \begin{itemize}
+  \item
+  For a polynomial $p(\mathbf{x})$,
+  define
+  \begin{displaymath}
+    L(\phi) = \int_{\mathbb{R}^n}p(\mathbf{x})\phi(\mathbf{x})\dif\mathbf{x}, \quad \phi\in\mathcal{S}.
+  \end{displaymath}
+  Now we show that $L(\phi)$
+  is a continuous linear functional on the Schwartz
+  space $\mathcal{S}$.
+  Choose $N\in\mathbb{N}^+$ large enough so that
+  \begin{displaymath}
+    \int_{\mathbb{R}^n}\LP 1+\|\mathbf{x}\|^2\RP^{-N}
+    |p(\mathbf{x})|\dif\mathbf{x} = C < \infty.
+  \end{displaymath}
+  Then
+  \begin{align*}
+    |L(\phi)| &= \left|\int_{\mathbb{R}^n}p(\mathbf{x})\phi(\mathbf{x})\dif\mathbf{x}\right| =
+                \left|\int_{\mathbb{R}^n}\LP
+                1+\|\mathbf{x}\|^2\RP^{-N}p(\mathbf{x})
+                (1+\|\mathbf{x}\|^2)^N\phi(\mathbf{x})\dif\mathbf{x}\right| \\
+    &\le \int_{\mathbb{R}^n}\LP 1+\|\mathbf{x}\|^2\RP^{-N}
+      |p(\mathbf{x})|\dif\mathbf{x}
+      \sup_{\mathbf{x}\in\mathbb{R}^n}\left\|(1+\|\mathbf{x}\|^2)^N\phi(\mathbf{x})\right\| \\
+    &= C\sup_{\mathbf{x}\in\mathbb{R}^n}\left\|(1+\|\mathbf{x}\|^2)^N\phi(\mathbf{x})\right\|,
+  \end{align*}
+  which shows the continuity of $L$,
+  $L$ is easily seen to be a linear functional.
+  Therefore,
+  the polynomial $p(\mathbf{x})\in\mathcal{S}'(\mathbb{R}^n)$.
+
+\item
+  Choose a function $\psi\in\mathcal{C}_c^{\infty}(\mathbb{R})$ such that
+  $\int_{\mathbb{R}}\psi(x)\dif x = 1$,
+  let
+  \begin{displaymath}
+    \phi_j(x) = \frac{\psi(x-j)}{f(x)} =
+    e^{-x^2}\psi(x-j).
+  \end{displaymath}
+  It is easily verified that $\phi_j\to 0$ in
+  $\mathcal{S}(\mathbb{R})$ as $j\to\infty$,
+  but
+  \begin{displaymath}
+    \int_{\mathbb{R}}f(x)\phi_j(x)\dif x =
+    \int_{\mathbb{R}}\psi(x)\dif x = 1
+  \end{displaymath}
+  for all $j$. Therefore $f(x)=e^{x^2}\notin
+  \mathcal{S}'(\mathbb{R})$.
+
+\item
+  Similarly, we can show that $g(x)=e^x\notin\mathcal{S}'(\mathbb{R})$.
+\end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

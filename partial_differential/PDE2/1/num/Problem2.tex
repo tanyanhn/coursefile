@@ -1,0 +1,65 @@
+\begin{pro}[minimal surface]
+  Let $u:\Omega\to\mathbb{R}$ with $\Omega\subset \mathbb{R}^n$.
+  For a fixed function $f$ on the boundary of $\Omega$,
+  suppose $u$ is a function such that it minimizes the area
+  \begin{displaymath}
+    A[u] = \int_{\Omega}\sqrt{1 + \|\nabla u\|^2}\dif \mathbf{x},
+  \end{displaymath}
+  among all surfaces with $u=f$ on the boundary of $\Omega$.
+  Try to derive a PDE for $u$.
+\end{pro}
+
+\begin{sol}
+  Choose a smooth function $v:\Omega\to\mathbb{R}$
+  satisfying the boundary condition $v|_{\partial\Omega} = 0$
+  and define for $\tau\in\mathbb{R}$
+  \begin{displaymath}
+    w = u + \tau v.
+  \end{displaymath}
+  Then $w$ is a surface with $w=f$ on the boundary of $\Omega$,
+  and so
+  \begin{displaymath}
+    A[u] \leq A[w].
+  \end{displaymath}
+  Thus the real-valued function
+  \begin{displaymath}
+    i(\tau) := A[u+\tau v]
+  \end{displaymath}
+  has a minimum at $\tau=0$,
+  and consequently
+  \begin{equation}
+    \label{eq:1}
+    i'(0)= 0 \quad \left( ' = \frac{\dif}{\dif \tau}\right),
+  \end{equation}
+  provided $i'(0)$ exists.
+
+  We explicitly compute this derivative.
+  Observe
+  \begin{displaymath}
+    i(\tau) = \int_{\Omega}\sqrt{1 + \|\nabla (u+\tau v)\|^2}\dif \mathbf{x}
+    = \int_{\Omega}\sqrt{\|\nabla v\|\tau^2 + 2(\nabla u\cdot\nabla v) \tau+\|\nabla u\|^2 + 1}\dif \mathbf{x},
+  \end{displaymath}
+  and so
+  \begin{displaymath}
+    i'(\tau) = \int_{\Omega}\frac{1}{2}\frac{2\|\nabla v\|\tau + 2(\nabla u\cdot\nabla v)}{\sqrt{\|\nabla v\|\tau^2 + 2(\nabla u\cdot\nabla v) \tau+\|\nabla u\|^2 + 1}}\dif\mathbf{x}.
+  \end{displaymath}
+  Set $\tau=0$ and remember \eqref{eq:1}:
+  \begin{displaymath}
+    0 = i'(0) = \int_{\Omega}\frac{\nabla u}{\sqrt{1 + \|\nabla u\|^2}}\cdot
+    \nabla v\dif\mathbf{x}
+    = -\int_{\Omega}v\nabla\cdot\left( \frac{\nabla u}{\sqrt{1+\|\nabla u\|^2}}\right)\dif \mathbf{x},
+  \end{displaymath}
+  where the third equality follows from the integration-by-parts formula
+  and the boundary condition of $v$(i.e., $v|_{\partial\Omega}=0$).
+  
+  Since $v$ is an arbitrary smooth function
+  satisfying the boundary condition $v|_{\partial \Omega}=0$,
+  and so
+  \begin{equation}
+    \nabla\cdot\left( \frac{\nabla u}{\sqrt{1+\|\nabla u\|^2}}\right) = 0.
+  \end{equation}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw1"
+%%% End:

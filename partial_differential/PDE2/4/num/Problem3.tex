@@ -1,0 +1,29 @@
+\begin{pro}
+  Let $f = \ln|x|\in\mathcal{D}'(\mathbb{R})$,
+  check that $f'\in\mathcal{D}'(\mathbb{R})$ is given by
+  \begin{displaymath}
+    \left\langle \mathrm{pv}\frac{1}{x}, \phi\right\rangle =
+    \lim_{\epsilon\to 0^+}\int_{|x|\ge \epsilon}\frac{\phi(x)}{x}\dif x,
+    \quad \forall \phi\in\mathcal{C}_c^{\infty}(\mathbb{R}).
+  \end{displaymath}
+\end{pro}
+
+\begin{proof}
+  \begin{align*}
+    \int_{|x|\ge\epsilon}\frac{\phi(x)}{x}\dif x &= \int_{-\infty}^{-\epsilon}\frac{\phi(x)}{x}\dif x + \int_{\epsilon}^{\infty}\frac{\phi(x)}{x}\dif x \\
+                                                 &= \phi(-\epsilon)\ln\epsilon - \int_{-\infty}^{-\epsilon}\phi'(x)\ln|x|\dif x - \phi(\epsilon)\ln\epsilon - \int_{\epsilon}^{\infty}\phi'(x)\ln|x|\dif x \\
+    &= -(\phi(\epsilon)-\phi(-\epsilon))\ln\epsilon - \int_{|x|\ge\epsilon}\phi'(x)\ln|x|\dif x,
+  \end{align*}
+  since $(\phi(\epsilon)-\phi(-\epsilon))\ln\epsilon\to 0$
+  (Taylor expansion),
+  therefore
+  \begin{displaymath}
+    \lim_{\epsilon\to 0}\int_{|x|\ge\epsilon}\frac{\phi(x)}{x}\dif x =
+    -\int_{-\infty}^{\infty}\phi'(x)\ln|x|\dif x,
+  \end{displaymath}
+  which completes the proof.
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw4"
+%%% End:
