@@ -1,0 +1,67 @@
+\begin{pro}
+  Write a formal algorithm for evaluating a polynomial
+  at a given argument using Horner's nested evaluation scheme
+  \begin{itemize}
+  \item[(a)]
+    For a polynomial expressed in terms of the monomial basis
+
+  \item[(b)]
+    For a polynomial expressed in Newton form
+  \end{itemize}
+\end{pro}
+\begin{sol}
+  \begin{itemize}
+
+    \item[(a)]
+  The pseudocode is given as follows.
+  \begin{algorithm}[htb]
+  \caption{Evaluate a polynomial $p(t, \mathbf{a})= \sum_{i=0}^na_it^i$}
+  \begin{algorithmic}[1]
+    \renewcommand{\algorithmicrequire}{\textbf{Input : }}
+    \REQUIRE $\mathbf{a} =
+    \begin{bmatrix}
+      a_0 & a_1 & \cdots & a_n
+    \end{bmatrix}^T
+$ and $t$
+   \renewcommand{\algorithmicrequire}{\textbf{Precondition : }}
+    \renewcommand{\algorithmicensure}{\textbf{Output : }}
+    \ENSURE $y = p(t, \mathbf{a})$
+    \STATE
+    $y\leftarrow a_n$
+    \FOR{$i=n-1:-1:0$}
+    \STATE $y \leftarrow tp + a_i$
+    \ENDFOR
+  \end{algorithmic}
+\end{algorithm}
+
+\item[(b)]
+  The pseudocode is given as follows.
+  \begin{algorithm}[htb]
+    \caption{Evaluate $p(t, \mathbf{a}, \mathbf{t}) = \sum_{i=0}^na_i\prod_{j=0}^{i-1}(t-t_j)$}
+  \begin{algorithmic}[1]
+    \renewcommand{\algorithmicrequire}{\textbf{Input : }}
+    \REQUIRE $\mathbf{a} =
+    \begin{bmatrix}
+      a_0 & a_1 & \cdots & a_n
+    \end{bmatrix}^T
+    $, $\mathbf{t} =
+    \begin{bmatrix}
+      t_0 & t_1 & \cdots & t_{n-1}
+    \end{bmatrix}
+    $ and $t$
+   \renewcommand{\algorithmicrequire}{\textbf{Precondition : }}
+    \renewcommand{\algorithmicensure}{\textbf{Output : }}
+    \ENSURE $y = p(t, \mathbf{a}, \mathbf{t})$
+    \STATE
+    $y\leftarrow a_n$
+    \FOR{$i=n-1:-1:0$}
+    \STATE $y \leftarrow (t-t_i)p + a_i$
+    \ENDFOR
+  \end{algorithmic}
+\end{algorithm}  
+\end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

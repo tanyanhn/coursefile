@@ -1,0 +1,274 @@
+\begin{pro}
+  Verify the properties of B-splines enumerated in Section 7.4.3.
+\end{pro}
+\begin{sol}
+  First let's review the definition of B-splines.
+  \begin{defn}
+    B-splines are defined recursively by
+    \begin{equation}
+      \label{eq:Bsplines}
+      B_i^{k+1}(t) = \frac{t-t_i}{t_{i+k+1}-t_{i}}B_i^k(t) +
+      \frac{t_{i+k+2}-t}{t_{i+k+2}-t_{i+1}}B_{i+1}^{k}(t).
+    \end{equation}
+    The recursion base is the B-spline of degree zero,
+    \begin{equation}
+      \label{eq:1}
+      B_i^0(t) =
+      \begin{cases}
+        1 \text{ if } t\in [t_i, t_{i+1}), \\
+        0 \text{ otherwise.}
+      \end{cases}
+    \end{equation}
+  \end{defn}
+  We need to verify the following properties of B-splines,
+  which we decompose into several propositions.
+
+  \begin{prop}
+    \label{prop:1}
+    For $t<t_i$ or $t>t_{i+k+1}$,
+    $B_i^k(t)=0$.
+  \end{prop}
+  \begin{proof}
+    The induction basis clearly holds because of \eqref{eq:1}.
+    Now suppose the conclusion holds for some $k$,
+    then for $k+1$,
+    \begin{displaymath}
+            B_i^{k+1}(t) = \frac{t-t_i}{t_{i+k+1}-t_{i}}B_i^k(t) +
+      \frac{t_{i+k+2}-t}{t_{i+k+2}-t_{i+1}}B_{i+1}^{k}(t) = 0
+    \end{displaymath}
+    for $t<t_i$ or $t>t_{i+k+2}$, since by the induction hypothesis,
+    \begin{displaymath}
+      B_i^k(t) = B_{i+1}^k(t) = 0 \text{ for } t<t_i \text{ or } t>t_{i+k+2}.
+    \end{displaymath}
+    Therefore the conclusion holds for $k+1$ as well,
+    which completes the proof.
+  \end{proof}
+
+  \begin{prop}
+    For $t_i<t<t_{i+k+1}$, $B_i^k(t)>0$.
+  \end{prop}
+
+  \begin{proof}
+    The induction basis clearly holds because of \eqref{eq:1}.
+    Now suppose the conclusion holds for some $k$,
+    then by the induction hypothesis and Proposition \ref{prop:1},
+    we have
+    \begin{displaymath}
+      B_i^k(t)>0 \text{ for } t_i<t<t_{i+k+1} \text{ and }
+      B_i^k(t)=0 \text{ for } t<t_i \text{ or } t>t_{i+k+1}.
+    \end{displaymath}
+    \begin{displaymath}
+      B_{i+1}^k>0 \text{ for } t_{i+1}<t<t_{i+k+2} \text{ and }
+      B_{i+1}^k=0 \text{ for } t<t_{i+1} \text{ or } t>t_{i+k+2}.
+    \end{displaymath}
+    Combining with \eqref{eq:Bsplines} gives the conclusion for $k+1$,
+    which completes the proof.
+  \end{proof}
+
+  \begin{prop}
+    For all $t$, $\sum_{i=-\infty}^{\infty}B_i^k(t)=1$.
+  \end{prop}
+  \begin{proof}
+    The induction basis clearly holds because of \eqref{eq:1}.
+    Now suppose the conclusion holds for some $k$,
+    then for $k+1$,
+    we have
+    \begin{align*}
+      \sum_{i=-\infty}^{\infty}B_i^{k+1}(t) &= \sum_{i=-\infty}^{\infty}
+      \LP\frac{t-t_i}{t_{i+k+1}-t_{i}}B_i^k(t) +
+                                              \frac{t_{i+k+2}-t}{t_{i+k+2}-t_{i+1}}B_{i+1}^{k}(t)\RP \\
+                                            &= \sum_{i=-\infty}^{\infty}\frac{t-t_i}{t_{i+k+1}-t_i}B_i^k(t) +
+                                              \sum_{i=-\infty}^{\infty}\frac{t_{i+k+2}-t}{t_{i+k+2}-t_{i+1}}B_{i+1}^k(t) \\
+      &= \sum_{i=-\infty}^{\infty}\frac{t-t_i}{t_{i+k+1}-t_i}B_i^k(t) +
+        \sum_{i=-\infty}^{\infty}\frac{t_{i+k+1}-t}{t_{i+k+1}-t_i}B_i^k(t)  \\
+      &= \sum_{i=-\infty}^{\infty}\LP\frac{t-t_i}{t_{i+k+1}-t_i}+
+        \frac{t_{i+k+1}-t}{t_{i+k+1}-t_i}\RP B_i^k(t) \\
+                                            &= \sum_{i=-\infty}^{\infty}B_i^k(t)= 1,
+    \end{align*}
+    where the last equality follows from the induction hypothesis.
+    Hence the conclusion holds for $k+1$ as well,
+    which completes the inductive proof.
+  \end{proof}
+
+  \begin{prop}
+    \label{prop:4}
+    For $k\ge 1$, $B_i^k$ is $k-1$ times continuously differentiable.
+  \end{prop}
+  \begin{proof}
+    We prove the following theorem:
+    \begin{thm}
+      For $k\ge 2$, we have,
+      $\forall t\in\mathbb{R}$,
+      \begin{equation}
+        \label{eq:2}
+        \frac{\dif}{\dif t}B_i^k(t) = \frac{kB_i^{k-1}(t)}{t_{i+k}-t_i} -
+        \frac{kB_{i+1}^{k-1}(t)}{t_{i+k+1}-t_{i+1}}.
+      \end{equation}
+      For $k=1$, \eqref{eq:2} holds for all $t$ except at the three knots
+      $t_i, t_{i+1}, t_{i+2}$,
+      where the derivative of $B_i^1$ is not defined.
+    \end{thm}
+    \begin{proof}[Proof of Theorem]
+      We first show that \eqref{eq:2} holds for all $t$ except at the knots $t_j$.
+      By \eqref{eq:Bsplines} and \eqref{eq:1}, we have
+      \begin{displaymath}
+        \forall t\in\mathbb{R}\backslash\{t_i, t_{i+1}, t_{i+2}\},\quad
+        \frac{\dif}{\dif t}B_i^1(t) = \frac{1}{t_{i+1}-t_i}B_i^0(t)
+        - \frac{1}{t_{i+2}-t_{i+1}}B_{i+1}^0(t).
+      \end{displaymath}
+      Hence the induction hypothesis holds.
+      Now suppose \eqref{eq:2} holds $\forall t\in\mathbb{R}\backslash
+      \{t_i, \ldots, t_{i+k+1}\}$.
+      Differentiate \eqref{eq:Bsplines},
+      apply the induction hypothesis \eqref{eq:2},
+      and we have
+      \begin{equation}
+        \label{eq:3}
+        \frac{\dif}{\dif t}B_i^{k+1}(t) = \frac{B_i^k(t)}{t_{i+k+1}-t_i} -
+\frac{B_{i+1}^k(t)}{t_{i+k+2}-t_{i+1}} + kC(t)
+\end{equation}
+where
+\begin{align*}
+  C(t) &= \frac{t-t_i}{t_{i+k+1}-t_i}\left[\frac{B_i^{k-1}(t)}{t_{i+k}-t_i}
+  - \frac{B_{i+1}^{k-1}(t)}{t_{i+k+1}-t_{i+1}}\right] +
+  \frac{t_{i+k+2}-t}{t_{i+k+2}-t_{i+1}}\left[\frac{B_{i+1}^{k-1}(t)}{t_{i+k+1}-t_{i+1}}
+         - \frac{B_{i+2}^{k-1}(t)}{t_{i+k+2}-t_{i+2}}\right] \\
+       &=\begin{multlined}[t]
+         \frac{1}{t_{i+k+1}-t_i}\left[\frac{(t-t_i)B_i^{k-1}(t)}{t_{i+k}-t_i}
+           +
+           \frac{(t_{i+k+1}-t)B_{i+1}^{k-1}(t)}{t_{i+k+1}-t_{i+1}}\right] \\
+         - \frac{1}{t_{i+k+2}-t_{i+1}}\left[\frac{(t-t_{i+1})B_{i+1}^{k-1}(t)}{t_{i+k+1}-t_{i+1}}
+         + \frac{(t_{i+k+2}-t)B_{i+2}^{k-1}(t)}{t_{i+k+2}-t_{i+2}}\right] 
+     \end{multlined}
+  \\
+  &= \frac{B_i^k(t)}{t_{i+k+1}-t_i} - \frac{B_{i+1}^k(t)}{t_{i+k+2}-t_{i+1}},
+\end{align*}
+where the last step follows from \eqref{eq:Bsplines}.
+Then \eqref{eq:3} can be written as
+\begin{displaymath}
+  \frac{\dif}{\dif t}B_i^{k+1}(t) = \frac{(k+1)B_i^k(t)}{t_{i+k+1}-t_i} -
+  \frac{(k+1)B_{i+1}^k(t)}{t_{i+k+2}-t_{i+1}},
+\end{displaymath}
+which completes the inductive proof of \eqref{eq:2} except at the knots.
+Since $B_i^1(t)$ is continuous,
+an easy induction with \eqref{eq:Bsplines} shows that $B_i^k$ is
+continuous for all $k\ge 1$.
+Hence the right-hand side of \eqref{eq:2} is continuous for all $k\ge 2$.
+Therefore,
+if $k\ge 2$, $\frac{\dif}{\dif t}B_i^k(t)$ exists for all $t\in\mathbb{R}$.
+This completes the proof of the theorem.
+\end{proof}
+The proof follows from the above theorem and a simple induction on $k$.
+  \end{proof}
+
+  \begin{prop}
+    The set of functions $\{B_{1-k}^k, \ldots, B_{n-1}^k\}$
+    is linearly independent on the interval $[t_1, t_n]$.
+  \end{prop}
+  \begin{proof}
+    \begin{lem}
+      For $k\ge 2$, we have
+      \begin{equation}
+        \label{eq:4}
+        \frac{\dif}{\dif t}\sum_{i=-\infty}^{\infty}c_iB_i^k(t) =
+        k\sum_{i=-\infty}^{\infty}\LP \frac{c_i-c_{i-1}}{t_{i+k}-t_i}\RP
+        B_i^{k-1}(t).
+      \end{equation}
+    \end{lem}
+    \begin{proof}[Proof of Lemma]
+      Utilize \eqref{eq:2} and sum over $i=-\infty$ to $\infty$,
+      and we have the desired result.
+    \end{proof}
+    
+    \begin{lem}
+      The set of B-splines $\{B_j^k, B_{j+1}^k, \ldots, B_{j+k}^k\}$
+      is linearly independent on $[t_{k+j}, t_{k+j+1}]$.
+    \end{lem}
+    \begin{proof}[Proof of Lemma]
+      First consider the case $k=0$.
+      The lemma asserts that $\{B_j^0\}$ is linearly independent
+      on the interval $[t_j, t_{j+1}]$. This is obviously true.
+      For the purposes of an inductive proof, let $k\ge 1$,
+      and assume that the lemma is correct for index $k-1$.
+      On the basis of this assumption, we shall prove the lemma
+      for the index $k$.
+      Let $S(t) = \sum_{i=0}^kc_{j+i}B_{j+i}^k(t)$,
+      and suppose that $S|_{[t_{k+j}, t_{k+j+1}]}=0$.
+      By \eqref{eq:4},
+      \begin{displaymath}
+        0 = S'|_{(t_{k+j}, t_{k+j+1})} = k\sum_{i=1}^k
+        \frac{c_{j+i}-c_{j+i-1}}{t_{j+i+k}-t_{j+i}}B_{j+i}^{k-1}|_{(t_{k+j}, t_{k+j+1})}.
+      \end{displaymath}
+      To arrive at this equation,
+      we used $B_{j+k+1}^{k-1}=0$ and $B_j^{k-1}=0$ on
+      $(t_{k+j}, t_{k+j+1})$.
+      By applying the induction hypothesis to $\{B_{j+1}^{k-1},
+      B_{j+2}^{k-1}, \ldots, B_{j+k}^{k-1}\}$,
+      we conclude that this set is linearly independent on the interval
+      $(t_{k+j}, t_{k+j+1})$.
+      Therefore, in \eqref{eq:4} all the coefficients must be $0$,
+      and thus we have $c_0=c_1=\cdots=c_k$.
+      If this common value is denoted by $\lambda$,
+      we have $S(t) = \lambda$ on $(t_{k+j}, t_{k+j+1})$ by
+      Proposition 3. (Observe that in Proposition 3,
+      the only terms that are nonzero on the interval
+      $(t_{k+j}, t_{k+j+1})$ are $B_j^k, B_{j+1}^k, \ldots, B_{j+k}^k$.)
+      Since it has been assumed that $S$ vanished on $(t_{k+j}, t_{k+j+1})$,
+      we conclude that $\lambda=0$.
+    \end{proof}
+    
+    Let $S(t) = \sum_{i=1-k}^{n-1}c_iB_i^k(t)$,
+    and suppose that $S|_{[t_1, t_n]}=0$.
+    On the interval $[t_1, t_2]$ only
+    $B_{1-k}^k, B_{2-k}^k, \ldots, B_0^k$ are nonzero,
+    and therefore
+    \begin{equation}
+      \label{eq:5}
+      0 = S|_{[t_1, t_2]} = \sum_{i=1-k}^0c_iB_i^k|_{[t_1, t_2]}.
+    \end{equation}
+    By the above lemma,
+    the set $\{B_{1-k}^k, B_{2-k}^k, \ldots, B_0^k\}$
+    is linearly independent on $(t_1, t_2)$.
+    Hence from \eqref{eq:5},
+    we infer that $c_i=0$ when $1-k\leq i\leq 0$.
+    If all the $c_i$'s are $0$,
+    we have the desired conclusion.
+    If not all the $c_i$'s are $0$,
+    let $j$ be the first index for which $c_j\neq 0$.
+    By the prior work, $j\geq 1$.
+    Hence $(t_j, t_{j+1})\subseteq (t_1, t_n)$.
+    For any $t\in(t_j, t_{j+1})$,
+    we obtain the contradiction
+    \begin{displaymath}
+      0 = S(t) = \sum_{i=j}^{n-1}c_iB_i^k(t) = c_jB_j^k(t) \neq 0.
+    \end{displaymath}
+    Hence, all the $c_i$'s are $0$.
+  \end{proof}
+
+  \begin{prop}
+    The set of functions $\{B_{1-k}^k, \cdots, B_{n-1}^k\}$
+    spans the set of all splines of degree $k$ having knots $t_i$.
+  \end{prop}
+  \begin{proof}
+    Combining Proposition 5 and the following two lemmas
+    completes the proof.
+    \begin{lem}
+      If $\mathcal{V}$ is a finite-dimensional linear space,
+      then every linearly independent list of vectors in $\mathcal{V}$
+      with length $\dim \mathcal{V}$ is a basis of $\mathcal{V}$.
+    \end{lem}
+    \begin{lem}
+      Denote
+      \begin{displaymath}
+        \mathbb{S}_k^{k-1} = \{s: s\in\mathcal{C}^{k-1}[a, b];
+        \forall i\in[1, n-1], s|_{[t_i, t_{i+1}]} \in\mathbb{P}_k\}.
+      \end{displaymath}
+      Then $\mathbb{S}_k^{k-1}(t_1, t_2, \ldots, t_n)$ is a linear
+      space with dimension $k+n-1$.
+    \end{lem}
+  \end{proof}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

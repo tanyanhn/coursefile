@@ -1,0 +1,120 @@
+\textbf{3.8}.
+To demonstrate how results from the normal equations method and QR factorization
+  can differ numerically,
+  we need a least squares problem that is ill-conditioned and also has
+  a small residual.
+  We can generate such a problem as follows.
+  We will fit a polynomial of degree $n-1$,
+  \begin{displaymath}
+    p_{n-1}(t) = x_1 + x_2t + x_3t^2 + \cdots + x_nt^{n-1},
+  \end{displaymath}
+  to $m$ data points $(t_i, y_i), m>n$.
+  We choose $t_i=(i-1)/(m-1), i=1, \ldots, m$,
+  so that the data points are equally spaced on the interval $[0, 1]$.
+  We will generate the corresponding values $y_i$ by first choosing values
+  for the $x_j$, say, $x_j=1, j=1, \ldots, n$,
+  and evaluating the resulting polynomial to obtain $y_i=p_{n-1}(t_i), i=1, \ldots, m$.
+  We could now see whether we can recover the $x_j$ that we used to generate the $y_i$,
+  but to make it more interesting,
+  we first randomly perturb the $y_i$ values to simulate the data error typical of
+  least squares problems.
+  Specifically, we take $y_i=y_i+(2u_i-1)*\epsilon, i=1, \ldots, m$,
+  where each $u_i$ is a random number uniformly distributed on the interval $[0, 1)$
+  and $\epsilon$ is a small positive number that determines the maximum perturbation.
+  If you are using IEEE double precision,
+  reasonable parameters for this problem are
+  $m=21, n=12,$ and $\epsilon=10^{-10}$.
+
+  Having generated the data set $(t_i, y_i)$ as just outlined,
+  we will now compare the two methods for computing the least squares solution to
+  this polynomial data-fitting problem.
+  First, form the system of normal equations for this problem and solve
+  it using a library routine for Cholesky factorization.
+  Next, solve the least squares system using a library routine for QR factorization.
+  Compare the two resulting solution vectors $\bm{x}$.
+  For which method is the solution more sensitive to the perturbation we introduced into the data?
+  Which method comes closer to recovering the $\bm{x}$
+  that we used to generate the data?
+  Does the fact that the solutions differ affect our ability to fit the data points
+  $(t_i, y_i)$ closely by the polynomial?
+
+  \begin{multicols}{2}
+    \setlength{\columnseprule}{0.2pt}
+    \begin{sol}
+      % First we review the mathematical theory needed for solving this problem.
+      % \begin{thm}
+      %   Consider an over-determined linear system
+      %   \begin{displaymath}
+      %     A\bm{x} = \bm{b}
+      %   \end{displaymath}
+      %   where $A\in\mathbb{R}^{m\times n}$ and $m\ge n$.
+      %   The discrete linear least square problem
+      %   \begin{displaymath}
+      %     \min_{\bm{x}\in\mathbb{R}^n}\|A\bm{x}-\bm{b}\|_2^2
+      %   \end{displaymath}
+      %   is solved by $\bm{x}^{*}$ satisfying
+      %   \begin{itemize}
+      %   \item the normal equation
+      %     \begin{displaymath}
+      %       A^TA\bm{x}^{*} = A^T\bm{b},
+      %     \end{displaymath}
+      %     or
+      %   \item
+      %     \begin{displaymath}
+      %       R_1\bm{x}^{*} = \bm{c},
+      %     \end{displaymath}
+      %     where $R_1\in\mathbb{R}^{n\times n}$ and $\bm{c}\in\mathbb{R}^n$
+      %     result from the QR factorization of $A$:
+      %     \begin{displaymath}
+      %       Q^TA = R =
+      %       \begin{bmatrix}
+      %         R_1 \\
+      %         \bm{0}
+      %       \end{bmatrix}, \quad
+      %       Q^T\bm{b} =
+      %       \begin{bmatrix}
+      %         \bm{c} \\
+      %         \bm{r}
+      %       \end{bmatrix}.
+      %     \end{displaymath}
+      %     Furthermore,
+      %     the minimum if $\|\bm{r}\|_2^2$.
+      %   \end{itemize}
+      % \end{thm}
+      The code is shown as follows.
+      \lstinputlisting[firstnumber=1]{matlab/NormalVSQR.m}
+
+      Running the code,
+      we obtain the following numerical result:
+\begin{verbatim}
+Normal equations approach: 
+the inf-norm of the error is: 
+     9.817536e-01
+QR factorization approach: 
+the inf-norm of the error is: 
+     8.737004e-05
+\end{verbatim}
+      From which we see that
+      \begin{itemize}
+        \item
+      For the normal equations approach,
+      the solution is more sensitive to the perturbation we introduced into the data,
+      which is aligned with our theory that In solving the normal equation
+      \begin{displaymath}
+        A^TA\bm{x} = A^T\bm{y},
+      \end{displaymath}
+      the condition number of
+      $A^TA$ is the square of that of $A$.
+      \item
+      The QR factorization approach comes closer to recovering the $\bm{x}$
+      that we used to generate the data.
+    \item
+      The fact that the solutions differ \textbf{does not} affect our ablility
+      to fit the data points $(t_i, y_i)$ closely by the polynomial.
+    \end{itemize}
+  \end{sol}
+  \end{multicols}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../ComputerAssignment"
+%%% End:

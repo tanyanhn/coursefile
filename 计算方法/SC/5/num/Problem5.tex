@@ -1,0 +1,40 @@
+\begin{pro}
+  Implement the Total Variation Diminishing(TVD) scheme.
+\end{pro}
+\begin{sol}
+    We have the following method for conservation law
+  \begin{displaymath}
+    Q_i^{n+1} = Q_i^n - \frac{\Delta t}{\Delta x}\left[\mathcal{F}(Q_i^n, Q_{i+1}^n) - \mathcal{F}(Q_{i-1}^n, Q_i^n)\right],
+  \end{displaymath}
+  where $\mathcal{F}(Q_i^n, Q_{i+1}^n) \approx F_{i+\frac{1}{2}}^n =
+  h(Q_{i+\frac{1}{2}}^-, Q_{i+\frac{1}{2}}^+)$.
+  For a TVD scheme,
+  we require that the numerical flux function $h(\cdot,\cdot)$ satisfies
+  \begin{itemize}
+  \item
+    Lipschitz continuous;
+  \item
+    monotone;
+  \item
+    $h(a,a)=a$.
+  \end{itemize}
+  Here we take
+  \begin{displaymath}
+    h(a,b) = 0.5(f(a)+f(b)-\alpha(b-a)), \text{ with } \alpha = \max_u|f'(u)|.
+  \end{displaymath}
+  For Burger's equation,
+  \begin{displaymath}
+    f(u) = \frac{u^2}{2}.
+  \end{displaymath}
+  Modify the given code \verb|convection_fvm.m|,
+  we obtain the following main part of the code:
+\begin{verbatim}
+    h1 = 0.5*(0.5*un(i).^2+0.5*un(i+1).^2-norm(un,inf)*(un(i+1)-un(i)));
+    h2 = 0.5*(0.5*un(i-1).^2+0.5*un(i).^2-norm(un,inf)*(un(i)-un(i-1)));
+    u(i+1) = un(i) - (dt/dx)*(h1-h2);
+\end{verbatim}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw5"
+%%% End:

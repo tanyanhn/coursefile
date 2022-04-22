@@ -1,0 +1,53 @@
+\begin{pro}
+  Is there any real value for the parameter $\alpha$ such that the matrix
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 0 & \alpha \\
+      4 & 2 & 0 \\
+      6 & 5 & 3
+    \end{bmatrix}
+  \end{displaymath}
+  \begin{itemize}
+  \item[(a)]
+    Has all real eigenvalues?
+
+  \item[(b)]
+    Has all complex eigenvalues with nonzero imaginary parts?
+  \end{itemize}
+  In each case,
+  either give such a value for $\alpha$ or
+  give a reason why none exists.
+\end{pro}
+
+\begin{sol}
+  The characteristic polynomial of the above matrix is
+  \begin{displaymath}
+    p(\lambda) = -\lambda^3 + 6\lambda^2 + (6\alpha-11)\lambda
+    + 8\alpha+6.
+  \end{displaymath}
+  \begin{itemize}
+  \item[(a)]
+    One such value is $\alpha=0$.
+
+  \item[(b)]
+    There is no $\alpha$ such that the matrix has all complex eigenvalues
+    with nonzero imaginary parts.
+    \begin{lem}
+      Let $A$ be any real matrix,
+      let $\lambda$ be a complex eigenvalue of $A$ with corresponding
+      eigenvector $\mathbf{x}$,
+      then $\bar{\lambda}$ is an eigenvalue with corresponding eigenvector $\bar{\mathbf{x}}$.
+    \end{lem}
+    Let $\lambda_1=\alpha+\beta i$ be an eigenvalue,
+    then from the above lemma,
+    we know that $\lambda_2=\bar{\lambda}=\alpha-\beta i$ is also an eigenvalue,
+    $\lambda_3=\lambda_1$ or $\lambda_3=\lambda_2$,
+    in either case, $\lambda_1+\lambda_2+\lambda_3$ is a complex
+    number with nonzero imaginary parts,
+    contradicting the fact that $\lambda_1+\lambda_2+\lambda_3=6$.
+  \end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw2"
+%%% End:

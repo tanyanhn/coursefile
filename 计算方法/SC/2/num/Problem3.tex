@@ -1,0 +1,47 @@
+\begin{pro}
+  Determine the Householder transformation that
+  annihilates all but the first entry of the vector $
+  \begin{bmatrix}
+    1 & 1 & 1 & 1
+  \end{bmatrix}^T$.
+  Specifically, if
+  \begin{displaymath}
+    \LP I - 2 \frac{\mathbf{v}\mathbf{v}^T}{\mathbf{v}^T\mathbf{v}}\RP
+    \begin{bmatrix}
+      1 \\
+      1 \\
+      1 \\
+      1
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      \alpha \\
+      0 \\
+      0 \\
+      0
+    \end{bmatrix},
+  \end{displaymath}
+  what are the values of $\alpha$ and $\mathbf{v}$?
+\end{pro}
+
+\begin{sol}
+  Let $\mathbf{a}=
+  \begin{bmatrix}
+    1 & 1 & 1 & 1
+  \end{bmatrix}^T$,
+  then
+  \begin{displaymath}
+    \alpha = -\mathrm{sign}(a_1)\|\mathbf{a}\| = -2,
+  \end{displaymath}
+  and
+  \begin{displaymath}
+    \mathbf{v} = \mathbf{a} - \alpha\mathbf{e}_1 =
+    \begin{bmatrix}
+      3 & 1 & 1 &1
+    \end{bmatrix}^T.
+  \end{displaymath}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw2"
+%%% End:

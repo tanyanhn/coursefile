@@ -1,0 +1,42 @@
+\begin{pro}
+  \begin{itemize}
+  \item[(a)]
+    What is the LU factorization of the following matrix?
+    \begin{displaymath}
+      \begin{bmatrix}
+        1 & a \\
+        c & b
+      \end{bmatrix}
+    \end{displaymath}
+
+  \item[(b)]
+    Under what condition is this matrix singular?
+  \end{itemize}
+\end{pro}
+
+\begin{sol}
+  \begin{itemize}
+  \item[(a)]
+    The LU factorization is as follows.
+    \begin{displaymath}
+      L =
+      \begin{bmatrix}
+        1 & 0 \\
+        c & 1
+      \end{bmatrix},
+      \quad 
+      U =
+      \begin{bmatrix}
+        1 & a \\
+        0 & b-ca
+      \end{bmatrix}.
+    \end{displaymath}
+
+  \item[(b)]
+    The matrix is singular if and only if $b-ca=0$.
+  \end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw1"
+%%% End:

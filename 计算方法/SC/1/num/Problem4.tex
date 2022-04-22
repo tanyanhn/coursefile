@@ -1,0 +1,30 @@
+\begin{pro}
+  If $A, B$, and $C$ are $n\times n$ matrices,
+  with $B$ and $C$ nonsingular,
+  and $\mathbf{b}$ an $n$-vector,
+  how would you implement the formula
+  \begin{displaymath}
+    \mathbf{x} = B^{-1}(2A+I)(C^{-1}+A)\mathbf{b}
+  \end{displaymath}
+  without computing any matrix inverses?
+\end{pro}
+
+\begin{sol}
+  The basic idea is that whenever we see a matrix inverse
+  in a formula, we should think ``solve a system'' rather than
+  ``invert a matrix.'' So we can implement the formula using the following steps.
+  \begin{itemize}
+  \item
+    solve $C\mathbf{y} = b$ for $\mathbf{y}$;
+  \item
+    $\mathbf{y}\leftarrow \mathbf{y} + A\mathbf{b}$;
+  \item
+    $\mathbf{w} \leftarrow (2A+I)\mathbf{y}$;
+  \item
+    solve $B\mathbf{x} = \mathbf{w}$ for $\mathbf{x}$.
+  \end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw1"
+%%% End:

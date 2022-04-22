@@ -1,0 +1,64 @@
+\begin{pro}
+  \begin{itemize}
+  \item[(a)]
+    What are the eigenvalues of the Householder transformation
+    \begin{displaymath}
+      H = I - 2 \frac{\mathbf{v}\mathbf{v}^T}{\mathbf{v}^T\mathbf{v}},
+    \end{displaymath}
+    where $\mathbf{v}$ is any nonzero vector?
+
+  \item[(b)]
+    What are the eigenvalues of the plane rotation
+    \begin{displaymath}
+      G =
+      \begin{bmatrix}
+        c & s \\
+        -s & c
+      \end{bmatrix},
+    \end{displaymath}
+    where $c^2+s^2=1$?
+  \end{itemize}
+\end{pro}
+
+\begin{sol}
+  \begin{itemize}
+  \item[(a)]
+    The characteristic polynomial of $H$ is
+    \begin{displaymath}
+      p(\lambda) = \det(H-\lambda I) =
+      \det\LP(1-\lambda)I - 2 \frac{\mathbf{v}\mathbf{v}^T}{\mathbf{v}^T\mathbf{v}}\RP,
+    \end{displaymath}
+    hence
+    \begin{align*}
+      \lambda_1 &= 1 \text{ is an eigenvalue of multiplicity }n-1; \\
+      \lambda_2 &= -1 \text{ is an eigenvalue with corresponding
+                  eigenvector } \mathbf{v}.
+    \end{align*}
+
+  \item[(b)]
+    The characteristic polynomial of $G$ is
+    \begin{displaymath}
+      p(\lambda) = \det(G-\lambda I) =
+      \begin{vmatrix}
+        c -\lambda & s \\
+        -s & c-\lambda
+      \end{vmatrix}
+      = (c-\lambda)^2 + s^2,
+    \end{displaymath}
+    therefore $\lambda_1=c+is$ is an eigenvalue of $G$ with
+    corresponding eigenvector $
+    \begin{bmatrix}
+      1 & i
+    \end{bmatrix}^T
+    $ and $\lambda_2=c-is$ is an eigenvalue with
+    corresponding eigenvector $
+    \begin{bmatrix}
+      i & 1
+    \end{bmatrix}^T
+    $.
+  \end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw2"
+%%% End:

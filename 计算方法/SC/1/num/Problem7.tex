@@ -1,0 +1,96 @@
+\begin{pro}[Programming assignment]
+  Consider a horizontal cantilevered beam that is
+  clamped at one end but free along the remainder of its length.
+  A discrete model of the forces on the beam yields a system of linear equations
+  $A\mathbf{x} = \mathbf{b}$,
+  where the $n\times n$ matrix $A$ has the banded form
+  \begin{displaymath}
+    \begin{bmatrix}
+      9 & -4 & 1 & 0 & \cdots & \cdots & 0 \\
+      -4 & 6 & -4 & 1 & \ddots & & \vdots \\
+      1 & -4 & 6 & -4 & 1 & \ddots & \vdots \\
+      0 & \ddots & \ddots & \ddots & \ddots & \ddots & 0 \\
+      \vdots & \ddots & 1 & -4 & 6 & -4 & 1 \\
+      \vdots &  & \ddots & 1 & -4 & 5 & -2 \\
+      0 & \cdots & \cdots & 0 & 1 & -2 & 1
+    \end{bmatrix},
+  \end{displaymath}
+  the $n$-vector $\mathbf{b}$ is the known load on the bar
+  (including its own weight),
+  and the $n$-vector $\mathbf{x}$ represents
+  the resulting deflection of the bar that is to be determined.
+  We will take the bar to be uniformly loaded,
+  with $b_i = \frac{1}{n^4}$ for each component of the load vector.
+  \begin{itemize}
+  \item[(a)]
+    Letting $n=100$, solve this linear system using
+    both a standard library routine for dense linear systems
+    and a library routine designed for banded (or more general sparse) systems.
+    How do the two routines compare in the time required to compute the solution?
+    How well do the answers obtained agree with each other?
+
+  \item[(b)]
+    Verify that the matrix $A$ has the UL factorization $A = RR^T$,
+    where $R$ is an upper triangular matrix of the form
+    \begin{displaymath}
+      \begin{bmatrix}
+        2 & -2 & 1 & 0 & \cdots & 0 \\
+        0 & 1 & -2 & 1 & \ddots & \vdots \\
+        \vdots & \ddots & \ddots & \ddots & \ddots & 0 \\
+        \vdots & & \ddots & 1 & -2 & 1 \\
+        \vdots & & & \ddots & 1 & -2 \\
+        0 & \cdots & \cdots & \cdots & 0 & 1
+      \end{bmatrix}.
+    \end{displaymath}
+    Letting $n=1000$,
+    solve the linear system using this factorization
+    (two triangular solves will be required).
+    Also solve the system in its original form using a banded (or general sparse) system solver
+    as in part (a).
+    How well do the answers obtained agree with each other?
+    Which approach seems more accurate?
+    What is the condition number of $A$,
+    and what accurary does it suggest that you should expect?
+    Try iterative refinement to see if the accurary  or residual improves
+    for the less accurate method.
+  \end{itemize}
+\end{pro}
+
+\begin{sol}
+    \begin{itemize}
+    \item[(a)]
+      The matlab routines are as follows.
+      The time for the standard library routine for dense linear systems and
+      the standard routines designed for banded systems we use
+      are given approximately as follows.
+\begin{verbatim}
+Dense: 0.000226 seconds;
+Sparse: 0.000163 seconds.
+\end{verbatim}
+      The answers obtained almost agree with each other, 
+      since the $\infty$-norm of the difference between the two results we get is
+\begin{verbatim}
+6.01e-11.
+\end{verbatim}
+  \lstinputlisting[firstnumber=1]{matlab/beamDense.m}
+  \lstinputlisting[firstnumber=1]{matlab/beamSparse.m}
+
+  \item[(b)]
+    Verifying that $A = RR^T$ is straightforward.
+
+      The matlab routines are as follows.
+      The $\infty$-norm of the difference between the two results we get is
+\begin{verbatim}
+1.59e-07.
+\end{verbatim}
+      The condition number of the matrix $A$ is
+\begin{verbatim}
+1.31e+08
+\end{verbatim}
+  \lstinputlisting[firstnumber=1]{matlab/triangularSolver.m}
+  \end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw1"
+%%% End:

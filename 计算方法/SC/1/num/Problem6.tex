@@ -1,0 +1,89 @@
+\begin{pro}
+  Suppose that the symmetric matrix
+  \begin{displaymath}
+    B =
+    \begin{bmatrix}
+      A & \mathbf{a} \\
+      \mathbf{a}^T & \alpha
+    \end{bmatrix}
+  \end{displaymath}
+  of order $n+1$ is positive definite.
+  \begin{itemize}
+  \item[(a)]
+    Show that the scalar $\alpha$ must be positive and
+    the $n\times n$ matrix $A$ must be positive definite.
+
+  \item[(b)]
+    What is the Cholesky factorization of $B$ in terms of the
+    constituent submatrices?
+  \end{itemize}
+\end{pro}
+
+\begin{proof}
+  \begin{itemize}
+  \item[(a)]
+    Since $B$ is symmetric positive definite, we have
+    \begin{displaymath}
+      \forall \mathbf{x}\in\mathbb{R}^{n+1}, \mathbf{x}\neq\mathbf{0}, \quad 
+      \mathbf{x}^TB\mathbf{x} > 0.
+    \end{displaymath}
+    In particular, choose $\mathbf{x}=\mathbf{e}_{n+1}$,
+    and thus
+    \begin{displaymath}
+      0< \mathbf{e}_{n+1}^TB\mathbf{e}_{n+1} = \alpha.
+    \end{displaymath}
+    Similar, choosing $\mathbf{x}=(\mathbf{y}, 0)$,
+    where $\mathbf{y}\in\mathbb{R}^n, \mathbf{y}\neq \mathbf{0}$, yields
+    \begin{displaymath}
+      0< \mathbf{x}^TB\mathbf{x} = \mathbf{y}^TA\mathbf{y}, \quad \forall \mathbf{y}\in\mathbb{R}^n, \mathbf{y}\neq\mathbf{0},
+    \end{displaymath}
+    which shows that $A$ is a positive definite matrix.
+
+  \item[(b)]
+    Assume that the Cholesky factorization of $A$ is given by
+    \begin{displaymath}
+      A = LL^T,
+    \end{displaymath}
+    let
+    \begin{displaymath}
+      B =
+      \begin{bmatrix}
+        L & \mathbf{0} \\
+        \mathbf{b}^T & \sqrt{\alpha}
+      \end{bmatrix}
+      \begin{bmatrix}
+        L^T & \mathbf{b} \\
+        \mathbf{0}^T & \sqrt{\alpha}
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        LL^T & L\mathbf{b} \\
+        (L\mathbf{b})^T & \alpha
+      \end{bmatrix},
+    \end{displaymath}
+    and hence
+    \begin{displaymath}
+      L\mathbf{b} = \mathbf{a} \Rightarrow \mathbf{b} = L^{-1}\mathbf{a}.
+    \end{displaymath}
+    Therefore, the Cholesky factorization of $B$ is
+    \begin{displaymath}
+      B =
+            \begin{bmatrix}
+        L & \mathbf{0} \\
+        (L^{-1}\mathbf{a})^T & \sqrt{\alpha}
+      \end{bmatrix}
+      \begin{bmatrix}
+        L^T & L\mathbf{a} \\
+        \mathbf{0}^T & \sqrt{\alpha}
+      \end{bmatrix},
+    \end{displaymath}
+    where $L$ is obtained by the Cholesky factorization of $A$,
+    i.e.,
+    $A = LL^T$.
+  \end{itemize}
+  
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw1"
+%%% End:

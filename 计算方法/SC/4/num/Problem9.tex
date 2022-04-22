@@ -1,0 +1,185 @@
+\begin{pro}
+  Consider the two-point BVP for the second-order scalar ODE
+  \begin{displaymath}
+    u'' = u, \quad 0<t<b,
+  \end{displaymath}
+  with boundary conditions
+  \begin{displaymath}
+    u(0)=\alpha, \quad u(b) = \beta.
+  \end{displaymath}
+  \begin{itemize}
+  \item[(a)]
+    Rewrite the problem as a first-order system of ODEs with
+    separated boundary conditions.
+
+  \item[(b)]
+    Show that the fundamental solution matrix for the resulting linear
+    system of ODEs is given by
+    \begin{displaymath}
+      Y(t) =
+      \begin{bmatrix}
+        \cosh(t) & \sinh(t) \\
+        \sinh(t) & \cosh(t)
+      \end{bmatrix}.
+    \end{displaymath}
+
+  \item[(c)]
+    Are the solutions to this ODE stable?
+
+  \item[(d)]
+    Determine the matrix $Q\equiv B_0Y(0)+B_bY(b)$
+    for this problem.
+
+  \item[(e)]
+    Determine the rescaled solution matrix
+    $\Phi(t) = Y(t)Q^{-1}$.
+
+  \item[(f)]
+    What can you say about the conditioning of $Q$,
+    the norm of $\Phi(t)$,
+    and the stability of solutions to this BVP as the right endpoint $b$ grows?
+  \end{itemize}
+\end{pro}
+
+\begin{sol}
+  \begin{itemize}
+  \item[(a)]
+  Define the new unknowns $y_1(t)=u(t)$ and $y_2(t)=u'(t)$,
+  then we have
+  \begin{displaymath}
+    \begin{bmatrix}
+      y_1' \\
+      y_2'
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      y_2 \\
+      y_1
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      0 & 1 \\
+      1 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+      y_1 \\
+      y_2
+    \end{bmatrix},
+  \end{displaymath}
+  with separated linear boundary conditions
+  \begin{displaymath}
+    \begin{bmatrix}
+      1 & 0 \\
+      0 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+      y_1(0) \\
+      y_2(0)
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+      0 & 0 \\
+      1 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+      y_1(b) \\
+      y_2(b)
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      \alpha \\
+      \beta
+    \end{bmatrix}.
+  \end{displaymath}
+
+\item[(b)]
+  Solving $\mathbf{y}'=A\mathbf{y}$ with
+  initial condition $\mathbf{y}(0)=\mathbf{e}_1 =
+  \begin{bmatrix}
+    1 & 0
+  \end{bmatrix}^T
+  $, we obtain
+  $\mathbf{y}(t)=
+  \begin{bmatrix}
+    \cosh(t) & \sinh(t)
+  \end{bmatrix}^T,
+  $
+  with $\mathbf{y}(0)=\mathbf{e}_2=
+  \begin{bmatrix}
+    0 & 1
+  \end{bmatrix}^T
+$,  $\mathbf{y}(t) =
+\begin{bmatrix}
+  \sinh(t) &
+  \cosh(t)
+\end{bmatrix}^T
+$.
+Therefore the fundamental solution matrix is
+    \begin{displaymath}
+      Y(t) =
+      \begin{bmatrix}
+        \cosh(t) & \sinh(t) \\
+        \sinh(t) & \cosh(t)
+      \end{bmatrix}.
+    \end{displaymath}
+
+  \item[(c)]
+    The solutions to this ODE are stable,
+    since growth in the solution
+    % that would otherwise be possible
+    is limited by the boundary conditions.
+
+  \item[(d)]
+    \begin{displaymath}
+      Q =
+      \begin{bmatrix}
+        1 & 0 \\
+        0 & 0
+      \end{bmatrix}
+      \begin{bmatrix}
+        1 & 0 \\
+        0 & 1
+      \end{bmatrix}
+      +
+      \begin{bmatrix}
+        0 & 0 \\
+        1 & 0
+      \end{bmatrix}
+      \begin{bmatrix}
+        \cosh(b) & \sinh(b) \\
+        -\sinh(b) & \cosh(b)
+      \end{bmatrix} =
+      \begin{bmatrix}
+        1 & 0 \\
+        \cosh(b) & \sinh(b)
+      \end{bmatrix}.
+    \end{displaymath}
+
+  \item[(e)]
+    \begin{align*}
+      \Phi(t) &= Y(t)Q^{-1} =
+      \begin{bmatrix}
+        \cosh(t) & \sinh(t) \\
+        \sinh(t) & \cosh(t)
+      \end{bmatrix}
+                   \begin{bmatrix}
+                     1 & 0 \\
+                     -\frac{\cosh(b)}{\sinh(b)} & \frac{1}{\sinh(b)}
+                   \end{bmatrix} \\
+      &= \frac{1}{\sinh(b)}
+        \begin{bmatrix}
+          \sinh(b-t) & \sinh(t) \\
+          -\cosh(b-t) & \cosh(t)
+        \end{bmatrix}
+    \end{align*}
+
+  \item[(f)]
+    As $b$ grows,
+    the condition number of $Q$ and the norm of $\Phi(t)$ grow as well,
+    and the stability of solutions to this BVP decreases.
+  \end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw4"
+%%% End:

@@ -1,0 +1,181 @@
+\begin{pro}
+  Suppose the $n\times n$ matrix $A$ has the block upper triangular form
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      A_{11} & A_{12} \\
+      O & A_{22}
+    \end{bmatrix},
+  \end{displaymath}
+  where $A_{11}$ is $k\times k$ and
+  $A_{22}$ is $(n-k)\times(n-k)$.
+  \begin{itemize}
+  \item[(a)]
+    If $\lambda$ is an eigenvalue of $A_{11}$ with corresponding
+    eigenvector $\mathbf{u}$,
+    show that $\lambda$ is an eigenvalue of $A$.
+    (Hint: Find an $(n-k)-$vector $\mathbf{v}$ such that
+    $
+    \begin{bmatrix}
+      \mathbf{u} \\ \mathbf{v}
+    \end{bmatrix}
+    $ is an eigenvector of $A$ corresponding to $\lambda$.)
+
+  \item[(b)]
+    If $\lambda$ is an eigenvalue of $A_{22}$ (but not of $A_{11}$)
+    with corresponding eigenvector $\mathbf{v}$,
+    show that $\lambda$ is an eigenvalue of $A$.
+    (Hint: Find a $k$-vector $\mathbf{u}$ such that
+    $
+    \begin{bmatrix}
+      \mathbf{u} \\
+      \mathbf{v}
+    \end{bmatrix}
+    $ is an eigenvector of $A$ corresponding to $\lambda$.)
+
+  \item[(c)]
+    If $\lambda$ is an eigenvalue of $A$ with corresponding eigenvector
+    $
+    \begin{bmatrix}
+      \mathbf{u} \\ \mathbf{v}
+    \end{bmatrix}
+    $, where $\mathbf{u}$ is a $k$-vector,
+    show that $\lambda$ is either an eigenvalue of $A_{11}$ with
+    corresponding eigenvector $\mathbf{u}$ or an eigenvalue of $A_{22}$ with
+    corresponding eigenvector $\mathbf{v}$.
+
+  \item[(d)]
+    Combine the previous parts of this exercise to show that
+    $\lambda$ is an eigenvalue of $A$ if, and only if,
+    it is an eigenvalue of either $A_{11}$ or $A_{22}$.
+  \end{itemize}
+\end{pro}
+
+\begin{proof}
+  \begin{itemize}
+  \item[(a)]
+    \begin{displaymath}
+      A
+      \begin{bmatrix}
+        \mathbf{u} \\
+        \mathbf{0}
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        A_{11} & A_{12} \\
+        O & A_{22}
+      \end{bmatrix}
+      \begin{bmatrix}
+        \mathbf{u} \\
+        \mathbf{0} 
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        A_{11}\mathbf{u} \\
+        \mathbf{0}
+      \end{bmatrix}
+      = \lambda
+      \begin{bmatrix}
+        \mathbf{u} \\
+        \mathbf{0}
+      \end{bmatrix},
+    \end{displaymath}
+    where $\mathbf{0}$ is the zero vector of dimension $n-k$.
+
+    Therefore $\lambda$ is an eigenvalue of $A$.
+
+  \item[(b)]
+    \begin{displaymath}
+      A
+      \begin{bmatrix}
+        \mathbf{u} \\
+        \mathbf{v}
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        A_{11} & A_{12} \\
+        O & A_{22}
+      \end{bmatrix}
+      \begin{bmatrix}
+        \mathbf{u}  \\
+        \mathbf{v}
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        A_{11}\mathbf{u} + A_{12}\mathbf{v} \\
+        A_{22}\mathbf{v}
+      \end{bmatrix}
+      =\lambda
+      \begin{bmatrix}
+        \mathbf{u} \\
+        \mathbf{v}
+      \end{bmatrix},
+    \end{displaymath}
+    We need to choose a specific $\mathbf{u}$
+    so that the last equality holds.
+    \begin{displaymath}
+      A_{11}\mathbf{u} + A_{12}\mathbf{v} = \lambda\mathbf{u} \Rightarrow (A_{11}-\lambda I)\mathbf{u} = A_{12}\mathbf{v}
+      \Rightarrow \mathbf{u} = (A_{11}-\lambda I)^{-1}A_{12}\mathbf{v},
+    \end{displaymath}
+    The invertibility of $A_{11}-\lambda I$ is guaranteed by the fact
+    that $\lambda$ is not an eigenvalue of $A_{11}$.
+    Therefore, $\lambda$ is an eigenvalue of $A$
+    with corresponding eigenvector
+    $
+    \begin{bmatrix}
+      (A_{11}-\lambda I)^{-1}A_{12}\mathbf{v} & \mathbf{v}
+    \end{bmatrix}^T
+    $.
+
+  \item[(c)]
+    Since $\lambda$ is an eigenvalue of $A$ with corresponding
+    eigenvector $
+    \begin{bmatrix}
+      \mathbf{u} & \mathbf{v}
+    \end{bmatrix}^T
+    $, we have
+        \begin{displaymath}
+      A
+      \begin{bmatrix}
+        \mathbf{u} \\
+        \mathbf{v}
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        A_{11} & A_{12} \\
+        O & A_{22}
+      \end{bmatrix}
+      \begin{bmatrix}
+        \mathbf{u}  \\
+        \mathbf{v}
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        A_{11}\mathbf{u} + A_{12}\mathbf{v} \\
+        A_{22}\mathbf{v}
+      \end{bmatrix}
+      =\lambda
+      \begin{bmatrix}
+        \mathbf{u} \\
+        \mathbf{v}
+      \end{bmatrix},
+    \end{displaymath}
+    If $\mathbf{v}\neq \mathbf{0}$,
+    then $A_{22}\mathbf{v}=\lambda \mathbf{v}$,
+    and thus $\lambda$ is an eigenvalue of $A_{22}$
+    with corresponding eigenvector $\mathbf{v}$.
+
+    If $\mathbf{v}=\mathbf{0}$,
+    then $A_{11}\mathbf{u}=\lambda\mathbf{u}$,
+    and hence $\lambda$ is an eigenvalue of $A_{11}$
+    with corresponding eigenvector $\mathbf{u}$.
+
+  \item[(d)]
+    The sufficiency follows from (a) and (b)
+    while the necessity follows from (c).
+  \end{itemize}
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw2"
+%%% End:

@@ -1,0 +1,55 @@
+\begin{pro}
+  Applying the midpoint quadrature rule
+  on the interval $[t_k, t_{k+1}]$ leads to the implicit
+  \emph{midpoint method}
+  \begin{displaymath}
+    y_{k+1} = y_k + h_kf(t_k+h_k/2, (y_k+y_{k+1})/2)
+  \end{displaymath}
+  for solving the ODE $y'=f(t,y)$.
+  Determine the order of accuracy and
+  the stability region of this method.
+\end{pro}
+
+\begin{sol}
+  Applying Taylor's theorem yields
+  \begin{align*}
+    y(t_{k+1}) &= y(t_k) + h_ky'(t_k) + \frac{h_k^2}{2}y''(t_k) +
+    \mathcal{O}(h_k^3); \\
+    f\LP t_k+\frac{h_k}{2}, \frac{y(t_k)+y(t_{k+1})}{2}\RP &= f(t_k, y(t_k)) +
+                                                             \frac{h_k}{2}f_t(t_k, y(t_k)) +
+                                                             \frac{y(t_{k+1})-y(t_k)}{2}f_y(t_k, y(t_k)) + \mathcal{O}(h_k^2) \\
+               &= y'(t_k) + \frac{h_k}{2}\LP f_t(t_k, y(t_k))+f_y(t_k,y(t_k))y'(t_k)\RP
+                 + \mathcal{O}(h_k^2) \\
+    &= y'(t_k) + \frac{h_k}{2}y''(t_k) + \mathcal{O}(h_k^2).
+  \end{align*}
+  Therefore
+  \begin{align*}
+    y(t_{k+1}) - \left[y(t_k)+h_kf\LP t_k+\frac{h_k}{2}, \frac{y(t_k)+y(t_{k+1})}{2}\RP\right] &= \begin{multlined}[t]
+      y(t_k) + h_ky'(t_k) + \frac{h_k^2}{2}y''(t_k) +
+      \mathcal{O}(h_k^3) \\
+      - \left\{y(t_k) + h_k\left[y'(t_k) + \frac{h_k}{2}y''(t_k) + \mathcal{O}(h_k^2)\right]\right\}
+    \end{multlined}
+    \\
+    &= \mathcal{O}(h_k^3),
+  \end{align*}
+  which shows that the implicit midpoint method is of order $2$.
+
+  To determine the stability of the implicit midpoint method,
+  we apply it to the scalar test ODE $y'=\lambda y$,
+  obtaining
+  \begin{displaymath}
+    y_{k+1} = y_k + \frac{\lambda h_k}{2}(y_k+y_{k+1}),
+  \end{displaymath}
+  which implies that
+  \begin{displaymath}
+    y_k = \LP \frac{1+h_k\lambda/2}{1-h_k\lambda/2}\RP^ky_0.
+  \end{displaymath}
+  Thus, the stability region of the implicit midpoint method is
+  \begin{displaymath}
+    \mathcal{D} = \left\{z\in\mathbb{C}: \left| \frac{1+z}{1-z}\right|<1\right\}.
+  \end{displaymath}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw4"
+%%% End:

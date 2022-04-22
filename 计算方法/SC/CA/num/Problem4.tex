@@ -1,0 +1,148 @@
+\textbf{8.6}
+Evaluate the following quantities using each of the given methods:
+\begin{itemize}
+\item[(a)]
+  Use an adaptive quadrature routine to evaluate each of the integrals
+  \begin{displaymath}
+    I_k = e^{-1}\int_0^1x^ke^x\dif x
+  \end{displaymath}
+  for $k=0, 1, \ldots, 20$.
+
+\item[(b)]
+  Verify that the integrals just defined satisfy the recurrence
+  \begin{displaymath}
+    I_k = 1 - kI_{k-1},
+  \end{displaymath}
+  and use it to generate the same quantities,
+  starting with $I_0=1-e^{-1}$.
+
+\item[(c)]
+  Generate the same quantities using the backward recurrence
+  \begin{displaymath}
+    I_{k-1} = (1-I_k)/k,
+  \end{displaymath}
+  beginning with $I_n=0$ for some chosen value $n>20$.
+  Experiment with different values of $n$ to see the effect
+  on the accuracy of the values generated.
+
+\item[(d)]
+  Compare the three methods with respect to accuracy,
+  stability,
+  and execution time.
+  Can you explain these results?
+\end{itemize}
+\begin{multicols}{2}
+  \setlength{\columnseprule}{0.2pt}
+  \begin{sol}
+    \begin{itemize}
+    \item[(a)]
+      We utilize the \verb|matlab| routine \verb|quad|,
+      which uses adaptive Simpson quadrature to numerically evaluate an integral.
+      The code is shown as follows.
+      \lstinputlisting[firstnumber=1]{matlab/integral.m}
+      
+      The numerical result obtained is as follows.
+\begin{verbatim}
+ k I_k
+ 0 0.6321
+ 1 0.3679
+ 2 0.2642
+ 3 0.2073
+ 4 0.1709
+ 5 0.1455
+ 6 0.1268
+ 7 0.1124
+ 8 0.1009
+ 9 0.0916
+10 0.0839
+11 0.0774
+12 0.0718
+13 0.0669
+14 0.0627
+15 0.0590
+16 0.0557
+17 0.0528
+18 0.0501
+19 0.0477
+20 0.0455
+\end{verbatim}
+
+    \item[(b)]
+      \begin{align*}
+        I_k &= e^{-1}\int_0^1x^ke^x\dif x = e^{-1}\LP x^ke^x|_0^1 - \int_0^1kx^{k-1}e^x\dif x\RP \\
+        &= 1 - kI_{k-1}.
+      \end{align*}
+      The code is shown as follows.
+      \lstinputlisting[firstnumber=1]{matlab/integral2.m}
+    \end{itemize}
+    The numerical result obtained is as follows.
+\begin{verbatim}
+ k I_k
+ 1 -2.64e-01
+ 2 1.79e+00
+ 3 -6.17e+00
+ 4 3.19e+01
+ 5 -1.90e+02
+ 6 1.33e+03
+ 7 -1.07e+04
+ 8 9.59e+04
+ 9 -9.59e+05
+10 1.05e+07
+11 -1.27e+08
+12 1.65e+09
+13 -2.30e+10
+14 3.46e+11
+15 -5.53e+12
+16 9.40e+13
+17 -1.69e+15
+18 3.21e+16
+19 -6.43e+17
+20 1.35e+19
+\end{verbatim}
+
+  \item[(c)]
+    The code is shown as follows.
+    \lstinputlisting[firstnumber=1]{matlab/integral3.m}
+    For $n=22$,
+    the numerical result obtained is the same with that of (a)
+    up to fourth digit.
+
+  \item[(d)]
+    From the above numerical experiment,
+    we see that the adaptive quadrature routine and the backward recurrence are accurate and stable.
+    However, the recurrence used in (b) is unstable,
+    which is of course inaccurate due to the error propagation.
+    The backward recurrence is clearly more efficient than the adaptive quadrature
+    routine since we have used more information.
+
+    With the recurrence
+    \begin{displaymath}
+      I_k = 1 - kI_{k-1},
+    \end{displaymath}
+    it's easy to show via induction that
+    \begin{displaymath}
+      I_k = -k!\cdot I_0 - p_k,
+    \end{displaymath}
+    where $p_k$ is some number (independent of $I_0$).
+    Therefore,
+    \begin{displaymath}
+      \left| \frac{I_k^{*} - I_k}{I_k}\right| \approx
+        k! \left| \frac{I_0^{*}-I_0}{I_0}\right|,
+    \end{displaymath}
+    i.e., in obtaining $I_k$,
+    a relatively small perturbation in $I_0$ (for example, rounding to a machine number)
+    is amplified by a factor of $k!$,
+    which leads to the catastrophic phenomenon that we see in the above numerical
+    experiment.
+    Analyzing the backward recurrence shows that
+    \begin{displaymath}
+      \left| \frac{I_k^{*} - I_k}{I_k}\right| \approx
+        \frac{1}{k!} \left| \frac{I_0^{*}-I_0}{I_0}\right|,
+      \end{displaymath}
+      which shows the stability of the numerical scheme.
+  \end{sol}
+\end{multicols}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../ComputerAssignment"
+%%% End:

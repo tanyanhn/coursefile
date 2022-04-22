@@ -1,0 +1,65 @@
+\begin{pro}
+  Express the Newton iteration for solving each of the following
+  systems of nonlinear equations.
+  \begin{align*}
+    x_1^2 + x_1x_2^3 &= 9, \\
+    3x_1^2x_2 - x_2^3 &= 4.
+  \end{align*}
+\end{pro}
+
+\begin{sol}
+  The Jacobian matrix is given by
+  \begin{displaymath}
+    J(x_1, x_2) =
+    \begin{bmatrix}
+      2x_1 + x_2^3 & 3x_1x_2^2 \\
+      6x_1x_2 & 3x_1^2 - 3x_2^2.
+    \end{bmatrix}
+  \end{displaymath}
+  Solve
+    \begin{displaymath}
+      J(x_1^{(n)}, x_2^{(n)})
+      \begin{bmatrix}
+        s_1^{(n)} \\
+        s_2^{(n)}
+      \end{bmatrix}
+      = \mathbf{f}(x_1^{(n)}, x_2^{(n)}).
+    \end{displaymath}
+    Update solution
+    \begin{displaymath}
+      \begin{bmatrix}
+        x_1^{(n+1)} \\
+        x_2^{(n+1)}
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        x_1^{(n)} \\
+        x_2^{(n)}
+      \end{bmatrix}
+      +
+      \begin{bmatrix}
+        s_1^{(n)} \\
+        s_2^{(n)}
+      \end{bmatrix}.
+    \end{displaymath}
+    % Solve
+  % \begin{displaymath}
+  %   J(x_1^{(n)}, x_2^{(n)})
+  %   \begin{bmatrix}
+  %     s_1^{(n)} & s_2^{(n)}
+  %   \end{bmatrix}^T
+  %   =
+  %   \begin{bmatrix}
+  %     2x_1^{(n)} + (x_2^{(n)})^3 & 3x_1^{(n)}(x_2^{(n)})^2 \\
+  %     6x_1^{(n)}x_2^{(n)} & 3(x_1^{(n)})^2 - 3(x_2^{(n)})^2
+  %   \end{bmatrix}
+  %   \begin{bmatrix}
+  %     s_1^{(n)} \\
+  %     s_2^{(n)}
+  %   \end{bmatrix}
+  % \end{displaymath}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

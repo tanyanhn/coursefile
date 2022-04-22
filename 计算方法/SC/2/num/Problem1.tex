@@ -1,0 +1,30 @@
+\begin{pro}
+  Set up the linear least squares system $A\mathbf{x}\cong \mathbf{b}$
+  for fitting the model function $f(t, \mathbf{x}) = x_1t+x_2e^t$
+  to the three data points $(1, 2), (2, 3), (3,5)$.
+\end{pro}
+\begin{sol}
+  \begin{displaymath}
+    A\mathbf{x} =
+    \begin{bmatrix}
+      1 & e \\
+      2 & e^2 \\
+      3 & e^3
+    \end{bmatrix}
+    \begin{bmatrix}
+      x_1 \\
+      x_2
+    \end{bmatrix}
+    \cong
+    \begin{bmatrix}
+      2 \\
+      3 \\
+      5
+    \end{bmatrix}
+    = \mathbf{b}.
+  \end{displaymath}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw2"
+%%% End:

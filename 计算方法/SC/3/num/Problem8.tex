@@ -1,0 +1,33 @@
+\begin{pro}
+  Use Lagrange interpolation to derive the formulas given in
+  Section 5.5.5 for inverse quadratic interpolation.
+\end{pro}
+
+\begin{sol}
+  The interpolation condition is
+  \begin{displaymath}
+    p_2(f_a) = a, \quad p_2(f_b) = b, \quad p_2(f_c) = c.
+  \end{displaymath}
+  Applying the Lagrange interpolation polynomial yields
+  \begin{displaymath}
+    p_2(y) = a \frac{(y-f_b)(y-f_c)}{(f_a-f_b)(f_a-f_c)}
+    + b \frac{(y-f_a)(y-f_c)}{(f_b-f_a)(f_b-f_c)}
+    + c \frac{(y-f_a)(t-f_b)}{(f_c-f_a)(f_c-f_b)},
+  \end{displaymath}
+  evaluating $p_2(y)$ at $y=0$ gives
+  \begin{align*}
+    p_2(0) &= a \frac{f_bf_c}{(f_a-f_b)(f_a-f_c)}
+    + b \frac{f_af_c}{(f_b-f_a)(f_b-f_c)}
+             + c \frac{f_af_b}{(f_c-f_a)(f_c-f_b)} \\
+    &= b + \frac{v(w(u-w)(c-b) - (1-u)(b-a))}{(w-1)(u-1)(v-1)},
+  \end{align*}
+  where
+  \begin{displaymath}
+    u = \frac{f_b}{f_c}, \quad v = \frac{f_b}{f_a}, \quad
+    w = \frac{f_a}{f_c}.
+  \end{displaymath}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

@@ -1,0 +1,103 @@
+\begin{pro}
+  \begin{itemize}
+  \item[(a)]
+    In the Gram-Schmidt procedure of Section 3.5.3,
+    if we define the orthogonal projectors $P_k = \mathbf{q}_k\mathbf{q}_k^T$,
+    $k=1, \ldots, n$, where $\mathbf{q}_k$ is the $k$th column of $Q$ in the
+    resulting QR factorization, show that
+    \begin{displaymath}
+      (I-P_k)(I-P_{k-1})\cdots(I-P_1) = I-P_k-P_{k-1}-\cdots-P_1.
+    \end{displaymath}
+
+  \item[(b)]
+    Show that the classical Gram-Schmidt procedure is equivalent to
+    \begin{displaymath}
+      \mathbf{q}_k = (I-(P_1+\cdots+P_{k-1}))\mathbf{a}_k,
+    \end{displaymath}
+
+  \item[(c)]
+    Show that the modified Gram-Schmidt procedure is equivalent to
+    \begin{displaymath}
+      \mathbf{q}_k = (I-P_{k-1})\cdots(I-P_1)\mathbf{a}_k.
+    \end{displaymath}
+
+  \item[(d)]
+    An alternative way to stablize the classical procedure is to apply it more
+    than once (i.e., iterative refinement),
+    which is equivalent to taking
+    \begin{displaymath}
+      \mathbf{q}_k = (I-(P_1+\cdots+P_{k-1}))^m\mathbf{a}_k,
+    \end{displaymath}
+    where $m=2$ is typically sufficient.
+    Show that all three of these variations are mathematically equivalent
+    (thought they may differ markedly in finite-precision arithmetic).
+  \end{itemize}
+\end{pro}
+
+\begin{sol}
+  \begin{itemize}
+  \item[(a)]
+    First we compute $\forall i\neq j$,
+    \begin{displaymath}
+      P_iP_j = (\mathbf{q}_i\mathbf{q}_i^T)(\mathbf{q}_j\mathbf{q}_j^T)
+      = \mathbf{q}_i(\mathbf{q}_i^T\mathbf{q}_j)\mathbf{q}_j^T
+      = (\mathbf{q}_i^T\mathbf{q}_j)\mathbf{q}_i\mathbf{q}_j^T
+      = 0(\mathbf{q}_i\mathbf{q}_j^T) = O,
+    \end{displaymath}
+    where the fourth equality holds since $\mathbf{q}_i$'s
+    are the columns of an orthogonal matrix.
+
+    Now we employ a simple induction on $k$.
+    \begin{enumerate}
+    \item
+      For $k=1$, the conclusion clearly holds.
+
+    \item
+      Suppose the conclusion holds for some $k$,
+      then for $k+1$, we have
+      \begin{align*}
+        (I-P_{k+1})(I-P_k)\cdots(I-P_1) &= (I-P_{k+1})(I-P_k-P_{k-1}-\cdots-P_1) \\
+                                        &= I - P_{k+1}-P_k-\cdots-P_1 + P_{k+1}(P_k+\cdots+P_1) \\
+        &= I - P_{k+1} - P_k -\cdots -P_1,
+      \end{align*}
+      therefore the conlusion holds for $k+1$ as well.
+    \end{enumerate}
+
+  \item[(b)]
+    The definition of the classical Gram-Schmidt procedure yields
+    \begin{align*}
+      \mathbf{q}_k = \mathbf{a}_k - \sum_{j=1}^{k-1}(\mathbf{q}_j^T\mathbf{a}_k)\mathbf{q}_j = \mathbf{a}_k - \sum_{j=1}^{k-1}\mathbf{q}_j(\mathbf{q}_j^T\mathbf{a}_k) = \mathbf{a}_k - \sum_{j=1}^{k-1}(\mathbf{q}_j\mathbf{q}_j^T)\mathbf{a}_k = (I-(P_1+\cdots+P_{k-1}))\mathbf{a}_k.
+    \end{align*}
+
+  \item[(c)]
+    The definition of the modified Gram-Schmidt procedure yields
+    \begin{align*}
+      \mathbf{a}_k &\leftarrow \mathbf{a}_k - \mathbf{q}_1^T\mathbf{a}_k\mathbf{q}_1 = (I-P_1)\mathbf{a}_k \\
+      \mathbf{a}_k &\leftarrow \mathbf{a}_k - \mathbf{q}_2^T\mathbf{a}_k\mathbf{q}_2 = (I-P_2)\mathbf{a}_{k} \\
+                   & \cdots \\
+      \mathbf{a}_k &\leftarrow \mathbf{a}_k - \mathbf{q}_{k-1}^T\mathbf{a}_k\mathbf{q}_{k-1} = (I-P_{k-1})\mathbf{a}_k \\
+      \mathbf{q}_k &\leftarrow \mathbf{a}_k
+    \end{align*}
+    Therefore
+    \begin{displaymath}
+      \mathbf{q}_k = (I-P_{k-1})\cdots(I-P_1)\mathbf{a}_k.
+    \end{displaymath}
+
+  \item[(d)]
+    The equivalence of (b) and (c) follows directly from (a).
+    To show the equivalence of (b) and (d),
+    apply a mathematical induction on $m$ and
+    use the following property of $P_k$:
+    \begin{displaymath}
+      P_iP_j =
+      \begin{cases}
+        P_i \text{ if } i = j; \\
+        O \text{ if } i\neq j.
+      \end{cases}
+    \end{displaymath}
+  \end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw2"
+%%% End:

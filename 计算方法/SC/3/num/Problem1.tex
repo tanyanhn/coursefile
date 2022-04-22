@@ -1,0 +1,34 @@
+\begin{pro}
+  Consider the nonlinear equation
+  \begin{displaymath}
+    f(x) = x^2 - 2 = 0.
+  \end{displaymath}
+  \begin{itemize}
+  \item[(a)]
+    With $x_0=1$ as a starting point,
+    what is the value of $x_1$ if you use Newton's method for solving this problem?
+
+  \item[(b)]
+    With $x_0=1$ and $x_1=2$ as starting points,
+    what is the value of $x_2$ if you use the secant method for the same problem?
+  \end{itemize}
+\end{pro}
+
+\begin{sol}
+  \begin{itemize}
+  \item[(a)]
+    \begin{displaymath}
+      x_1 = x_0 - \frac{f(x_0)}{f'(x_0)} = 1 - \frac{1-2}{2} = 1.5.
+    \end{displaymath}
+
+  \item[(b)]
+    \begin{displaymath}
+      x_2 = x_1 - f(x_1)\frac{x_1-x_0}{f(x_1)-f(x_0)}
+    = 2 - 2 \frac{2-1}{4-(-1)} = 1.6.
+    \end{displaymath}
+  \end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

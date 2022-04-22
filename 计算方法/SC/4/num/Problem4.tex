@@ -1,0 +1,19 @@
+\begin{pro}
+  Why is Monte Carlo \emph{not} a practical method for
+  computing one-dimensional integrals?
+\end{pro}
+
+\begin{sol}
+  The error goes to zero as $1/\sqrt{n}$,
+  which means, for example,
+  that to gain an additional decimal digit of accuracy
+  the number of sample points must be increased by a factor of $100$.
+  Therefore,
+  for computing one-dimensional integrals,
+  Monte Carlo method is so inefficient,
+  which may require millions of evaluations of the integrand.
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw4"
+%%% End:

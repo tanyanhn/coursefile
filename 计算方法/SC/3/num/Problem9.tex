@@ -1,0 +1,69 @@
+\begin{pro}
+  Prove that the formula using divided differences given in Section
+  7.3.3,
+  \begin{displaymath}
+    x_j = f[t_1, t_2, \ldots, t_j],
+  \end{displaymath}
+  indeed gives the coefficient of the $j$th basis function
+  in the Newton polynomial interpolant.
+\end{pro}
+
+\begin{proof}
+  We utilize a mathematical induction on $j$.
+  \begin{itemize}
+  \item
+    For $j=1$, the interpolating polynomial is
+    \begin{displaymath}
+      p_1(t) = f(t_1),
+    \end{displaymath}
+    and hence $x_1 = f(t_1) = f[t_1]$.
+
+  \item
+    Suppose the conclusion is true for all integers less than $n$,
+    we show that it holds for $n+1$ as well.
+    
+    By our inductive hypothesis, we know that
+    the polynomial interpolating
+    \begin{displaymath}
+      p_n(t_1) = f(t_1), \quad p_n(t_2) = f(t_2), \quad p_n(t_n) = f(t_n)
+    \end{displaymath}
+    is given by
+    \begin{displaymath}
+      p_n(t) = \sum_{i=1}^nx_i\prod_{j=1}^{i-1}(t-t_j)
+      = \sum_{i=1}^nf[t_1, \ldots, t_i]\prod_{j=1}^{i-1}(t-t_j).
+    \end{displaymath}
+    And the polynomial interpolating
+    \begin{displaymath}
+      q_n(t_2) = f(t_2), \quad q_n(t_3) = f(t_3), \quad q_n(t_{n+1}) = f(t_{n+1})
+    \end{displaymath}
+    is given by
+    \begin{displaymath}
+      q_n(t) = \sum_{i=1}^nx_i\prod_{j=2}^i(t-t_j)
+      = \sum_{i=1}^nf[t_2, \ldots, t_{i+1}]\prod_{j=2}^i(t-t_j).
+    \end{displaymath}
+    Therefore from the uniqueless of the interpolating polynomial,
+    we know that the polynomial for interpolating
+    \begin{displaymath}
+      p_{n+1}(t_1) = f(t_1), \quad p_{n+1}(t_2) = f(t_2), \quad
+      p_{n+1}(t_n) = f(t_n), \quad p_{n+1}(t_{n+1}) = f(t_{n+1})
+    \end{displaymath}
+    is given by
+    \begin{displaymath}
+      p_{n+1}(t) = \frac{t-t_{n+1}}{t_1-t_{n+1}}p_n(t)
+      + \frac{t-t_1}{t_{n+1}-t_1}q_n(t)
+    \end{displaymath}
+    Comparing the coefficient of the highest-order term of the above
+    two polynomials yields
+    \begin{displaymath}
+      x_{n+1} = \frac{f[t_2, t_3, \ldots, t_{n+1}]-f[t_1, t_2, \ldots,
+        t_n]}{t_{n+1} - t_1} = f[t_1, t_2, \ldots, t_{n+1}],
+    \end{displaymath}
+    where the second equality follows from the definition of divided differences.
+    Therefore we have shown that the conclusion holds for $n+1$,
+    which completes the inductive proof.
+  \end{itemize}
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

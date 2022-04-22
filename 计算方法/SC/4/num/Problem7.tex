@@ -1,0 +1,120 @@
+\begin{pro}
+  Consider the IVP
+  \begin{displaymath}
+    y'' = y
+  \end{displaymath}
+  for $t\ge 0$,
+  with initial values $y(0)=1$ and $y'(0)=2$.
+  \begin{itemize}
+  \item[(a)]
+    Express this second-order ODE as
+    an equivalent system of two first-order ODEs.
+
+  \item[(b)]
+    What are the corresponding initial conditions for the system of
+    ODEs in part a?
+
+  \item[(c)]
+    Are solutions of this system stable?
+
+  \item[(d)]
+    Perform one step of Euler's method for this ODE system
+    using a step size of $h=0.5$.
+
+  \item[(e)]
+    Is Euler's method stable for this problem using this step size?
+
+  \item[(f)]
+    Is the backward Euler method stable for this problem
+    using this step size?
+  \end{itemize}
+\end{pro}
+
+\begin{sol}
+  \begin{itemize}
+    \item[(a)]
+  Define the new unknowns $u_1(t)=y(t)$ and $u_2(t)=y'(t)$,
+  then we have
+  \begin{displaymath}
+    \begin{bmatrix}
+      u_1' \\
+      u_2'
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      u_2 \\
+      u_1
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      0 & 1 \\
+      1 & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+      u_1 \\
+      u_2
+    \end{bmatrix}.
+  \end{displaymath}
+
+\item[(b)]
+  \begin{displaymath}
+    \begin{bmatrix}
+      u_1(0) \\
+      u_2(0)
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      1 \\
+      2
+    \end{bmatrix}.
+  \end{displaymath}
+
+\item[(c)]
+  The eigenvalues of the matrix
+  \begin{displaymath}
+    A = 
+    \begin{bmatrix}
+      0 & 1 \\
+      1 & 0
+    \end{bmatrix}
+  \end{displaymath}
+  are $1(>0)$ and $-1$,
+  thus solutions of this system are unstable.
+
+\item[(d)]
+  \begin{displaymath}
+    \mathbf{u}_1 = \mathbf{u}_0 + hA\mathbf{u}_0 =
+    \begin{bmatrix}
+      1 & 2
+    \end{bmatrix}^T
+    +
+    0.5
+    \begin{bmatrix}
+      2 & 1
+    \end{bmatrix}^T
+    =
+    \begin{bmatrix}
+      2 & 2.5
+    \end{bmatrix}^T.
+  \end{displaymath}
+
+\item[(e)]
+  The eigenvalues of the matrix $I+hA$ are $1.5(> 1)$ and $0.5$,
+  therefore,
+  Euler's method is unstable for this problem using this step size.
+
+\item[(f)]
+  The formula for the backward Euler method is
+  \begin{displaymath}
+    \mathbf{u}_{n+1} = \mathbf{u}_n + hA\mathbf{u}_{n+1} \Rightarrow
+    \mathbf{u}_{n+1} = (I-hA)^{-1}\mathbf{u}_n,
+  \end{displaymath}
+  the eigenvalues of the matrix $(I-hA)^{-1}$ are $2(>1)$ and $2/3$,
+  therefore,
+  backward Euler's method is unstable for this problem using this step size.
+\end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw4"
+%%% End:

@@ -1,0 +1,20 @@
+\begin{pro}
+  Newton's method is sometimes used to implement the built-in
+  root function on a computer, with the initial guess
+  supplied by a lookup table.
+
+  What is the Newton iteration for computing the square root of a
+  positive number $y$ (i.e., for solving the equation
+  $f(x)=x^2-y=0$, given $y$)?
+\end{pro}
+
+\begin{sol}
+  \begin{displaymath}
+    x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)} = x_n - \frac{x_n^2 - y}{2x_n}
+    = \frac{x_n^2 + y}{2x_n}.
+  \end{displaymath}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

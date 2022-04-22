@@ -1,0 +1,105 @@
+\begin{pro}
+  Let $A$ be an $m\times n$ matrix and $\mathbf{b}$ an $m$-vector.
+  \begin{itemize}
+  \item[(a)]
+    Prove that a solution to the least squares problem $A\mathbf{x}\cong\mathbf{b}$
+    always exists.
+
+  \item[(b)]
+    Prove that such a solution is unique if, and only if,
+    $\mathrm{rank}(A)=n$.
+  \end{itemize}
+\end{pro}
+
+\begin{proof}
+  \begin{itemize}
+
+    \item[(a)]
+  \begin{defn}
+    A continuous function $f$ on an unbounded set $S\subset\mathbb{R}^n$
+    is said to be \emph{coercive} if
+    \begin{displaymath}
+      \lim_{\|\mathbf{x}\|\to\infty}f(\mathbf{x}) = +\infty,
+    \end{displaymath}
+    i.e., for any constant $M$,
+    there is an $r>0$ (depending on $M$) such that $f(\mathbf{x})\ge M$
+    for any $\mathbf{x}\in S$ such that $\|\mathbf{x}\|\ge r$.
+  \end{defn}
+
+  \begin{lem}
+    Let $S\in\mathbb{R}^n$ be closed and unbounded,
+    if $f$ is coercive on $S$, then
+    $f$ has a global minimum over $S$.
+  \end{lem}
+  \begin{proof}[Proof of Lemma]
+    Without loss of generality,
+    assume $\mathbf{0}\in S$.
+    Since $f$ is coercive on $S$,
+    we have
+    \begin{equation}
+      \label{eq:1}
+      \exists r>0 \text{ s.t. } \forall \mathbf{x}\in S, \|\mathbf{x}\|> r, \quad
+      f(\mathbf{x}) \ge f(\mathbf{0}).
+    \end{equation}
+    Consider the closed and bounded (hence compact) set
+    $A = \{\mathbf{x}\in S: \|\mathbf{x}\|\le r\}$,
+    we know from Calculus the fact that a continuous function on a compact
+    set has both maximum and minimum,
+    therefore
+    \begin{equation}
+      \label{eq:2}
+      \exists \mathbf{x}^{*}\in A, \text{ s.t. }
+      \forall \mathbf{x}\in A, f(\mathbf{x})\ge f(\mathbf{x}^{*}).
+    \end{equation}
+    Combining \eqref{eq:1} and \eqref{eq:2} completes the proof, i.e.,
+    \begin{displaymath}
+      \exists \mathbf{x}^{*}\in S, \text{ s.t. } \forall \mathbf{x}\in S,
+      f(\mathbf{x})\ge f(\mathbf{x}^{*}).
+    \end{displaymath}
+  \end{proof}
+
+  Consider the function $\phi:\mathbb{R}^n\to\mathbb{R}$ given by
+  \begin{displaymath}
+    \phi(\mathbf{y}) = \|\mathbf{b}-\mathbf{y}\|_2.
+  \end{displaymath}
+
+  $\phi$ is coercive on the closed and unbounded set $\mathrm{span}(A)$,
+  applying the above lemma yields
+  \begin{equation}
+    \label{eq:3}
+    \exists \mathbf{y}^{*} \text{ s.t. } \forall \mathbf{y}\in\mathrm{span}(A),
+    \quad \phi(\mathbf{y}) \ge \phi(\mathbf{y}^{*}).
+  \end{equation}
+  Let $\mathbf{y}^{*} = A\mathbf{x}^{*} $,
+  from \eqref{eq:3}, we see that $\mathbf{x}^{*}$ is a solution to the
+  least squares problem $A\mathbf{x}\cong\mathbf{b}$, i.e.,
+  \begin{displaymath}
+    % \forall \mathbf{x}\in\mathbb{R}^n, \quad \|\mathbf{b}-A\mathbf{x}\|
+    % \ge \|\mathbf{b}-A\mathbf{x}^{*}\|.
+    \|\mathbf{b}-A\mathbf{x}^{*}\|_2 = \min_{\mathbf{x}\in\mathbb{R}^n}
+    \|\mathbf{b}-A\mathbf{x}\|_2.
+  \end{displaymath}
+
+\item[(b)]
+  Sufficiency: If $\mathrm{rank}(A)=n$,
+  then $\forall \mathbf{y}\in\mathrm{span}(A)$,
+  there exists a unique $\mathbf{x}\in \mathbb{R}^n$, s.t.
+  $\mathbf{y}=A\mathbf{x}$.
+  Therefore, the $\mathbf{x}^{*}$ constructed in the proof of (a) is unique.
+
+  Necessity: if $\mathrm{rank}(A)<n$,
+  then $\exists \mathbf{z}\in\mathbb{R}^n
+  \text{ s.t. } A\mathbf{z}=\mathbf{0}$.
+  Thus
+  \begin{displaymath}
+    \|\mathbf{b}-A(\mathbf{x}^{*}+\mathbf{z})\|_2 =
+    \|\mathbf{b}-A\mathbf{x}^{*}\|_2 = \min_{\mathbf{x}\in\mathbb{R}^n}
+    \|\mathbf{b}-A\mathbf{x}\|_2,
+  \end{displaymath}
+  which contradicts the uniqueness of $\mathbf{x}^{*}$.
+\end{itemize}
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw2"
+%%% End:

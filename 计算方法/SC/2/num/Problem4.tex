@@ -1,0 +1,43 @@
+\begin{pro}
+  Suppose you want to annihilate the second component of a vector
+  \begin{displaymath}
+    \mathbf{a} =
+    \begin{bmatrix}
+      a_1 \\ a_2
+    \end{bmatrix}
+  \end{displaymath}
+  using a Givens rotation, but $a_1$ is already zero.
+  \begin{itemize}
+  \item[(a)]
+    Is it still possible to annihilate $a_2$ with a Givens rotation?
+    If so, specify an appropriate Givens rotation; if not, explain
+    why.
+
+  \item[(b)]
+    Under these circumstances,
+    can $a_2$ be annihilated with an elementary elimination matrix?
+    If so, how? If not, why?
+  \end{itemize}
+\end{pro}
+
+\begin{sol}
+  \begin{itemize}
+  \item[(a)]
+    It is possible to annihilate $a_2$ with a Givens rotation
+    \begin{displaymath}
+      G =
+      \begin{bmatrix}
+        0 & 1 \\
+        -1 & 0
+      \end{bmatrix}.
+    \end{displaymath}
+
+  \item[(b)]
+    We cannot annihilate $a_2$ with an elementary elimination matrix,
+    since adding any scalar multiple of $a_1$ to $a_2$ does not change $a_2$.
+  \end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw2"
+%%% End:

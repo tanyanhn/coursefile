@@ -1,0 +1,35 @@
+\begin{pro}
+  Run the code \verb|main_FD5Newton.m|
+  to calculate the convergence rate of Newton's method.
+\end{pro}
+\begin{sol}
+  The convergence rate is calculated by
+  \begin{displaymath}
+    p \approx \frac{\log e_{n+2}-\log e_{n+1}}{\log e_{n+1} - \log e_n}.
+  \end{displaymath}
+  The numerical result is as follows.
+  \begin{figure}[H]
+  \centering
+\begin{tabular}{c|c|c}
+  \centering
+  $k$ & $\|\bm{e}_k\|_{\infty}$ & convergence rate
+  \\ \hline
+  1 & 41.15 &
+  \\
+  2 & 1.14 & 
+  \\
+  3& 2.87e-3 & 1.67
+  \\
+  4 & 1.80e-8 & 2.01
+  \\
+  5 & 6.20e-14 & 1.05
+  \\ \hline
+\end{tabular}
+\end{figure}
+Therefore,
+the convergence rate of Newton's method is $2$.
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw5"
+%%% End:

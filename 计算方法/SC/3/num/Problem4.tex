@@ -1,0 +1,33 @@
+\begin{pro}
+  Suppose you are using the secant method to find a root $x^{*}$ of a
+  nonlinear equation $f(x)=0$.
+  Show that if at any iteration it happens to be the case that either
+  $x_k=x^{*}$ or $x_{k-1}=x^{*}$
+  (but not both),
+  then it will also be true that $x_{k+1}=x^{*}$.
+\end{pro}
+\begin{sol}
+  \begin{itemize}
+  \item
+    If $x_k=x^{*}$, then
+    \begin{displaymath}
+      x_{k+1} = x_k - f(x_k)\frac{x_k-x_{k-1}}{f(x_k)-f(x_{k-1})}
+      = x^{*} - f(x^{*})\frac{x^{*}-x_{k-1}}{f(x^{*})-f(x_{k-1})}
+      = x^{*} - 0 = x^{*}.
+    \end{displaymath}
+
+  \item
+    If $x_{k-1}=x^{*}$, then
+    \begin{align*}
+      x_{k+1} &= x_k - f(x_k)\frac{x_k-x_{k-1}}{f(x_k)-f(x_{k-1})}
+                = x_k - f(x_k)\frac{x_k - x^{*}}{f(x_k)-f(x^{*})} \\
+      &= x_k - f(x_k) \frac{x_k-x^{*}}{f(x_k)} = x_k - (x_k - x^{*})
+      \\
+      &= x^{*}.
+    \end{align*}
+  \end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

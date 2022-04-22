@@ -1,0 +1,77 @@
+\textbf{4.3}
+\begin{itemize}
+\item[(a)]
+  Implement inverse iteration with a shift to compute the eigenvalues nearest to 2,
+  and a corresponding normalized eigenvector,
+  of the matrix
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      6 & 2 & 1
+      \\
+      2 & 3 & 1
+      \\
+      1 & 1 & 1
+    \end{bmatrix}.
+  \end{displaymath}
+  You may use an arbitrary starting vector.
+
+\item[(b)]
+  Use a real symmetric eigensystem library routine to compute all of the eigenvalues
+  and eigenvectors of the matrix,
+  and compare the results with those obtained in part (a).
+\end{itemize}
+  \begin{multicols}{2}
+    \setlength{\columnseprule}{0.2pt}
+    \begin{sol}
+      \begin{itemize}
+        \item[(a)]
+  The code is shown as follows.
+  \lstinputlisting[firstnumber=1]{matlab/InverseIter.m}
+  The numerical result obtained is
+\begin{verbatim}
+The eigenvalue nearest to 2 is:
+  2.1331e+00
+a corresponding eigenvector is:
+
+v =
+
+    0.4974
+   -0.8196
+   -0.2843
+\end{verbatim}
+
+\item[(b)]
+  We use the \verb|matlab| function \verb|eig| to compute
+  the eigenvalue decomposition of $A$.
+  \begin{displaymath}
+    AV = VD,
+  \end{displaymath}
+  where the columns of $V$ are the eigenvectors of $A$
+  and the diagonal entries of $D$ are the corresponding eigenvalues.
+\begin{verbatim}
+>> [V, D] = eig(A); diag(D)
+
+ans =
+
+    0.5789
+    2.1331
+    7.2880
+
+>> V
+
+V =
+
+   -0.0432   -0.4974   -0.8664
+   -0.3507    0.8196   -0.4531
+    0.9355    0.2843   -0.2098
+\end{verbatim}
+  From the above two numerical results,
+  we see that the two results agree with each other up to fourth digit.
+\end{itemize}
+\end{sol}
+\end{multicols}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../ComputerAssignment"
+%%% End:

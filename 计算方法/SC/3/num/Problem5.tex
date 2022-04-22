@@ -1,0 +1,29 @@
+\begin{pro}
+  Consider the system of equations
+  \begin{align*}
+    x_1 - 1 &= 0, \\
+    x_1x_2 - 1 &= 0.
+  \end{align*}
+  For what starting point or points,
+  if any,
+  will Newton's method for solving this system fail?
+  Why?
+\end{pro}
+
+\begin{sol}
+  The Jacobian matrix is given by
+  \begin{displaymath}
+    J(x_1, x_2) =
+    \begin{bmatrix}
+      1 & 0 \\
+      x_2 & x_1
+    \end{bmatrix}
+  \end{displaymath}
+  For starting point on the axis $x_2$($x_1=0$),
+  $J(x_1, x_2)$ is singular,
+  and therefore Newton's method will fail.
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

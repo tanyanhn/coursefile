@@ -1,0 +1,79 @@
+\begin{pro}
+  Given the three data points $(-1, 1), (0, 0), (1, 1)$,
+  determine the interpolating polynomial of degree two:
+  \begin{itemize}
+  \item[(a)]
+    Using the monomial basis
+
+  \item[(b)]
+    Using the Lagrange basis
+
+  \item[(c)]
+    Using the Newton basis
+  \end{itemize}
+  Show that the three representations give the same polynomial.
+\end{pro}
+\begin{sol}
+  \begin{itemize}
+  \item[(a)]
+    Solving the following system of linear equations
+    \begin{displaymath}
+      \begin{bmatrix}
+        1 & -1 & 1 \\
+        1 & 0 & 0 \\
+        1 & 1 & 1
+      \end{bmatrix}
+      \begin{bmatrix}
+        x_1 \\
+        x_2 \\
+        x_3
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        1 \\
+        0 \\
+        1
+      \end{bmatrix}
+    \end{displaymath}
+    yields $x_1 = 0, x_2 = 0, x_3 = 1$,
+    so that the interpolating polynomial is
+    \begin{displaymath}
+      p_2(t) = t^2.
+    \end{displaymath}
+
+  \item[(b)]
+    Apply Lagrange interpolation polynomial, and we have
+    \begin{align*}
+      p_2(t) &= 1\cdot \frac{(t-0)(t-1)}{(-1-0)(-1-1)}
+      + 0\cdot \frac{(t+1)(t-1)}{(0+1)(0-1)}
+               + 1\cdot \frac{(t+1)(t-0)}{(1+1)(1-0)} \\
+             &= \frac{t(t-1)}{2} + \frac{t(t+1)}{2} \\
+      &= t^2.
+    \end{align*}
+
+  \item[(c)]
+    (a) From the table of divided differences
+\begin{center}
+\begin{tabular}{c|cccc}
+$t$  & $y$ \\
+\hline 
+-1 & 1 \\
+0 & 0 & -1 \\
+1 & 1 & 1 & 1
+\end{tabular}
+\end{center}
+one obtains by Newton's formula
+\begin{displaymath}
+  p_2(t) = 1 - (t+1) + (t+1)t = t^2.
+\end{displaymath}
+
+We can see that the above three representations give the same polynomial
+\begin{displaymath}
+  p_2(t) = t^2.
+\end{displaymath}
+  \end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw3"
+%%% End:

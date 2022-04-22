@@ -1,0 +1,44 @@
+\begin{pro}
+  Prove that the Jacobi iterative method for solving the linear system
+  $A\mathbf{x}=\mathbf{b}$ converges if the matrix $A$
+  is diagonally dominant by rows.
+  (Hint: Use the $\infty$-norm.)
+\end{pro}
+\begin{proof}
+  Recall \emph{Jacobi method}:
+  \begin{displaymath}
+    \mathbf{x}^{(k+1)} = -D^{-1}(L+U)\mathbf{x}^{(k)}
+    + D^{-1}\mathbf{b},
+  \end{displaymath}
+  where $D$ is a diagonal matrix with the same diagonal entries
+  as $A$, and $L$ and $U$ are the strict lower and upper
+  triangular portions of $A$, respectively.
+  To prove the convergence of Jacobi method,
+  we need to show that the spectral radius
+  \begin{displaymath}
+    \rho(D^{-1}(L+U))<1.
+  \end{displaymath}
+  We have
+  \begin{displaymath}
+    \|D^{-1}(L+U)\|_{\infty} = \max_{1\le i\le n}\sum_{j=1, j\ne i}^n
+    |a_{ij}/a_{ii}|.
+  \end{displaymath}
+  Diagonal dominance means that
+  \begin{displaymath}
+    |a_{ii}| > \sum_{j=1,j\ne i}^n|a_{ij}| \quad
+    (1\le i\le n).
+  \end{displaymath}
+  We then conclude that
+  \begin{displaymath}
+    \|D^{-1}(L+U)\|_{\infty} < 1,
+  \end{displaymath}
+  and therefore
+  \begin{displaymath}
+    \rho(D^{-1}(L+U)) \le \|D^{-1}(L+U)\|_{\infty} < 1,
+  \end{displaymath}
+  which completes the proof.
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw5"
+%%% End:

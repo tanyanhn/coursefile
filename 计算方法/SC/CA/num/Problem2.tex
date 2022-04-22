@@ -1,0 +1,85 @@
+\textbf{5.9} In celestial mechanics,
+\emph{Kepler's equation}
+\begin{displaymath}
+  M = E - e\sin(E)
+\end{displaymath}
+relates the mean anomaly $M$ to the eccentric anomaly $E$ of an elliptical orbit
+of eccentricity $e$,
+where $0<e<1$.
+\begin{itemize}
+\item[(a)]
+  Prove that the fixed-point iteration using the iteration function
+  \begin{displaymath}
+    g(E) = M + e\sin(E)
+  \end{displaymath}
+  is locally convergent.
+
+\item[(b)]
+  Use the fixed-point iteration scheme in part (a)
+  to solve Kepler's equation for the eccentric anomaly $E$
+  corresponding to a mean anomaly of $M=1$ (radians)
+  and an eccentricity of $e=0.5$.
+
+\item[(c)]
+  Use Newton's method to solve the same problem.
+
+\item[(d)]
+  Use a library zero finder to solve the same problem.
+\end{itemize}
+
+\begin{sol}
+    \begin{multicols}{2}
+      \setlength{\columnseprule}{0.2pt}
+      \begin{itemize}
+      \item[(a)]
+        It sufficies to show that $g$ is locally a contractive mapping,
+        which is true since
+        \begin{displaymath}
+          |g'(E)| = e|\cos(E)| \le e < 1.
+        \end{displaymath}
+        Therefore,
+        the fixed-point iteration using the iteration function
+        \begin{displaymath}
+          g(E) = M + e\sin(E)
+        \end{displaymath}
+        is locally convergent.
+
+      \item[(b)]
+        The fixed-point iteration formula in this case is given by
+        \begin{displaymath}
+          E_{n+1} = M + e\sin(E_n) = 1 + \frac{\sin(E_n)}{2}
+        \end{displaymath}
+        \lstinputlisting[firstnumber=1]{matlab/fixedPoint.m}
+      \end{itemize}
+      The numerical result obtained is
+\begin{verbatim}
+E: 1.498701e+00
+\end{verbatim}
+    \item[(c)]
+      Using Newton's method,
+      we have
+      \begin{align*}
+        E_{n+1} &= E_n - \frac{E_n - e\sin(E_n)-M}{1-e\cos(E_n)} \\
+        &= E_n - \frac{E_n-\sin(E_n)/2 -1}{1-\cos(E_n)/2}.
+      \end{align*}
+      \lstinputlisting[firstnumber=1]{matlab/Newton.m}
+      The numerical result obtained is
+\begin{verbatim}
+E: 1.498702e+00
+\end{verbatim}
+
+    \item[(d)]
+\begin{verbatim}
+>> M = 1; e = 0.5;
+>> E = fzero(@(x) M+e*sin(x)-x, 1)
+\end{verbatim}
+      The numerical result obtained is
+\begin{verbatim}
+E = 1.4987
+\end{verbatim}
+  \end{multicols}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../ComputerAssignment"
+%%% End:

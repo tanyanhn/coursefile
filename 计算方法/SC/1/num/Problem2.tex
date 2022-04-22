@@ -1,0 +1,68 @@
+\begin{pro}
+  Let
+  \begin{displaymath}
+    A =
+    \begin{bmatrix}
+      1 & 1+\epsilon \\
+      1-\epsilon & 1
+    \end{bmatrix}.
+  \end{displaymath}
+\end{pro}
+\begin{itemize}
+\item[(a)]
+  What is the determinant of $A$?
+
+\item[(b)]
+  In floating-point arithmetic,
+  for what range of values of $\epsilon$
+  will the computed value of the determinant be zero?
+
+\item[(c)]
+  What is the LU factorization of $A$?
+
+\item[(d)]
+  In floating-point arithmetic,
+  for what range of values of $\epsilon$
+  will the computed value of $U$ be singular?
+\end{itemize}
+
+\begin{sol}
+  \begin{itemize}
+  \item[(a)]
+    \begin{displaymath}
+      \det(A) = 1 - (1+\epsilon)(1-\epsilon) = \epsilon^2.
+    \end{displaymath}
+
+  \item[(b)]
+    For $\epsilon\in(-\sqrt{\epsilon_{\text{mach}}},
+    \sqrt{\epsilon_{\text{mach}}})$,
+    the computed value of the determinant will be zero,
+    where $\epsilon_{\text{mach}}$ denotes the unit roundoff.
+
+  \item[(c)]
+    The LU factorization of A is as follows
+    \begin{displaymath}
+      L =
+      \begin{bmatrix}
+        1 & 0 \\
+        1-\epsilon & 1
+      \end{bmatrix},
+      \quad
+      U =
+      \begin{bmatrix}
+        1 & 1+\epsilon \\
+        0 & \epsilon^2
+      \end{bmatrix}.
+    \end{displaymath}
+
+  \item[(d)]
+    For $\epsilon\in(-\sqrt{\epsilon_{\text{mach}}},
+    \sqrt{\epsilon_{\text{mach}}})$,
+    the computed value of $U$ will be singular,
+    where $\epsilon_{\text{mach}}$ denotes the unit roundoff.
+  \end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw1"
+%%% End:

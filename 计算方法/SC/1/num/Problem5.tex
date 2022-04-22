@@ -1,0 +1,26 @@
+\begin{pro}
+  Prove that the Woodbury formula
+  \begin{displaymath}
+    (A-UV^T)^{-1} = A^{-1}+A^{-1}U(I-V^TA^{-1}U)^{-1}V^TA^{-1}
+  \end{displaymath}
+  given in Section 2.4.9 is correct.
+  (Hint: Multiply both sides by $A-UV^T$.)
+\end{pro}
+
+\begin{proof}
+  Following the hint, multiply both sides by $A-UV^T$,
+  and we have
+  \begin{align*}
+    &\LP A-UV^T\RP \LP A^{-1}+A^{-1}U(I-V^TA^{-1}U)^{-1}V^TA^{-1}\RP \\
+    &= I + U(I-V^TA^{-1}U)^{-1}V^TA^{-1} - UV^TA^{-1} -
+      UV^TA^{-1}U(I-V^TA^{-1}U)^{-1}V^TA^{-1} \\
+    &= I -UV^TA^{-1} + U(I-V^TA^{-1}U)(I-V^TA^{-1}U)^{-1}V^TA^{-1} \\
+    &= I - UV^TA^{-1} + UV^TA^{-1} \\
+    &= I,
+  \end{align*}
+  which completes the proof.
+\end{proof}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw1"
+%%% End:

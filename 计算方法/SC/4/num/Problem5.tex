@@ -1,0 +1,33 @@
+\begin{pro}
+  Explain how a quadrature rule can be used
+  to solve an integral equation numerically.
+  What type of computational problem results?
+\end{pro}
+
+\begin{sol}
+  We approximate the integral equation
+  \begin{displaymath}
+    \int_a^bK(s, t)u(t)\dif t = f(s),
+  \end{displaymath}
+  by
+  \begin{displaymath}
+    \sum_{j=1}^nw_jK(s_i, t_j)u(t_j) = f(s_i), \quad i = 1, \ldots, n,
+  \end{displaymath}
+  where $t_j$ and $w_j$ ($j=1, \ldots,n$) are the nodes and
+  weights of a quadrature rule.
+
+  Now we can solve the above
+  \emph{system of linear algebratic equations}
+  $A\mathbf{x}=\mathbf{b}$,
+  where $a_{ij} = w_jK(s_i, t_j), b_i=f(s_i)$,
+  and $x_j=u(t_j)$,
+  which can be solved for $\mathbf{x}$ to obtain
+  a discrete sample of approximate values of the solution function $u$.
+
+  As we have seen,
+  the result is solving a system of linear algebraic equations.
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw4"
+%%% End:

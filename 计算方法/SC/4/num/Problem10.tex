@@ -1,0 +1,42 @@
+\begin{pro}
+  Consider the two-point BVP
+  \begin{displaymath}
+    u'' = u^3 + t, \quad a < t < b,
+  \end{displaymath}
+  with boundary conditions
+  \begin{displaymath}
+    u(a) = \alpha, \quad u(b) = \beta.
+  \end{displaymath}
+  To use the shooting method to solve this problem,
+  one needs a starting guess for the initial slope $u'(a)$.
+  One way to obtain such a starting guess for the initial slope is,
+  in effect,
+  to do a ``preliminary shooting'' in which we take a single step
+  of Euler's method with $h=b-a$.
+  \begin{itemize}
+  \item[(a)]
+    Using this approach,
+    write out the resulting algebraic equation for the initial slope.
+
+  \item[(b)]
+    What starting value for the inital slope results from this approach?
+  \end{itemize}
+\end{pro}
+
+\begin{sol}
+  \begin{itemize}
+  \item[(a)]
+    \begin{displaymath}
+      u(b) = u(a) + hu'(a) \Rightarrow hu'(a) = u(b)-u(a).
+    \end{displaymath}
+
+  \item[(b)]
+    \begin{displaymath}
+      u'(a) = \frac{u(b)-u(a)}{h} = \frac{\beta-\alpha}{b-a}.
+    \end{displaymath}
+  \end{itemize}
+\end{sol}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../hw4"
+%%% End:
