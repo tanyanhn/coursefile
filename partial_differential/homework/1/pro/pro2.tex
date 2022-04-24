@@ -1,0 +1,24 @@
+\paragraph*{Section 1.3}
+\begin{itemize}
+    \item [(3)] Solve $u_t + uu_x = 0, u(0, x)= -x$.
+\end{itemize}
+
+\begin{solution}
+    \begin{itemize}
+        \item [(3)] Firstly,
+        \[       
+        \det \left( 
+            \begin{array}{cc}
+                \partial_x g^1 & 1 \\
+                \partial_x g^2 & u
+            \end{array} \right) = -1 \neq 0.
+        \]
+
+        We obtain \[t = s, x = -x_0 s + x_0, u = - x_0\].
+        means $\forall (t, x) \in \mathbb{R}^2, u(t, x) = -x_0$,
+        
+        and since \[x_0 = \frac{x}{ 1 - s} = \frac{x}{1 - t}\].
+        So
+        \[ u = \frac{x}{t - 1}\].
+    \end{itemize}
+\end{solution}

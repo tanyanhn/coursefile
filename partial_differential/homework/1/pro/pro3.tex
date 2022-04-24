@@ -1,0 +1,33 @@
+\paragraph*{Section 1.5}
+\begin{itemize}
+    \item [(5)] Solve $u_t + xu_x = x$ with data $u(0, x) = 2x$,
+    by applying the power series method.
+\end{itemize}
+
+\begin{solution}
+    \begin{itemize}
+        \item [(5)] Assume 
+        \[u(t, x) = \sum \frac{c_{j,k}}{j! k!} t^j x^k + 2x.\]
+        So $c_{0, 1} = 0$, substitute into $u_t + xu_x = x$ know 
+\[\sum_{j \neq 0} (\frac{c_{j + 1, k} + c_{j, k}}{j! k!}) t^j x^k + \sum\frac{c_{1, k}}{ k!} x^k =
+-x.\]
+        Which imply 
+        \[ c_{1, k} = \left\{ \begin{aligned}
+            &-1 \qquad & k = 1\\
+            &0  \qquad & k \neq 1
+        \end{aligned}  \right.\]
+        \[c_{j + 1,k} = -c_{j, k}, \qquad j \neq 0.\]
+        So 
+        \[c_{j, k} = \left\{
+            \begin{aligned}
+                &(-1)^j  \qquad & k = 1 \\
+                &0                       & k \neq 1
+            \end{aligned}
+        \right..\]
+        Therefore,
+            \begin{align*}
+                u(t, x) = \sum_{j \neq 0} \frac{(-t)^j x}{j!} + 2x 
+            \end{align*}
+
+    \end{itemize}
+\end{solution}

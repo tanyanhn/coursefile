@@ -8,3 +8,7 @@
 *研究生教材/
 /前沿数学专题讨论/
 .history/
+*.aux
+*.log
+*.synctex.gz
+*.asv

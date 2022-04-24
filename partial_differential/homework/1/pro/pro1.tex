@@ -1,0 +1,54 @@
+\paragraph*{Section 1.1}
+\begin{itemize}
+    \item [(2)] Find general solutions for spherically symmetric functions 
+    $V = V(|x|)$ such that 
+    $\Delta V = 0, x \in \mathbb{R}^n \backslash \{0\}$ with $n \geq 2$.
+
+    \item [(3)] (minimal surface) Let $u : \Omega \rightarrow \mathbb{R}$
+    with $\Omega \in \mathbb{R}^2$. For fixed function $f$ on the boundary of 
+    $\Omega$, suppose $u$ is a function such that it minimizes the area
+    \[ A[u] = \int_{\Omega} \sqrt{1 + | \nabla u|^2 } d\mathbf{x} ,\]
+    among all surface with $u = f$ on the boundary of $Omega$. 
+    Try to derive a PDE for $u$.
+\end{itemize}
+
+\begin{solution}
+    \begin{itemize}
+        \item [(2)] Since $| x| = (\sum x_i^2)^{1/2}$,
+        we have $\partial |x| / \partial x = x / |x|$.
+
+        So, \[V' = V'(|x|) \partial |x| / \partial x
+        = V'x / |x|,\]
+        and \[\Delta V = V_{x_i x_i} + V_{x_i} (n - 1) / |x|.\]
+        That means 
+         \[\Delta V = 0 \Longleftrightarrow V'' + (n - 1)V'/ |x| = 0. \]
+         Differential $r^{n-1} V'$ get
+         \[(r^{n - 1} V')' = r^{n - 1}\left( V'' + (n - 1)V' / |x|\right) = 0.\]
+         hence,
+            \[V' = a / r^{n - 1}. \]
+            Therefore 
+            \[ V = \left\{ 
+                \begin{aligned}
+                &a \log |x| + b  \qquad & (n = 2) \\
+                &a / |x|^{n - 2} + b &(n \geq 3)
+            \end{aligned} \right. .\]
+
+            \item[(3)] Assume $u$ match the condition, For any smooth
+            function $v : \Omega \rightarrow \mathbb{R}$ and Real $\delta$.
+            Define $w(\delta) = u + \delta v$ satisfy $w(\delta) = f$ on the $\partial\Omega$.
+            So $A[u] \leq A[w(\delta)]$.
+
+            Hence 
+            \begin{align*}
+                w'(\delta) = \int_{\Omega} \frac{ (| \nabla v |^2 \delta + \nabla u \cdot \nabla v)}
+                {\sqrt{1 + | \nabla u|^2 }} d\mathbf{x}.
+            \end{align*}
+            Set $\delta = 0$,
+            \begin{align*}
+                0 &= w'(0) = \int_{\Omega} \frac{\Delta u \cdot \Delta v}{\sqrt{1 + | \nabla u|^2 }} d\mathbf{x} = \int_{\Omega} v \Delta \cdot \left( \frac{\Delta u}{\sqrt{1 + | \nabla u|^2 }}\right) d\mathbf{x} \qquad \text{Since $v = 0$, on } \partial \Omega
+            \end{align*}.
+
+            By random of $v$, we know
+            \[\Delta \cdot \left( \frac{\Delta u}{\sqrt{1 + | \nabla u|^2 }} \right) = 0 \]
+    \end{itemize}
+\end{solution}
