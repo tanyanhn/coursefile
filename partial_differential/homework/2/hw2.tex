@@ -204,7 +204,7 @@ by the method of separation variables.
     \begin{equation*}
         \left\{
         \begin{array}{l}
-            F(x)G(0) = F(x) \\
+            F(x)G(0) = f(x) \\
             F'(0)G(t) = F'(1)G(t) = 0
         \end{array}
         \right.
@@ -212,26 +212,26 @@ by the method of separation variables.
         \left\{
         \begin{array}{l}
             G(0) = 1                               \\
-            A_m = 2\int_0^1 f(x) \cos(2 m \pi x) dx \\
+            A_m = 2\int_0^1 f(x) \cos( m \pi x) dx \\
             B_m = 0                                \\
         \end{array}
         \right.
     \end{equation*}.
-    Hence induce $u_1 = A_0/2 + \sum_m A_m \cos(2m\pi x)e^{-m^2 t}$. Assume
+    Hence induce $u_1 = A_0/2 + \sum_m A_m \cos(m\pi x)e^{-(m\pi)^2 t}$. Assume
     $w$ solve
     \begin{equation*}
         \left\{
         \begin{array}{l}
             u_t = u_{xx}              \\
-            u(x, t) = t \cos x        \\
+            u(x, \tau) = \tau \cos x        \\
             u_x(0, t) = u_x(1, t) = 0 \\
         \end{array}
         \right.
     \end{equation*}.
-    Similarly, $w = A'_0/2 + \sum_m  A'_m \cos(2m\pi x)e^{-m^2 t}, $ there is
-    \[ A'_m = 2\int_0^1 t e^{m^2 t} \cos x \cos(2 m \pi x) dx\].
+    Similarly, $w(x, t, \tau) = A'_0/2 + \sum_m  A'_m \cos(m\pi x)e^{-(m\pi)^2 t}, $ there is
+    \[ A'_m = 2\int_0^1 \tau e^{(m\pi)^2 \tau} \cos x \cos(m \pi x) dx\].
     According to Duhamel's principle, we know 
-    \[ u = u_1 + u_2 = u_1 + \int_0^t w(x, s) ds  \]
+    \[ u = u_1 + u_2 = u_1 + \int_0^t w(x, t, \tau) d\tau  \]
 \end{solution}
 
 \paragraph*{2. }
