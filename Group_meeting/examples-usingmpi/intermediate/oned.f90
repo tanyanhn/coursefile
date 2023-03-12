@@ -59,7 +59,7 @@
 !
       call MPI_BARRIER( MPI_COMM_WORLD, ierr )
       t1 = MPI_WTIME()
-      do it=1, 100
+      do it=1, 1000
 !      do it=1, 2
 	call exchng1( a, nx, s, e, comm1d, nbrbottom, nbrtop )
 	call sweep1d( a, f, nx, s, e, b )
@@ -68,7 +68,7 @@
 	dwork = diff( a, b, nx, s, e )
 	call MPI_Allreduce( dwork, diffnorm, 1, MPI_DOUBLE_PRECISION, &
                             MPI_SUM, comm1d, ierr )
-        if (diffnorm .lt. 1.0e-5) exit
+        if (diffnorm .lt. 1.0e-3) exit
 !        if (myid .eq. 0) print *, 2*it, ' Difference is ', diffnorm
       enddo
       if (myid .eq. 0 .and. it .gt. 100) print *, 'Failed to converge'

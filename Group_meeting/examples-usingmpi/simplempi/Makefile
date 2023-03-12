@@ -2,7 +2,8 @@ SHELL    = /bin/sh
 CC       = mpicc
 FC       = mpifort
 LDFLAGS  = 
-CPPFLAGS = 
+CPPFLAGS =
+FCFLAGS = -fallow-argument-mismatch
 
 all: all-redirect
 

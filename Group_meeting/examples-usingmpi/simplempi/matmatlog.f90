@@ -41,6 +41,10 @@
             b(j,i) = i
          enddo
       enddo
+      do i = 1,bcols
+         call MPI_BCAST(b(1,i), brows, MPI_DOUBLE_PRECISION, &
+                        master, MPI_COMM_WORLD, ierr)
+      enddo
       numsent = 0
 !     send a row of a to each other process; tag with row number
 !     For simplicity, assume arows .ge. numprocs - 1
