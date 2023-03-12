@@ -1,7 +1,0 @@
-\babel@toc {english}{}
-\beamer@sectionintoc {1}{程序背景}{3}{0}{1}
-\beamer@sectionintoc {2}{程序进展}{7}{0}{2}
-\beamer@subsectionintoc {2}{1}{程序架构}{7}{0}{2}
-\beamer@subsectionintoc {2}{2}{计算交线的优化}{9}{0}{2}
-\beamer@subsectionintoc {2}{3}{粘合模块的修改}{12}{0}{2}
-\beamer@sectionintoc {3}{后续工作}{15}{0}{3}

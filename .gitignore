@@ -13,3 +13,11 @@
 *.synctex.gz
 *.asv
 *examples-usingmpi/
+*.fls
+*.toc
+*.synctex
+*.out
+*.xdv
+*.fdb_latexmk
+*.nav
+*.snm
